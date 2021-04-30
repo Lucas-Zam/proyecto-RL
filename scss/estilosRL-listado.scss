@@ -1,0 +1,120 @@
+﻿* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+h1 {
+	font-family: roboto, sans-serif;
+}
+h2 {
+	font-family: roboto, sans-serif;
+}
+h4 {
+	font-family: roboto, sans-serif;
+}
+h5 {
+	font-family: roboto, sans-serif;
+}
+h6 {
+	font-family: roboto, sans-serif;
+}
+h3 {
+	font-family: nunito, verdana, sans-serif;
+}
+body {
+	background-color: cadetblue;
+}
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0px auto;
+	display: grid;
+	grid-column-gap: 5px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	.header {
+		background: #008080;
+		color: white;
+		width: 100%;
+		padding: 0px 10px 0px 10px;
+		grid-column-start: 1;
+		grid-column-end: -1;
+		display: grid;
+		grid-template-columns: 1fr 3fr 4fr;
+		grid-template-rows: auto;
+		grid-column-gap: 10px;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.logo-RL {
+	img {
+		width: 100%;
+	}
+}
+.texto-RL {
+	color: white;
+}
+nav {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	a {
+		background: #c0392b;
+		color: #fff;
+		text-align: center;
+		text-decoration: none;
+		padding: 10px;
+	}
+}
+header {
+	nav {
+		a {
+			&:hover {
+				background: #e74c3d;
+				border-radius: 4px;
+				transition: all 70ms linear;
+				transform: scale(1.1,1.1);
+			}
+		}
+	}
+}
+.tituloProd {
+	height: 34px;
+	background-color: darkkhaki;
+	padding-top: 4px;
+}
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+th {
+	background-color: #808080;
+	border: 1px solid #fffff0;
+	text-align: left;
+	padding: 8px;
+}
+tr {
+	&:nth-child(even) {
+		background-color: #dddddd;
+	}
+	&:nth-child(odd) {
+		background-color: #ddd444;
+	}
+}
+td {
+	border: 1px solid #fffff0;
+	text-align: left;
+	padding: 8px;
+}
+.footer {
+	background: linear-gradient(140deg, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 45%, rgba(95,158, 160,1) 88%, rgba(95,158, 160,1) 100%);
+	color: white;
+	color: white;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 5px;
+	height: 62px;
+	line-height: 120%;
+}
