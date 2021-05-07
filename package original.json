@@ -1,0 +1,25 @@
+{
+  "name": "proyecto-rl",
+  "version": "4.0.0",
+  "description": "Repuestos de Automotores marca Chevrolet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/prueba.scss css/prueba.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Lucas Zam",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucas-Zam/proyecto-RL.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Lucas-Zam/proyecto-RL/issues"
+  },
+  "homepage": "https://github.com/Lucas-Zam/proyecto-RL#readme"
+}

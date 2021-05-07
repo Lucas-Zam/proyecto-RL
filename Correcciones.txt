@@ -1,0 +1,14 @@
+1) Se modificaron todos los estilos scss para estandarizar el header en cada uno de ellos.
+2) Cuando la pantalla es menor o igual a 576px, cambia la nav a un icon-short y aparece
+desde la derecha la navegación. Se agregó un archivo javascript, todos-nav-ico-intercambio.js,
+que realiza el cambio de ícono en la nav, en este caso.
+3) Se creo el archivo _variables.scss, que se @importa en todos los scss con variables 
+generales y comunes a todos.
+4) Se creo el archivo _cabecera.scss, que se @importa en todos los scss con la información
+del header y de la nav.
+5) Se creo el archivo _piedepagina.scss, que se @importa en todos los scss con la información
+del footer.
+6) Se utilizó un @extend en el archivo estilosRL-clientes.scss para igualar los datos
+idénticos en cada uno de los campos de ingreso de datos.
+7) Todos los archivos scss están en la carpeta scss, y sus compilaciones están en la
+carpeta estilos, y NO en la de css.

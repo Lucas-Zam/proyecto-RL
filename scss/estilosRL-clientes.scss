@@ -1,87 +1,36 @@
 ﻿* {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
-h1 {
-	font-family: roboto, sans-serif;
-}
-h2 {
-	font-family: roboto, sans-serif;
-}
-h4 {
-	font-family: roboto, sans-serif;
-}
-h5 {
-	font-family: roboto, sans-serif;
-}
-h6 {
-	font-family: roboto, sans-serif;
-}
-h3 {
-	font-family: nunito, verdana, sans-serif;
-}
+
+@import "variables";
+
 body {
-	background-color: rgb(95,158,160);
+	background-color: $fondo-principal;
+	font-family: $fuente-primaria;
 }
 .contenedor {
 	width: 90%;
 	max-width: 1000px;
-	margin: 20px auto;
+	font-size: 1rem;
+	margin: 0 auto;
+	height: auto;	
+
 	display: grid;
 	grid-gap: 5px;
 	grid-template-columns: 1fr;
 	grid-template-rows: repeat(5, auto);
-	.header {
-		padding: 20px;
-		border-radius: 4px;
-	}
-	.footer {
-		padding: 20px;
+	.tit2, #login-form, .footer {
+		box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		padding: 1.25rem;
 		border-radius: 4px;
 	}
 }
-.header {
-	background: #008080;
-	grid-column: 1 / -1;
-	display: grid;
-	grid-gap: 5px;
-	grid-template-columns: 1fr 3fr 4fr;
-	grid-template-rows: 1;
-	grid-column-gap: 10px;
-	justify-content: center;
-	align-items: center;
-	.logo-RL {
-		grid-column: 1 / 2;
-		img {
-			width: 100%;
-		}
-	}
-	.texto-RL {
-		grid-column: 2 / 3;
-		color: white;
-		font-size: 20px;
-	}
-	nav {
-		grid-column: 3 / 4;
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		grid-template-rows: auto;
-		a {
-			background: #c0392b;
-			color: #fff;
-			text-align: center;
-			text-decoration: none;
-			padding: 10px;
-			&:hover {
-				background: #e74c3c;
-				border-radius: 4px;
-				transition: all 70ms linear;
-				transform: scale(1.1,1.1);
-			}
-		}
-	}
-}
+
+@import "cabecera";
+
+
 .tit1 {
 	grid-column: 1 / -1;
 	grid-row: 2 / 3;
@@ -98,7 +47,7 @@ body {
 	grid-column: 1 / -1;
 	grid-row: 4 / 5;
 	background-image: url("../imagenes/logo-tapiz-shattered1.png");
-	padding: 5px 20px;
+	padding: 15px 20px;
 	border-radius: 4px;
 	display: grid;
 	grid-column-gap: 2rem;
@@ -110,7 +59,7 @@ body {
 	display: grid;
 	grid-gap: 3px;
 	grid-template-columns: 1fr;
-	grid-row-gap: 0.6rem;
+	grid-row-gap: 1.5rem;
 	align-content: flex-start;
 }
 .der {
@@ -118,76 +67,44 @@ body {
 	display: grid;
 	grid-gap: 3px;
 	grid-template-columns: 1fr 1fr;
-	grid-row-gap: 0.6rem;
+	grid-row-gap: 1.5rem;
 	grid-column-gap: 4rem;
 	align-content: flex-start;
 }
+
 #NomAp {
 	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
+	padding: 0.6rem 1.5rem;
 	border: none;
 	background: #eee;
 	outline: none;
 }
 #NomEmp {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
+	@extend #NomAp;
 }
 #Cuit {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
+	@extend #NomAp;
 }
 #Dire {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
+	@extend #NomAp;
 }
 #Loca {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
+	@extend #NomAp;
 }
 #PosProv {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
+	@extend #NomAp;
+	padding: 0.525rem 1.5rem;
 	grid-column: 1 / 3;
 }
 #Postal {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
+	@extend #NomAp;
 	grid-column: 1 / 3;
 }
 #Email {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
-	grid-column: 1 / 3;
+	@extend #Postal;
 }
 #Tfono {
-	border-radius: 50px;
-	padding: 0.40rem 1.5rem;
-	border: none;
-	background: #eee;
-	outline: none;
-	grid-column: 1 / 3;
+	@extend #Postal;
 }
 #infoadic {
 	grid-column: 1 / 3;
@@ -246,36 +163,13 @@ input {
 		transform: translateY(7px);
 	}
 }
-.footer {
-	grid-column: 1 / -1;
-	grid-row: 5 / 6;
-	background: linear-gradient(140deg, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 45%, rgba(95,158, 160,1) 88%, rgba(95,158, 160,1) 100%);
-	color: white;
-	text-align: left;
-	padding-left: 10px;
-}
+
+@import "piedepagina";
+
 @media screen and (max-width: 992px) {
-	h2 {
-		font-size: 1.3rem;
-	}
-	h4 {
-		font-size: 0.83rem;
-	}
-	h5 {
-		font-size: 0.7rem;
-	}
-	body {
-		background-color: rgb(117,172,152);
-	}
-	.header {
-		.texto-RL {
-			h3 {
-				font-size: 1.1rem;
-			}
-			h5 {
-				font-size: 0.9rem;
-			}
-		}
+	:root {
+		font-size: 14px;
+		width: -webkit-fill-available;
 	}
 	#login-form {
 		display: grid;
@@ -288,36 +182,15 @@ input {
 	}
 	.der {
 		grid-column: 1 / -1;
+		padding-top: 1rem;
 	}
 }
 @media screen and (max-width: 768px) {
-	h2 {
-		font-size: 1.3rem;
-	}
-	h4 {
-		font-size: 0.83rem;
-		font-size: 0.83rem;
-	}
-	h5 {
-		font-size: 0.7rem;
-	}
-	body {
-		background-color: rgb(117,172,152);
-		background-color: rgb(143,188,143);
-	}
-	.header {
-		.texto-RL {
-			grid-column: 2 / 4;
-			h3 {
-				font-size: 0.75rem;
-			}
-			h5 {
-				font-size: 0.7rem;
-			}
-		}
-		nav {
-			grid-column: 1 / -1;
-		}
+	:root{
+		font-size: 14px;
+	}	
+	.contenedor{
+		grid-gap: 5px;
 	}
 	.contenido {
 		div {
@@ -331,8 +204,6 @@ input {
 		padding: 5px 60px;
 		padding: 5px 20px;
 	}
-}
-@media screen and (max-width: 768px) {
 	h2 {
 		font-size: 1.3rem;
 	}
@@ -340,3 +211,30 @@ input {
 		font-size: 0.4rem;
 	}
 }
+
+@media screen and (max-width: 576px) {
+	/*se hace si tiene 576px o menos*/
+		:root {
+			font-size: 12px;
+		}
+		.contenedor {
+			width: 100%;
+			max-width: 1000px;
+			margin: 0;
+			grid-gap: 0;
+			border-radius: 0;
+			.footer {
+				border-radius: 0;
+				grid-column: 1 / 4;
+				grid-row: 6 / 7;
+			}	
+		}
+	}
+	
+	@media screen and (max-width: 341px) {
+	/*se hace si tiene 341px o menos*/
+		:root{
+			font-size: 10px;
+		}	
+	}
+	

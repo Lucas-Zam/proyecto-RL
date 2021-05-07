@@ -1,0 +1,31 @@
+﻿$fondo-principal: rgb(95,158,160);
+$fondo-header:#006969;
+$fondo-naveg: #006969;
+$fondo-naveg-hover: #006969;
+$color-naveg-hover: rgb(155, 155, 155);
+$fondo-novedad-barra-sup:rgba(0, 0, 0, 0.253);
+$fondo-novedad: #fff;
+$fondo-ofertas: #e67e22;
+$fondo-footer: linear-gradient(140deg, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 45%, rgba(95,158, 160,1) 88%, rgba(95,158, 160,1) 100%);
+$fuente-primaria: 'Roboto', 'Montserrat-Light', verdana, sans-serif;
+$fuente-size: 16px;
+
+h1 {font-family: roboto, sans-serif;}
+h2 {font-family: roboto, sans-serif;}
+h3 {font-family: nunito, verdana, sans-serif;}
+h4 {font-family: roboto, sans-serif;}
+h5 {font-family: roboto, sans-serif;}
+h6 {font-family: roboto, sans-serif;}
+.tituh1 {font-size: 2rem; font-weight: 700;}
+.tituh2 {font-size: 1.5rem; font-weight: 500;}
+.tituh3 {font-size: 1.17rem;}
+.tituh4 {font-size: 1rem;}
+.tituh5 {font-size: 0.83rem;}
+.tituh6 {font-size: 0.67rem;}
+img {
+	display: block;/* con esto las imágenes son tratadas como un bloque*/
+	margin: auto;/* este bloque se puede centrar bien*/
+	max-width: 100%;/* tiene un máximo, antes que se pixele la imagen*/
+	min-width: 50%;/* tiene un mínimo, antes que se pixele la imagen*/
+	height: auto;/* la altura se coloca para que no deforme la imagen*/
+}

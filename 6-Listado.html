@@ -1,4 +1,4 @@
-<doctype html> <!-- Tipo de Documento-->
+<!DOCTYPE html> <!-- Tipo de Documento-->
 <html lang="es"> <!-- Etiqueta inicial-->
 
 <!---------------------------------------------------------------->
@@ -7,105 +7,148 @@
 		<meta name="author" content="Lucas Zambelli">
 		<meta name="description" content="Prototipo HTML">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="./estilos/estilosRL-listado.css">
-		<title>Repuestos Lucas. Alternativos marca Chevrolet</title>
+
+		<link rel="stylesheet" href="./estilos/estilosRL-listado.css"><!-- mi carpeta de estilos se pone última para que pise cualquier estilo general de bootstrap-->
+		<title>Rep Lucas - Seccion Clientes</title>
 	</head>
 
 <body>	
 	<div class="contenedor">
-		<header class="header"><!-- Cabecera -->
+		<header class="header">
 			<div class="logo-RL">
-				<img src="./imagenes/logo-RL.png" alt="logo RL"/>
-			</div>
-			<div class="texto-RL">
-				<h3>REPUESTOS LUCAS</h3>
-		    	<h5>Repuestos alternativos</h5>
-		    	<h5>para el automotor marca Chevrolet</h5>
+				<img src="./IMAGENES/logo-RL.png" alt="logo RL">
 			</div>	
-			<nav>
-				<a href="index-grid.html">Inicio</a>
-				<a href="4-Ofertas-bootstrap.html">Ofertas</a>
-				<a href="5-Clientes.html">Clientes</a>
-				<a href="6-Listado.html">Listado</a>
+			<div class="texto-RL">
+				<p class="tituh2">REPUESTOS LUCAS</p>
+			    <p class="tituh5">Repuestos alternativos</p>
+			    <p class="tituh5">para el automotor marca Chevrolet</p>	
+			</div>
+ 			<nav class="nav">
+                 <input type="checkbox" id="check">
+                 <label for="check" class="checkbtn">
+                    <img src="" class="sichecked" alt="" id="img11">
+                	<img src="" class="nochecked" alt="" id="img22">
+				</label>
+				<ul>
+					<li><a class="tituh4" href="index-grid.html">Inicio</a></li>
+					<li><a class="tituh4" href="4-Ofertas.html">Ofertas</a></li>
+					<li><a class="tituh4" href="5-Clientes.html">Clientes</a></li>
+					<li><a class="tituh4" href="6-Listado.html">Listado</a></li>
+				</ul>				 
 			</nav>
 		</header>
-	</div>	
 
+		<div class="tituloProd" align="center">
+			<h2><b>Listado de Productos</b></h2>
+		</div>
 
-	<div class="tituloProd" align="center">
-		<h2><b>Listado de Productos</b></h2>
-	</div>
+		<table><!--Tabla de listado de productos-->
+			<thead><!--Cabecera o Títulos-->
+				<tr><!--fila 1-->
+					<th>Código</th>
+					<th>Descripción</th>
+					<th>Venta &dollar;</th>
+					<th>Rubro</th>
+					<th>Auto</th>
+					<th>Cód. Original</th>
+				</tr>
+			</thead>
+			<tbody><!--Datos a mostrar-->
+				<tr><!--fila 1-->
+					<td>02028</td>
+					<td>GRIFO DE CALEFACCION CHEVROLET CORSA 4 VIAS</td>
+					<td>1556,1</td>
+					<td>GRICALAF</td>
+					<td>CORSA</td>							
+					<td>12380318</td>				
+				</tr>				
+				<tr><!--fila 2-->
+					<td>02442</td>
+					<td>KIT TAPA DISTRIBUCION CORSA II /MERIVA 1.8 8V.</td>
+					<td>3256</td>
+					<td>TAPDIST</td>
+					<td>CORSA MERIVA</td>									
+					<td>93388682</td>				
+				</tr>					
+				<tr><!--fila 3-->
+					<td>03709</td>
+					<td>POLEA  DE CIG CHEVROLET C20 BRASILERA MOD92</td>
+					<td>3740,16</td>
+					<td>POLCIGU</td>
+					<td>C20</td>									
+					<td></td>				
+				</tr>			
+				<tr><!--fila 4-->
+					<td>05426</td>
+					<td>GUIA DIRECTA CAJA VEL CHEVROLET AVEO</td>
+					<td>1034,67</td>
+					<td>GUIADIRE</td>
+					<td>AVEO</td>								
+					<td>94580547</td>				
+				</tr>			
+				<tr><!--fila 5-->
+					<td>11263</td>
+					<td>BIELETA BARRA ESTAB. CHEVROLET VECTRA DEL. 300 MM</td>
+					<td>940</td>
+					<td>BIELETABA</td>
+					<td>VECTRA GAMBINA</td>									
+					<td></td>				
+				</tr>		
+				<tr><!--fila 6-->
+					<td>D1075</td>
+					<td>CABLE DE DESTRABE CAPOT VECTRA/ASTRA 1650MM</td>
+					<td>498</td>
+					<td>CABLEDESTR</td>
+					<td>FREMEC</td>						
+					<td></td>				
+				</tr>						
+				<tr><!--fila 7-->
+					<td>FVC527</td>
+					<td>CENTRO DE CARDAN CHEVROLET S10 M NUEVO 2014/</td>
+					<td>4269</td>
+					<td>CENTRODE</td>
+					<td>S10 FVC</td>								
+					<td></td>				
+				</tr>						
+				<tr><!--fila 8-->
+					<td>HE030</td>
+					<td>BOMBA DE NAFTA ELCT CHEVROLET MONZA 2.0 SPI REEMPLAZO BOSCH</td>
+					<td>5739</td>
+					<td>BOMBANAFTA</td>
+					<td>HELLUX</td>								
+					<td></td>				
+				</tr>						
+				<tr><!--fila 9-->
+					<td>HE11421</td>
+					<td>BOBINA AUDI BORA GOLF PASSAT NEW BEET VOYAGE FOX SURAN</td>
+					<td>4845</td>
+					<td>BOBINA</td>
+					<td>HELLUX</td>								
+					<td>03290510</td>				
+				</tr>						
+				<tr><!--fila 10-->
+					<td>HE2401022</td>
+					<td>SENSOR DE VELOCIDAD CHEVROLET BLAZER S10 OEM 12</td>
+					<td>3215</td>
+					<td>SENSORVEL</td>
+					<td>HELLUX</td>								
+					<td></td>				
+				</tr>						
+				
+			</tbody>
+		</table>
 
-	<table><!--Tabla de listado de productos-->
-		<thead><!--Cabecera o Títulos-->
-			<tr><!--fila 1-->
-				<th>Código</th>
-				<th>Descripción</th>
-				<th>Venta &dollar;</th>
-				<th>Rubro</th>
-				<th>Auto</th>
-				<th>Marca</th>
-				<th>Cód. Original</th>
-			</tr>
-		</thead>
-		<hr>
-		<tbody><!--Datos a mostrar-->
-			<tr><!--fila 1-->
-				<td>02028</td>
-				<td>GRIFO DE CALEFACCION CHEVROLET CORSA 4 VIAS</td>
-				<td>1556,1</td>
-				<td>GRICALAF</td>
-				<td>CORSA</td>					
-				<td></td>					
-				<td>12380318</td>				
-			</tr>				
-			<tr><!--fila 2-->
-				<td>02442</td>
-				<td>KIT TAPA DISTRIBUCION CORSA II /MERIVA 1.8 8V.</td>
-				<td>3256</td>
-				<td>TAPDIST</td>
-				<td>CORSA/MERIVA</td>					
-				<td></td>					
-				<td>93388682/3/4</td>				
-			</tr>					
-			<tr><!--fila 3-->
-				<td>03709</td>
-				<td>POLEA  DE CIG CHEVROLET C20 BRASILERA MOD92</td>
-				<td>3740,16</td>
-				<td>POLCIGU</td>
-				<td>C20</td>					
-				<td></td>					
-				<td></td>				
-			</tr>			
-			<tr><!--fila 4-->
-				<td>05426</td>
-				<td>GUIA DIRECTA CAJA VEL CHEVROLET AVEO</td>
-				<td>1034,67</td>
-				<td>GUIADIRE</td>
-				<td>AVEO</td>					
-				<td></td>					
-				<td>94580547</td>				
-			</tr>			
-			<tr><!--fila 5-->
-				<td>11263</td>
-				<td>BIELETA BARRA ESTAB. CHEVROLET VECTRA DEL. 300 MM</td>
-				<td>940</td>
-				<td>BIELETABA</td>
-				<td>VECTRA</td>					
-				<td>GAMBINA</td>					
-				<td></td>				
-			</tr>						
-		</tbody>
-	</table>
-	<!--<hr>-->
-
-	<footer class="footer">
+		<footer class="footer">
 			<h4><b>Repuestos Lucas</b></h4>
 			<h5>4666-1908/15  ///
 			Ciudad Autónoma de Buenos Aires</h5>
 			<h5><ins><a href="mailto:repuestoslucas2020@yahoo.com.ar">repuestoslucas2020@yahoo.com.ar</a></ins></h5>
 			<h5 align="center" style="color: black"><b>Copyright LRZ &copy; 2021</b></h5>
-	</footer>
+		</footer>
+
+	</div>	
+	<script src="./js/todos-nav-ico-intercambio.js"></script>
 </body>
 </html>
