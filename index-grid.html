@@ -5,29 +5,32 @@
 	<head> <!-- Cabecera, recursos y datos importantes-->
 		<meta charset="utf-8" />
 		<meta name="author" content="Lucas Zambelli">
-		<meta name="description" content="Prototipo HTML">
+		<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet">
+		<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- <meta name="title" content="Rep Lucas. Chevrolet alternativos" ch-meta-content="SITE.title" ng-attr-content> -->
+		<title>Rep Lucas. Chevrolet alternativos</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="./estilos/estilosRL-grid.css"><!-- mi carpeta de estilos se pone última para que pise cualquier estilo general de bootstrap-->
 
-		<title>Repuestos Lucas. Alternativos marca Chevrolet</title>
 	</head>
 
 <body>
-	<div class="contenedor">
+	<div class="contenedor grid col-3 row-5">
 
-		<header class="header">
-			<div class="logo-RL">
+		<header class="header colspan-3 rowspan-1 grid col-9 row-1">
+			<div class="logo-RL colspan-1 rowspan-1">
 				<img src="./IMAGENES/logo-RL.png" alt="logo RL">
 			</div>	
-			<div class="texto-RL">
+			<div class="texto-RL colspan-3 rowspan-1 m768-colspan-8">
 				<p class="tituh2">REPUESTOS LUCAS</p>
 			    <p class="tituh5">Repuestos alternativos</p>
 			    <p class="tituh5">para el automotor marca Chevrolet</p>	
 			</div>
- 			<nav class="nav">
+ 			<nav class="nav colspan-5 rowspan-1 m768-colspan-9">
                  <input type="checkbox" id="check">
                  <label for="check" class="checkbtn">
                     <img src="" class="sichecked" alt="" id="img11">
@@ -42,79 +45,17 @@
 			</nav>
 		</header>
 
-<!--
-	<div class="contenedor">
-		<header class="header">
-			<div class="logo-RL">
-				<img class="img" src="./imagenes/logo-RL.png" alt="logo RL">
-			</div>	
-			<div class="texto-RL">
-				<h3>REPUESTOS LUCAS</h3>
-			    <h5>Repuestos alternativos</h5>
-			    <h5>para el automotor marca Chevrolet</h5>	
-			</div>
- 			<nav>
-				<a href="index-grid.html">INICIO</a>
-				<a href="4-Ofertas.html">OFERTAS</a>
-				<a href="5-Clientes.html">CLIENTES</a>
-				<a href="6-Listado.html">LISTADO</a>
-			 </nav>
-		</header>
---> 
-		<section class="novedades" align="center">
-			<div class="tit-novedad">
-				<h2><b><a href="#">Nuevas Incorporaciones de Autopartes</a></b></h2>					
-				<!--<h2><b><a href="4-Novedades.html" title="Ir a Novedades">Nuevas Incorporaciones de Autopartes</a></b></h2>-->
+		<section class="novedades colspan-2 rowspan-1 m576-colspan-3">
+			<div class="tit-novedad texto-centrado">
+				<h2><ins><b>Nuevas Incorporaciones de Autopartes</b></ins></h2>					
 			</div>
 			<div class="logo-novedad">
 				<img src="./imagenes/logo-novedad.png" alt="Novedades" width="600" />
 			</div>
 		</section>
 
-		<section class="clientes"><!-- Clientes -->
-			<div class="clientes__tit-cliente">
-				<h2><b><a href="5-Clientes.html" >Solicitud de Cliente</a></b></h2>
-			</div>
-			<div class="clientes__logo-cliente">
-				<img src="./imagenes/logo-cliente.png" alt="Estrechar manos"/>
-			</div>
-			<div class="clientes__texto-cliente">
-				<h4><b>Si Ud. desea ser Cliente de esta empresa y 	quiere que le estemos enviando nuestro Catálogo en forma digital, complete la solicitud y luego de aceptada, se lo estaremos enviando via email.</b></h4>
-			</div>
-		</section>
-
-		<section class="laempresa"><!-- La Empresa -->
-			<div class="laempresa__logo1-LE">
-				<img class="laempresa__logo1-LE__img" src="./imagenes/logo-RL-negro.png" alt="Logo Chevrolet" width="65" />
-			</div>
-			<div class="laempresa__tit-LE">
-				<h2><ins><b>La Empresa</b></ins></h2>
-			</div>
-			<div class="laempresa__logo2-LE">
-				<img src="./imagenes/logo-chevrolet.png" alt="Logo Chevrolet"/>
-			</div>
-			<div class="laempresa__texto-LE">
-				<h4><b>REPUESTOS LUCAS, minorista de autopartes línea CHEVROLET para todos los modelos presentes en el país, tiene sus comienzos como un emprendimiento familiar de su fundador Sr. Roque V. Zambelli hace más de una década.</b></h4>
-				<h4><b>Actualmente le dán continuidad a este emprendimiento su hijo y nietos.</b></h4>
-				<br>
-				<h4><b>Esta empresa cuenta actualmente con personal altamente capacitado, con muchos años de experiencia en el conocimiento de autopartes.</b></h4>
-				<br>
-				<h4><b>Tenemos representación de importantes marcas de reconocidos fabricantes que encontraron en Repuestos Lucas, una empresa seria y responsable en la cual confiar la comercialización de sus productos.</b></h4>
-				<br>
-				<h4><b>Nuestra extensa gama de repuestos está centralizada en el establecimiento ubicado en la Ciudad Autónoma de Buenos Aires, República Argentina. Desde ese punto atendemos a todo el territorio nacional.</b></h4> 
-				<br>
-				<h4><b>Tenemos como objetivo brindar un servicio de calidad a nuestros clientes.</b></h4>	
-			</div>
-			<div class="laempresa__video-LE" align="center">
-				<video width="400" controls> 
-				<source src="./imagenes/video-RL.mp4" type="video/mp4">
-				Su navegador no soporta este formato de video
-				</video>
-			</div>
-		</section>
-
-		<section class="ofertas">
-			<div class="ofertas__tit-ofertas" align="center">
+		<section class="ofertas colspan-1 rowspan-3 m576-colspan-3">
+			<div class="ofertas__tit-ofertas texto-centrado">
 				<h2><b><a href="4-Ofertas.html"></a>Ofertas</b></h2>
 			</div>	
 			<div class="ofertas__logo-OF">
@@ -142,14 +83,55 @@
 				<h4><b>Cable de Bujía Chevrolet Spark $2160</b></h4>
 			</div>
 		</section>
+
+		<section class="clientes colspan-2 rowspan-1 m576-colspan-3 grid col-4 row-1"><!-- Clientes -->
+			<div class="clientes__tit-cliente colspan-4 rowspan-1">
+				<h2><b><a href="5-Clientes.html" >Solicitud de Cliente</a></b></h2>
+			</div>
+			<div class="clientes__logo-cliente colspan-1">
+				<img src="./imagenes/logo-cliente.png" alt="Estrechar manos"/>
+			</div>
+			<div class="clientes__texto-cliente colspan-3">
+				<h4><b>Si Ud. desea ser Cliente de esta empresa y 	quiere que le estemos enviando nuestro Catálogo en forma digital, complete la solicitud y luego de aceptada, se lo estaremos enviando via email.</b></h4>
+			</div>
+		</section>
+
+		<section class="laempresa colspan-2 rowspan-1 m576-colspan-3 grid col-9 row-3"><!-- La Empresa -->
+			<div class="laempresa__logo1-LE colspan-2 rowspan-1">
+				<img class="laempresa__logo1-LE__img" src="./imagenes/logo-RL-negro.png" alt="Logo Chevrolet" width="65" />
+			</div>
+			<div class="laempresa__tit-LE colspan-4 rowspan-1">
+				<h2><ins><b>La Empresa</b></ins></h2>
+			</div>
+			<div class="laempresa__logo2-LE colspan-3 rowspan-1">
+				<img src="./imagenes/logo-chevrolet.png" alt="Logo Chevrolet"/>
+			</div>
+			<div class="laempresa__texto-LE colspan-9 rowspan-1">
+				<h4><b>REPUESTOS LUCAS, minorista de autopartes línea CHEVROLET para todos los modelos presentes en el país, tiene sus comienzos como un emprendimiento familiar de su fundador Sr. Roque V. Zambelli hace más de una década.</b></h4>
+				<h4><b>Actualmente le dán continuidad a este emprendimiento su hijo y nietos.</b></h4>
+				<br>
+				<h4><b>Esta empresa cuenta actualmente con personal altamente capacitado, con muchos años de experiencia en el conocimiento de autopartes.</b></h4>
+				<br>
+				<h4><b>Tenemos representación de importantes marcas de reconocidos fabricantes que encontraron en Repuestos Lucas, una empresa seria y responsable en la cual confiar la comercialización de sus productos.</b></h4>
+				<br>
+				<h4><b>Nuestra extensa gama de repuestos está centralizada en el establecimiento ubicado en la Ciudad Autónoma de Buenos Aires, República Argentina. Desde ese punto atendemos a todo el territorio nacional.</b></h4> 
+				<br>
+				<h4><b>Tenemos como objetivo brindar un servicio de calidad a nuestros clientes.</b></h4>	
+			</div>
+			<div class="laempresa__video-LE colspan-9 rowspan-1">
+				<video width="400" controls> 
+				<source src="./imagenes/video-RL.mp4" type="video/mp4">
+				Su navegador no soporta este formato de video
+				</video>
+			</div>
+		</section>
  
-		<footer class="footer">
+		<footer class="footer colspan-3 rowspan-1">
 				<h4><b>Repuestos Lucas</b></h4>
-				<h5>4666-1908/15  ///
-				Ciudad Autónoma de Buenos Aires</h5>
+				<h5>4666-1908/15  ///  Ciudad Autónoma de Buenos Aires</h5>
 				<h5><ins><a href="mailto:repuestoslucas2020@yahoo.com.ar">repuestoslucas2020@yahoo.com.ar</a></ins></h5>
-				<h5 align="center" style="color: black"><b>Copyright LRZ &copy; 2021</b></h5>
-		</footer>
+				<h5 class="copyright texto-centrado"><b>Copyright LRZ &copy; 2021</b></h5>
+			</footer>
 
 	</div>
 	<script src="./js/todos-nav-ico-intercambio.js"></script>

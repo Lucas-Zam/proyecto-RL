@@ -5,6 +5,7 @@
 }
 
 @import "variables";
+@import "grid";
 
 body {
 	background-color: $fondo-principal;
@@ -17,12 +18,10 @@ body {
 	margin: 0 auto;
 	height: auto;	
 
-	display: grid;
 	grid-gap: 5px;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(5, auto);
+	// display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(5, auto);
 	.tit2, #login-form, .footer {
-		box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		box-shadow: $sombra-caja;
 		padding: 1.25rem;
 		border-radius: 4px;
 	}
@@ -31,42 +30,31 @@ body {
 @import "cabecera";
 
 
-.tit1 {
-	grid-column: 1 / -1;
-	grid-row: 2 / 3;
+.tit1 {// grid-column: 1 / -1; grid-row: 2 / 3;
 	text-align: center;
 }
-.tit2 {
-	grid-column: 1 / -1;
-	grid-row: 3 / 4;
+.tit2 {// grid-column: 1 / -1; grid-row: 3 / 4;
 	border-radius: 4px;
 	text-align: center;
 	background-color: darksalmon;
 }
-#login-form {
-	grid-column: 1 / -1;
-	grid-row: 4 / 5;
+#login-form {// grid-column: 1 / -1; grid-row: 4 / 5;
 	background-image: url("../imagenes/logo-tapiz-shattered1.png");
 	padding: 15px 20px;
 	border-radius: 4px;
-	display: grid;
 	grid-column-gap: 2rem;
-	grid-template-columns: 1fr 1fr;
+	// display: grid; grid-template-columns: 1fr 1fr;
 	grid-row-gap: 0.6rem;
 }
-.izq {
-	grid-column: 1 / 2;
-	display: grid;
+.izq {// grid-column: 1 / 2;
+	// display: grid; grid-template-columns: 1fr;
 	grid-gap: 3px;
-	grid-template-columns: 1fr;
 	grid-row-gap: 1.5rem;
 	align-content: flex-start;
 }
-.der {
-	grid-column: 2 / 3;
-	display: grid;
+.der {// grid-column: 2 / 3;
+	// display: grid; grid-template-columns: 1fr 1fr;
 	grid-gap: 3px;
-	grid-template-columns: 1fr 1fr;
 	grid-row-gap: 1.5rem;
 	grid-column-gap: 4rem;
 	align-content: flex-start;
@@ -91,14 +79,12 @@ body {
 #Loca {
 	@extend #NomAp;
 }
-#PosProv {
+#PosProv {// grid-column: 1 / 3;
 	@extend #NomAp;
 	padding: 0.525rem 1.5rem;
-	grid-column: 1 / 3;
 }
-#Postal {
+#Postal {// grid-column: 1 / 3;
 	@extend #NomAp;
-	grid-column: 1 / 3;
 }
 #Email {
 	@extend #Postal;
@@ -106,11 +92,8 @@ body {
 #Tfono {
 	@extend #Postal;
 }
-#infoadic {
-	grid-column: 1 / 3;
-}
 #Prov {
-	font-family: verdana, roboto, sans-serif;
+	font-family: "Roboto", verdana, sans-serif;
 	align-content: right;
 	border: none;
 	background: #eee;
@@ -118,7 +101,7 @@ body {
 }
 input {
 	&::placeholder {
-		font-family: verdana, roboto, sans-serif;
+		font-family: "Roboto", verdana, sans-serif;
 	}
 }
 #PosReset {
@@ -171,17 +154,11 @@ input {
 		font-size: 14px;
 		width: -webkit-fill-available;
 	}
-	#login-form {
-		display: grid;
-		grid-template-columns: 1fr;
+	.contenedor #login-form {// display: grid; grid-template-columns: 1fr;
 		grid-row-gap: 0.6rem;
 		padding: 5px 160px;
 	}
-	.izq {
-		grid-column: 1 / -1;
-	}
 	.der {
-		grid-column: 1 / -1;
 		padding-top: 1rem;
 	}
 }
@@ -200,9 +177,8 @@ input {
 			}
 		}
 	}
-	#login-form {
+	.contenedor #login-form {
 		padding: 5px 60px;
-		padding: 5px 20px;
 	}
 	h2 {
 		font-size: 1.3rem;
@@ -225,8 +201,7 @@ input {
 			border-radius: 0;
 			.footer {
 				border-radius: 0;
-				grid-column: 1 / 4;
-				grid-row: 6 / 7;
+				// grid-column: 1 / 4; grid-row: 6 / 7;
 			}	
 		}
 	}

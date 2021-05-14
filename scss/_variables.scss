@@ -7,8 +7,10 @@ $fondo-novedad-barra-sup:rgba(0, 0, 0, 0.253);
 $fondo-novedad: #fff;
 $fondo-ofertas: #e67e22;
 $fondo-footer: linear-gradient(140deg, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 45%, rgba(95,158, 160,1) 88%, rgba(95,158, 160,1) 100%);
+$sombra-caja: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 $fuente-primaria: 'Roboto', 'Montserrat-Light', verdana, sans-serif;
 $fuente-size: 16px;
+
 
 h1 {font-family: roboto, sans-serif;}
 h2 {font-family: roboto, sans-serif;}
@@ -29,3 +31,6 @@ img {
 	min-width: 50%;/* tiene un mínimo, antes que se pixele la imagen*/
 	height: auto;/* la altura se coloca para que no deforme la imagen*/
 }
+.texto-centrado {text-align: center;}
+.texto-izquierda {text-align: left;}
+.texto-derecha {text-align: right;}

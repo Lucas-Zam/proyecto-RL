@@ -1,8 +1,0 @@
-Se realizaron los estilos en scss, que se encuentran en la carpeta scss.
-Además, en el archivo estilosRL-grid.scss se encuentran hechos con BEM,
-los cuatro bloques solicitados. 
-Estos están con un título comentariado cada uno.
-Todo fue compilado correctamente y creados los css correspondientes que
-se encuentran en la carpeta estilos.
-
-

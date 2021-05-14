@@ -1,9 +1,11 @@
-﻿.footer {
-	grid-column: 1 / -1;
+﻿.footer {// grid-column: 1 / -1;
 	background: $fondo-footer;
 	color: white;
 	text-align: left;
 	padding-left: 10px;
+}
+.copyright {
+	color: black;
 }
 
 @media screen and (max-width: 768px) {

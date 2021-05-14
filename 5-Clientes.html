@@ -5,28 +5,30 @@
 	<head> <!-- Cabecera, recursos y datos importantes-->
 		<meta charset="utf-8" />
 		<meta name="author" content="Lucas Zambelli">
-		<meta name="description" content="Prototipo HTML">
+		<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet. Formulario de Ingreso de Cliente">
+		<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet, cliente">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rep Lucas. Form. clientes</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="./estilos/estilosRL-clientes.css"><!-- mi carpeta de estilos se pone última para que pise cualquier estilo general de bootstrap-->
-		<title>Rep Lucas - Seccion Clientes</title>
 	</head>
 
 <body>
 
-	<div class="contenedor">	
-		<header class="header">
-			<div class="logo-RL">
+	<div class="contenedor grid col-1 row-5">	
+
+		<header class="header colspan-1 rowspan-1 grid col-9 row-1">
+			<div class="logo-RL colspan-1 rowspan-1">
 				<img src="./IMAGENES/logo-RL.png" alt="logo RL">
 			</div>	
-			<div class="texto-RL">
+			<div class="texto-RL colspan-3 rowspan-1 m768-colspan-8">
 				<p class="tituh2">REPUESTOS LUCAS</p>
 			    <p class="tituh5">Repuestos alternativos</p>
 			    <p class="tituh5">para el automotor marca Chevrolet</p>	
 			</div>
- 			<nav class="nav">
+ 			<nav class="nav colspan-5 rowspan-1 m768-colspan-9">
                  <input type="checkbox" id="check">
                  <label for="check" class="checkbtn">
                     <img src="" class="sichecked" alt="" id="img11">
@@ -41,28 +43,25 @@
 			</nav>
 		</header>
 
-		<main class="tit1" align="center">
+		<main class="tit1 colspan-1 rowspan-1">
 			<h2><b>Formulario de ingreso de cliente</b></h2>
 		</main>
-		<main class="tit2">
+		<main class="tit2 colspan-1 rowspan-1">
 			<h5><b>Si Ud. desea ser Cliente de esta empresa y quiere que le estemos enviando nuestro Catálogo en forma digital, complete la solicitud y luego de aceptada, se lo estaremos enviando via email.</b></h5>
 		</main>
 	
-		<form id="login-form">
-			<div class="izq">
-				<input id="NomAp" type="text" name="NomAp" placeholder="Nombre y Apellido" maxlength="40" size="40" autofocus required="">
-							
+		<form id="login-form" class="colspan-1 rowspan-1 grid col-2 m992-col-1">
+			
+			<div class="izq colspan-1 grid col-1">
+				<input id="NomAp" type="text" name="NomAp" placeholder="Nombre y Apellido" maxlength="40" size="40" autofocus required="">						
 				<input id="NomEmp" type="text" name="NomEmp" placeholder="Razón Social" maxlength="40" size="40" required="">
-				
 				<input id="Cuit" type="number" name="Cuit" placeholder="Cuit: 00000000000" required="">
-
 				<input id="Dire" type="text" name="Dire" placeholder="Dirección" maxlength="50" size="40" required="">
-				
 				<input id="Loca" type="text" name="Loca" placeholder="Localidad" maxlength="50" size="40" required="">
 			</div>
 
-			<div class="der">
-				<div id="PosProv">
+			<div class="der colspan-1 grid col-2">
+				<div id="PosProv" class="colspan-2">
 					<label for="Prov">Provincia</label>
 					<select id="Prov" name="Prov">
 						<option value="1">Buenos Aires</option>
@@ -90,24 +89,19 @@
 						<option value="21">Tucumán</option>
 					</select>
 				</div>
-
-				<input id="Postal" type="text" name="Postal" placeholder="Cód. Postal" maxlength="7" required="">
-
-				<input id="Email" type="email" name="Email" placeholder="Email" required="">
-
-				<input id="Tfono" type="tel" name="Tfono" placeholder="Teléfono" required="">		
-
-				<button  id="PosReset" type="reset">Restablecer</button>
-				<button  id="PosSubmit" type="submit">Enviar</button>
+				<input id="Postal" class="colspan-2" type="text" name="Postal" placeholder="Cód. Postal" maxlength="7" required="">
+				<input id="Email" class="colspan-2" type="email" name="Email" placeholder="Email" required="">
+				<input id="Tfono" class="colspan-2" type="tel" name="Tfono" placeholder="Teléfono" required="">		
+				<button  id="PosReset" class="colspan-1" type="reset">Restablecer</button>
+				<button  id="PosSubmit" class="colspan-1" type="submit">Enviar</button>
 			</div>
 		</form>
 
-		<footer class="footer">
+		<footer class="footer colspan-1 rowspan-1">
 			<h4><b>Repuestos Lucas</b></h4>
-			<h5>4666-1908/15  ///
-			Ciudad Autónoma de Buenos Aires</h5>
+			<h5>4666-1908/15  ///  Ciudad Autónoma de Buenos Aires</h5>
 			<h5><ins><a href="mailto:repuestoslucas2020@yahoo.com.ar">repuestoslucas2020@yahoo.com.ar</a></ins></h5>
-			<h5 align="center" style="color: black"><b>Copyright LRZ &copy; 2021</b></h5>
+			<h5 class="copyright texto-centrado"><b>Copyright LRZ &copy; 2021</b></h5>
 		</footer>
 
 	</div>

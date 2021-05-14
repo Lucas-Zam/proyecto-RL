@@ -5,27 +5,29 @@
 	<head> <!-- Cabecera, recursos y datos importantes-->
 		<meta charset="utf-8" />
 		<meta name="author" content="Lucas Zambelli">
-		<meta name="description" content="Prototipo HTML">
+		<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet. Listado de Productos">
+		<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet, listado, productos">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Rep Lucas. Listado Prods.</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="./estilos/estilosRL-listado.css"><!-- mi carpeta de estilos se pone última para que pise cualquier estilo general de bootstrap-->
-		<title>Rep Lucas - Seccion Clientes</title>
 	</head>
 
 <body>	
-	<div class="contenedor">
-		<header class="header">
-			<div class="logo-RL">
+	<div class="contenedor grid col-1 row-4">
+
+		<header class="header colspan-1 rowspan-1 grid col-9 row-1">
+			<div class="logo-RL colspan-1 rowspan-1">
 				<img src="./IMAGENES/logo-RL.png" alt="logo RL">
 			</div>	
-			<div class="texto-RL">
+			<div class="texto-RL colspan-3 rowspan-1 m768-colspan-8">
 				<p class="tituh2">REPUESTOS LUCAS</p>
 			    <p class="tituh5">Repuestos alternativos</p>
 			    <p class="tituh5">para el automotor marca Chevrolet</p>	
 			</div>
- 			<nav class="nav">
+ 			<nav class="nav colspan-5 rowspan-1 m768-colspan-9">
                  <input type="checkbox" id="check">
                  <label for="check" class="checkbtn">
                     <img src="" class="sichecked" alt="" id="img11">
@@ -40,11 +42,11 @@
 			</nav>
 		</header>
 
-		<div class="tituloProd" align="center">
+		<div class="tituloProd colspan-1 rowspan-1">
 			<h2><b>Listado de Productos</b></h2>
 		</div>
 
-		<table><!--Tabla de listado de productos-->
+		<table class="colspan-1 rowspan-1"><!--Tabla de listado de productos-->
 			<thead><!--Cabecera o Títulos-->
 				<tr><!--fila 1-->
 					<th>Código</th>
@@ -100,7 +102,7 @@
 					<td>D1075</td>
 					<td>CABLE DE DESTRABE CAPOT VECTRA/ASTRA 1650MM</td>
 					<td>498</td>
-					<td>CABLEDESTR</td>
+					<td>CABLEDES</td>
 					<td>FREMEC</td>						
 					<td></td>				
 				</tr>						
@@ -116,12 +118,12 @@
 					<td>HE030</td>
 					<td>BOMBA DE NAFTA ELCT CHEVROLET MONZA 2.0 SPI REEMPLAZO BOSCH</td>
 					<td>5739</td>
-					<td>BOMBANAFTA</td>
+					<td>BOMBANAF</td>
 					<td>HELLUX</td>								
 					<td></td>				
 				</tr>						
 				<tr><!--fila 9-->
-					<td>HE11421</td>
+					<td>HE1142</td>
 					<td>BOBINA AUDI BORA GOLF PASSAT NEW BEET VOYAGE FOX SURAN</td>
 					<td>4845</td>
 					<td>BOBINA</td>
@@ -129,7 +131,7 @@
 					<td>03290510</td>				
 				</tr>						
 				<tr><!--fila 10-->
-					<td>HE2401022</td>
+					<td>HE2401</td>
 					<td>SENSOR DE VELOCIDAD CHEVROLET BLAZER S10 OEM 12</td>
 					<td>3215</td>
 					<td>SENSORVEL</td>
@@ -140,12 +142,11 @@
 			</tbody>
 		</table>
 
-		<footer class="footer">
+		<footer class="footer colspan-1 rowspan-1">
 			<h4><b>Repuestos Lucas</b></h4>
-			<h5>4666-1908/15  ///
-			Ciudad Autónoma de Buenos Aires</h5>
+			<h5>4666-1908/15  ///  Ciudad Autónoma de Buenos Aires</h5>
 			<h5><ins><a href="mailto:repuestoslucas2020@yahoo.com.ar">repuestoslucas2020@yahoo.com.ar</a></ins></h5>
-			<h5 align="center" style="color: black"><b>Copyright LRZ &copy; 2021</b></h5>
+			<h5 class="copyright texto-centrado"><b>Copyright LRZ &copy; 2021</b></h5>
 		</footer>
 
 	</div>	

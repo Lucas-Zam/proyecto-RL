@@ -1,0 +1,28 @@
+1) Se creo el archivo _grid.scss, para estandarizar y utilizar las clases para las grid.
+Por ende, se modificaron todos los html para utilizar esas clases.
+Todos los archivos scss están en la carpeta scss, y sus compilaciones están en la
+carpeta estilos, y NO en la de css.
+
+2) La información agregada al archivo index-grid.html es la siguiente:
+<meta name="author" content="Lucas Zambelli">
+<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet">
+<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet">
+<title>Rep Lucas. Chevrolet alternativos</title>
+
+3) La información agregada al archivo ofertas.html es la siguiente:
+<meta name="author" content="Lucas Zambelli">
+<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet. Ofertas de Productos">
+<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet, ofertas">
+<title>Rep Lucas. Ofertas</title>
+
+4) La información agregada al archivo clientes.html es la siguiente:
+<meta name="author" content="Lucas Zambelli">
+<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet. Formulario de Ingreso de Cliente">
+<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet, cliente">
+<title>Rep Lucas. Form. clientes</title>
+
+5) La información agregada al archivo listado.html es la siguiente:
+<meta name="author" content="Lucas Zambelli">
+<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet. Listado de Productos">
+<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet, listado, productos">
+<title>Rep Lucas. Listado Prods.</title>
