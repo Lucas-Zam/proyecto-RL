@@ -803,9 +803,8 @@ td {
   :root {
     font-size: 12px; }
   .contenedor {
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
-    margin: 0;
     gap: 0; } }
 
 @media screen and (max-width: 576px) {
