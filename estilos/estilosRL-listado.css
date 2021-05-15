@@ -820,6 +820,6 @@ td {
       border-radius: 0; } }
 
 @media screen and (max-width: 341px) {
-  /*se hace si tiene 341px o menos*/
+  /*se hace si tiene 341px o menos */
   :root {
     font-size: 8px; } }
