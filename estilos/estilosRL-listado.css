@@ -614,18 +614,17 @@ body {
   margin: 0 auto;
   height: auto;
   gap: 5px; }
-  .contenedor table, .contenedor .footer {
+  .contenedor table {
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    padding: 1.25rem;
     border-radius: 4px; }
 
 .header {
-  font-size: 1rem;
+  font-size: 16px;
   padding: 0.3125rem 1.25rem 0.3125rem 0.625rem;
   border-radius: 4px;
   background: #006969;
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  grid-gap: 0.625rem;
+  gap: 0.625rem;
   justify-content: center;
   align-items: center; }
   .header .logo-RL img {
@@ -782,44 +781,49 @@ td {
   background: linear-gradient(140deg, #202020 0%, #202020 45%, cadetblue 88%, cadetblue 100%);
   color: white;
   text-align: left;
-  padding-left: 10px; }
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1.25rem;
+  border-radius: 4px; }
 
 .copyright {
   color: black; }
 
-@media screen and (max-width: 768px) {
-  /*se hace si tiene 768px o menos*/
-  .footer {
-    padding: 0.3125rem; } }
-
 @media screen and (max-width: 992px) {
   /*se hace si tiene 992px o menos*/
   :root {
-    font-size: 14px;
-    width: -webkit-fill-available; } }
+    width: -webkit-fill-available; }
+  .tituloProd, table {
+    font-size: 15px; }
+  table {
+    display: block;
+    overflow-x: auto; } }
 
 @media screen and (max-width: 768px) {
   /*se hace si tiene 768px o menos*/
-  :root {
-    font-size: 12px; }
   .contenedor {
     width: 90%;
     max-width: 1000px;
-    gap: 0; } }
+    gap: 0; }
+  .tituloProd, table {
+    font-size: 14px; }
+  table {
+    display: block;
+    overflow-x: auto;
+    max-width: 768px; } }
 
 @media screen and (max-width: 576px) {
   /*se hace si tiene 576px o menos*/
-  :root {
-    font-size: 10px; }
   .contenedor {
     width: 100%;
     max-width: 1000px;
     margin: 0;
     gap: 0; }
+    .contenedor .tituloProd, .contenedor table {
+      font-size: 13px; }
     .contenedor .footer {
       border-radius: 0; } }
 
 @media screen and (max-width: 341px) {
-  /*se hace si tiene 341px o menos */
-  :root {
-    font-size: 8px; } }
+  /*se hace si tiene 341px o menos*/
+  .tituloProd, table {
+    font-size: 10px; } }

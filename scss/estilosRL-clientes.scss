@@ -20,7 +20,7 @@ body {
 
 	grid-gap: 5px;
 	// display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(5, auto);
-	.tit2, #login-form, .footer {
+	.tit2, #login-form {
 		box-shadow: $sombra-caja;
 		padding: 1.25rem;
 		border-radius: 4px;
@@ -150,9 +150,11 @@ input {
 @import "piedepagina";
 
 @media screen and (max-width: 992px) {
-	:root {
-		font-size: 14px;
+	:root {// font-size: 14px;
 		width: -webkit-fill-available;
+	}
+	.tit1, .tit2, #login-form {
+		font-size: 14px;
 	}
 	.contenedor #login-form {// display: grid; grid-template-columns: 1fr;
 		grid-row-gap: 0.6rem;
@@ -163,9 +165,10 @@ input {
 	}
 }
 @media screen and (max-width: 768px) {
-	:root{
+	// :root{font-size: 14px;}	
+	.tit1, .tit2, #login-form {
 		font-size: 14px;
-	}	
+	}
 	.contenedor{
 		grid-gap: 5px;
 	}
@@ -190,15 +193,16 @@ input {
 
 @media screen and (max-width: 576px) {
 	/*se hace si tiene 576px o menos*/
-		:root {
-			font-size: 12px;
-		}
+		// :root {font-size: 12px;}
 		.contenedor {
 			width: 100%;
 			max-width: 1000px;
 			margin: 0;
 			grid-gap: 0;
 			border-radius: 0;
+			.tit1, .tit2, #login-form {
+				font-size: 12px;
+			}
 			.footer {
 				border-radius: 0;
 				// grid-column: 1 / 4; grid-row: 6 / 7;
@@ -208,8 +212,9 @@ input {
 	
 	@media screen and (max-width: 341px) {
 	/*se hace si tiene 341px o menos*/
-		:root{
+		// :root{font-size: 10px;}	
+		.tit1, .tit2, #login-form {
 			font-size: 10px;
-		}	
+		}
 	}
 	

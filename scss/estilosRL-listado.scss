@@ -19,9 +19,8 @@ body {
 	height: auto;	
 	// display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(4, auto);
 	gap: 5px;
-	table, .footer {
+	table {
 		box-shadow: $sombra-caja;
-		padding: 1.25rem;
 		border-radius: 4px;
 	}
 }
@@ -61,43 +60,58 @@ td {
 
 @media screen and (max-width: 992px) {
 	/*se hace si tiene 992px o menos*/
-	:root {
-		font-size: 14px;
+	:root {// font-size: 15px;
 		width: -webkit-fill-available;
+	}
+	.tituloProd, table {
+		font-size: 15px;
+	}
+	table {
+		display: block;
+		overflow-x: auto;		
 	}
 }
 @media screen and (max-width: 768px) {
 /*se hace si tiene 768px o menos*/
-	:root{
-		font-size: 12px;
-	}	
+	// :root{font-size: 14px;}	
 	.contenedor{
 		width: 90%;
 		max-width: 1000px;
 		// margin: 0;
 		gap: 0;
 	}
+	.tituloProd, table {
+		font-size: 14px;
+	}
+	table {
+		display: block;
+		overflow-x: auto;		
+		// width: 768px;
+		max-width: 768px;
+	}
 }
 
 @media screen and (max-width: 576px) {
 /*se hace si tiene 576px o menos*/
-	:root {
-		font-size: 10px;
-	}
+	// :root {font-size: 13px;}
 	.contenedor {
 		width: 100%;
 		max-width: 1000px;
 		margin: 0;
 		gap: 0;
+		.tituloProd, table {
+			font-size: 13px;
+		}
 		.footer {// grid-column: 1 / 4; grid-row: 6 / 7;
 			border-radius: 0;
 		}	
-	}
+	}	
 }
 
 @media screen and (max-width: 341px) {
 /*se hace si tiene 341px o menos*/
-	:root{
-		font-size: 8px;
-	}	
+	// :root{font-size: 10px;}	
+	.tituloProd, table {
+		font-size: 10px;
+	}
 }

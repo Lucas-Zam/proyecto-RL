@@ -19,11 +19,6 @@ body {
 	height: auto;
 	grid-gap: 5px;
 	// display: grid; grid-template-columns: 1fr; grid-template-rows: repeat(4, auto);
-	.footer {
-		box-shadow: $sombra-caja;
-		padding: 1.25rem;
-		border-radius: 4px;
-	}
 }
 
 @import "cabecera";
@@ -142,22 +137,22 @@ article {
 }
 @media screen and (max-width: 992px) {
 /*se hace si tiene 992px o menos*/
-	:root {
-		font-size: 13px;
+	:root {// font-size: 13px;
 		width: -webkit-fill-available;
-	}
-	body {
-		background-color: rgb(117,172,152);
 	}
 	h6 {
 		font-size: 0.83rem;
 	}
+	.titOfertas, .contenido {
+		font-size: 13px;
+	}
 }
 @media screen and (max-width: 768px) {
 /*se hace si tiene 768px o menos*/
-	:root{
+	// :root{font-size: 14px;}	
+	.titOfertas, .contenido {
 		font-size: 14px;
-	}	
+	}
 	.contenido{
 		gap: 5px;
 		div p{
@@ -168,14 +163,15 @@ article {
 }
 @media screen and (max-width: 576px) {
 /*se hace si tiene 576px o menos*/
-	:root {
-		font-size: 12px;
-	}
+	// :root {font-size: 12px;}
 	.contenedor {
 		width: 100%;
 		max-width: 1000px;
 		margin: 0;
 		gap: 0;
+	}
+	.titOfertas, .contenido {
+		font-size: 12px;
 	}
 	.contenido{
 	// display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto;
@@ -183,7 +179,8 @@ article {
 	}
 }
 @media screen and (max-width: 341px) {
-	:root{
+	// :root{font-size: 10px;}	
+	.titOfertas, .contenido {
 		font-size: 10px;
-	}	
+	}
 }

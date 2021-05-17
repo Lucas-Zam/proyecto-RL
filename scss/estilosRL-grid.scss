@@ -18,7 +18,7 @@ body {
 	margin: 0 auto;
 	height: auto;	
 
-	.novedades, .clientes, .laempresa, .ofertas, .footer {
+	.novedades, .clientes, .laempresa, .ofertas {
 		box-shadow: $sombra-caja;
 		padding: 1.25rem;
 		border-radius: 4px;
@@ -143,20 +143,20 @@ body {
 
 @media screen and (max-width: 992px) {
 /*se hace si tiene 992px o menos*/
-	:root {
-		font-size: 14px;
+	:root {// font-size: 14px;
 		width: -webkit-fill-available;
 	}
 	.contenedor{
 		gap: 20px;
 	}
+	.novedades, .clientes, .laempresa, .ofertas {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 768px) {
 /*se hace si tiene 768px o menos*/
-	:root{
-		font-size: 14px;
-	}	
+	// :root{font-size: 14px;}	
 	.contenedor{
 		gap: 5px;
 	}
@@ -164,19 +164,17 @@ body {
 
 @media screen and (max-width: 576px) {
 /*se hace si tiene 576px o menos*/
-	:root {
-		font-size: 12px;
-	}
+	// :root {font-size: 12px;}
 	.contenedor {
 		width: 100%;
 		max-width: 1000px;
 		margin: 0;
 		gap: 0;
-		.novedades, .clientes, .laempresa {// grid-column: 1 / 4;
+		.novedades, .clientes, .laempresa, .ofertas {// grid-column: 1 / 4;
+			font-size: 12px;
 			border-radius: 0;
 		}
 		.ofertas {// grid-column: 1 / 4;
-			border-radius: 0;
 			grid-row: 5 / 6;
 			display: grid;
 			gap: 5px;
@@ -197,7 +195,9 @@ body {
 
 @media screen and (max-width: 341px) {
 /*se hace si tiene 341px o menos*/
-	:root{
+	// :root{font-size: 10px;}	
+	.novedades, .clientes, .laempresa, .ofertas {// grid-column: 1 / 4;
 		font-size: 10px;
-	}	
+	}
+
 }
