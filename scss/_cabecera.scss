@@ -26,7 +26,8 @@
 			float: right;
 			li {
 				display: inline-block;
-				margin: auto 0.3125rem;
+				margin: auto 0;
+				// margin: auto 0.3125rem;
 				a {
 					background: $fondo-naveg;
 					color:#fff;
@@ -79,11 +80,11 @@
 
 @media screen and (max-width: 992px) {
 /*se hace si tiene 992px o menos*/
-	:root {
-		font-size: 14px;
+	:root {// font-size: 14px;
 		width: -webkit-fill-available;
 	}
 	.header{
+		font-size: 14px;
 		padding: 0.3125rem 0.625rem;
 		grid-column-gap: 4px;
 		nav{
@@ -94,13 +95,13 @@
 
 @media screen and (max-width: 768px) {
 /*se hace si tiene 768px o menos*/
-	:root{
-		font-size: 14px;
-	}	
+	// :root{font-size: 14px;}	
 	.header{
+		font-size: 14px;
 		padding: 0.625rem;
 		.logo-RL img{
-			min-width: 3.125rem;
+			min-width: 4.75rem;// 50px
+			// min-width: 3.125rem;// 50px
 		}
 		// .texto-RL{}// grid-column: 2 / 4;
 		nav {// grid-column: 1 / -1;
@@ -118,14 +119,13 @@
 
 @media screen and (max-width: 576px) {
 /*se hace si tiene 576px o menos*/
-	:root {
-		font-size: 12px;
-	}
+	// :root {font-size: 12px;}
 	.header {
+		font-size: 12px;
 		border-radius: 0;
-		grid-template-columns: 1fr 6.5fr 2.5fr;
+		// grid-template-columns: 1fr 6.5fr 2.5fr;
 		.logo-RL img{
-			min-width: 3.125rem;
+			min-width: 4.125rem;
 		}
 		// .texto-RL{}// grid-column: 2 / 3;
 		nav {// grid-column: 3 / 4;
@@ -142,7 +142,7 @@
 	.header nav ul {
 		position: fixed;
 		width: 40%;
-		height: 35%;
+		height: 52%;
 		background-color: rgba(0, 0, 0, 0.342);
 		border-bottom-left-radius: 3.125rem;
 		border-top-left-radius: 3.125rem;
@@ -161,10 +161,11 @@
 
 @media screen and (max-width: 341px) {
 /*se hace si tiene 341px o menos*/
-	:root{
+	// :root{font-size: 10px;}	
+	.header{
 		font-size: 10px;
-	}	
+	}
 	.header nav ul {
-		height: 35vh;
+		height: 55vh;
 	}
 }
