@@ -775,7 +775,7 @@ td {
   padding: 8px; }
 
 .footer {
-  background: linear-gradient(140deg, #202020 0%, #202020 45%, cadetblue 88%, cadetblue 100%);
+  background: linear-gradient(140deg, rgba(32, 32, 32, 0.705) 0%, #556c6d 50%, #202020 100%);
   color: white;
   text-align: left;
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
