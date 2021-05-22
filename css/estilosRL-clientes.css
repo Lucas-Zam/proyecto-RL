@@ -759,7 +759,7 @@ body {
   background-color: darksalmon; }
 
 #login-form {
-  background-image: url("../imagenes/logo-tapiz-shattered1.png");
+  background-color: #a8bfc0;
   padding: 15px 20px;
   border-radius: 4px;
   grid-column-gap: 2rem;

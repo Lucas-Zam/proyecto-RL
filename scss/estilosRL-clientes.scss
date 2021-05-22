@@ -39,7 +39,8 @@ body {
 	background-color: darksalmon;
 }
 #login-form {// grid-column: 1 / -1; grid-row: 4 / 5;
-	background-image: url("../imagenes/logo-tapiz-shattered1.png");
+	// background-image: url("../imagenes/logo-tapiz-shattered1.png");
+	background-color: $fondo-formulario;
 	padding: 15px 20px;
 	border-radius: 4px;
 	grid-column-gap: 2rem;
