@@ -771,7 +771,7 @@ body {
   align-content: flex-start; }
 
 .der {
-  grid-column-gap: 3rem; }
+  grid-column-gap: 1.5rem; }
 
 #NomAp, #NomEmp, #Cuit, #Dire, #Loca, #PosProv, #Postal, #Email, #Tfono {
   border-radius: 50px;

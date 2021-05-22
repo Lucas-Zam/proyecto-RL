@@ -56,7 +56,7 @@ body {
 .der {// grid-column: 2 / 3;
 	// display: grid; grid-template-columns: 1fr 1fr;
 	@extend .izq;
-	grid-column-gap: 3rem;
+	grid-column-gap: 1.5rem;
 }
 
 #NomAp {
