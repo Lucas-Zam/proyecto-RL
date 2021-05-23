@@ -1,2 +1,5 @@
 # carpeta para no ser tenida en cuenta por git
-node_modules/
+/node_modules/
+package.json
+package-lock.json
+package-original.json
