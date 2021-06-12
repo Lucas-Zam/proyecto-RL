@@ -654,10 +654,10 @@ body {
   max-width: 1000px;
   font-size: 1rem;
   margin: 0 auto;
-  height: auto;
-  gap: 5px; }
-  .contenedor table {
+  height: auto; }
+  .contenedor .novedades, .contenedor .clientes, .contenedor .laempresa, .contenedor .ofertas {
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1.25rem;
     border-radius: 4px; }
 
 .header {
@@ -791,30 +791,92 @@ body {
   .header nav ul {
     height: 55vh; } }
 
-.tituloProd {
-  text-align: center; }
+.novedades {
+  background-color: #fff; }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%; }
+/*________________________________BLOQUE 2 CON BEM________________________________*/
+.ofertas {
+  background: #e67e22;
+  padding: 20px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: flex-start;
+  align-content: flex-start; }
+  .ofertas__tit-ofertas {
+    margin-bottom: 15px;
+    position: relative;
+    animation-name: animo-tit-ofertas;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite; }
 
-th {
-  background-color: #808080;
-  border: 1px solid #000000;
-  text-align: center;
-  padding: 8px; }
+@keyframes animo-tit-ofertas {
+  0% {
+    left: 0px;
+    top: 0px; }
+  50% {
+    left: 1px;
+    top: 1px;
+    background-color: orangered;
+    color: #F1CFE2;
+    border-radius: 6px; }
+  100% {
+    left: 0px;
+    top: 0px; } }
+  .ofertas__logo-OF__img {
+    border: 2px dotted red; }
+  .ofertas__des-OF {
+    margin-bottom: 10px;
+    border-bottom: 1px solid black; }
 
-tr:nth-child(even) {
-  background-color: #dddddd; }
+/*________________________________BLOQUE 3 CON BEM________________________________*/
+.clientes {
+  background-image: url("../imagenes/logo-tapiz-madera.png");
+  grid-gap: 5px;
+  grid-column-gap: 10px;
+  justify-content: center;
+  align-items: center; }
+  .clientes__tit-cliente {
+    color: black; }
 
-tr:nth-child(odd) {
-  background-color: #f1ea7e; }
+/*________________________________BLOQUE 4 CON BEM________________________________*/
+.laempresa {
+  background-image: url("../imagenes/logo-tapiz-climpek.png");
+  gap: 5px;
+  grid-column-gap: 10px;
+  align-items: center; }
+  .laempresa__logo1-LE {
+    padding-left: 10px; }
+    .laempresa__logo1-LE__img {
+      width: 50%;
+      position: relative;
+      animation-name: animo-logo1-LE;
+      animation-duration: 0.2s;
+      animation-iteration-count: infinite; }
 
-td {
-  border: 1px solid #000000;
-  text-align: left;
-  padding: 8px; }
+@keyframes animo-logo1-LE {
+  0% {
+    left: 0px;
+    top: 0px; }
+  25% {
+    left: 1px;
+    top: 0px; }
+  50% {
+    left: 1px;
+    top: 1px; }
+  75% {
+    left: 0px;
+    top: 1px; }
+  100% {
+    left: 0px;
+    top: 0px; } }
+  .laempresa__texto-LE {
+    padding: 10px; }
+  .laempresa__video-LE {
+    padding: 10px; }
+    .laempresa__video-LE video {
+      width: 100%; }
 
 .footer {
   background: linear-gradient(140deg, rgba(32, 32, 32, 0.705) 0%, #556c6d 50%, #202020 100%);
@@ -831,24 +893,15 @@ td {
   /*se hace si tiene 992px o menos*/
   :root {
     width: -webkit-fill-available; }
-  .tituloProd, table {
-    font-size: 15px; }
-  table {
-    display: block;
-    overflow-x: auto; } }
+  .contenedor {
+    gap: 20px; }
+  .novedades, .clientes, .laempresa, .ofertas {
+    font-size: 14px; } }
 
 @media screen and (max-width: 768px) {
   /*se hace si tiene 768px o menos*/
   .contenedor {
-    width: 90%;
-    max-width: 1000px;
-    gap: 0; }
-  .tituloProd, table {
-    font-size: 14px; }
-  table {
-    display: block;
-    overflow-x: auto;
-    max-width: 768px; } }
+    gap: 5px; } }
 
 @media screen and (max-width: 576px) {
   /*se hace si tiene 576px o menos*/
@@ -857,19 +910,24 @@ td {
     max-width: 1000px;
     margin: 0;
     gap: 0; }
-    .contenedor .tituloProd, .contenedor table {
-      font-size: 13px; }
-    .contenedor th, .contenedor td {
-      padding: 2px; }
+    .contenedor .novedades, .contenedor .clientes, .contenedor .laempresa, .contenedor .ofertas {
+      font-size: 12px;
+      border-radius: 0; }
+    .contenedor .ofertas {
+      grid-row: 5 / 6;
+      display: grid;
+      gap: 5px;
+      grid-template-columns: 0.4fr 1fr;
+      grid-template-rows: auto;
+      justify-content: center;
+      align-items: center; }
+      .contenedor .ofertas__tit-ofertas {
+        grid-column: 1 / -1; }
     .contenedor .footer {
-      border-radius: 0; } }
-
-@media screen and (max-width: 420px) {
-  /*se hace si tiene 341px o menos*/
-  .estado {
-    display: none; } }
+      border-radius: 0;
+      grid-row: 6 / 7; } }
 
 @media screen and (max-width: 341px) {
   /*se hace si tiene 341px o menos*/
-  .tituloProd, table {
+  .novedades, .clientes, .laempresa, .ofertas {
     font-size: 10px; } }

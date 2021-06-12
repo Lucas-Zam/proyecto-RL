@@ -802,7 +802,7 @@ table {
 th {
   background-color: #808080;
   border: 1px solid #000000;
-  text-align: center;
+  text-align: left;
   padding: 8px; }
 
 tr:nth-child(even) {
@@ -859,15 +859,8 @@ td {
     gap: 0; }
     .contenedor .tituloProd, .contenedor table {
       font-size: 13px; }
-    .contenedor th, .contenedor td {
-      padding: 2px; }
     .contenedor .footer {
       border-radius: 0; } }
-
-@media screen and (max-width: 420px) {
-  /*se hace si tiene 341px o menos*/
-  .estado {
-    display: none; } }
 
 @media screen and (max-width: 341px) {
   /*se hace si tiene 341px o menos*/

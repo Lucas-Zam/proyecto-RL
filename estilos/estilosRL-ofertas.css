@@ -655,10 +655,7 @@ body {
   font-size: 1rem;
   margin: 0 auto;
   height: auto;
-  gap: 5px; }
-  .contenedor table {
-    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 4px; }
+  grid-gap: 5px; }
 
 .header {
   font-size: 16px;
@@ -791,30 +788,81 @@ body {
   .header nav ul {
     height: 55vh; } }
 
-.tituloProd {
+.titOfertas {
   text-align: center; }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%; }
+.contenido {
+  background: lightblue;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 4px;
+  padding: 10px;
+  grid-gap: 10px; }
+  .contenido div {
+    border: 1px solid black; }
+    .contenido div:hover {
+      background-color: lightblue;
+      box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+      transform: scale(1.2);
+      cursor: pointer; }
+    .contenido div:active {
+      background-color: lightblue;
+      box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+      transform: scale(2);
+      cursor: -webkit-grabbing; }
+    .contenido div p {
+      padding-left: 5px; }
 
-th {
-  background-color: #808080;
-  border: 1px solid #000000;
-  text-align: center;
-  padding: 8px; }
+.fila2 {
+  margin: 0px 30px; }
+  .fila2 a + a {
+    margin-left: 20px; }
 
-tr:nth-child(even) {
-  background-color: #dddddd; }
+.fila3 {
+  margin: 0px -30px; }
 
-tr:nth-child(odd) {
-  background-color: #f1ea7e; }
+#carouselArticulos {
+  border: 1px solid white;
+  margin: 5px auto;
+  border-radius: 4px; }
+  #carouselArticulos img {
+    margin: 0px auto; }
+  #carouselArticulos .carousel-indicators li {
+    border: 0;
+    background-color: green;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%; }
+  #carouselArticulos .carousel-indicators li.active {
+    border: 0;
+    background-color: red;
+    width: 14px;
+    height: 14px;
+    border-radius: 100%; }
 
-td {
-  border: 1px solid #000000;
-  text-align: left;
-  padding: 8px; }
+article {
+  background-color: lightblue;
+  border-radius: 4px;
+  padding: 20px; }
+  article div:hover {
+    background-color: lightblue;
+    box-shadow: 3px 5px;
+    z-index: 100;
+    transform: scale(1.2);
+    cursor: pointer; }
+  article div:active {
+    background-color: lightblue;
+    box-shadow: 3px 5px;
+    z-index: 100;
+    transform: scale(2);
+    cursor: -webkit-grabbing; }
+  article div p {
+    padding-left: 5px; }
+
+.artitems {
+  border: 1px solid black;
+  padding: 0px; }
+  .artitems p {
+    padding-left: 5px; }
 
 .footer {
   background: linear-gradient(140deg, rgba(32, 32, 32, 0.705) 0%, #556c6d 50%, #202020 100%);
@@ -827,28 +875,29 @@ td {
 .copyright {
   color: black; }
 
+@media screen and (max-width: 1200px) {
+  /*se hace si tiene 1200px o menos*/
+  h6 {
+    font-size: 0.83rem; } }
+
 @media screen and (max-width: 992px) {
   /*se hace si tiene 992px o menos*/
   :root {
     width: -webkit-fill-available; }
-  .tituloProd, table {
-    font-size: 15px; }
-  table {
-    display: block;
-    overflow-x: auto; } }
+  h6 {
+    font-size: 0.83rem; }
+  .titOfertas, .contenido {
+    font-size: 13px; } }
 
 @media screen and (max-width: 768px) {
   /*se hace si tiene 768px o menos*/
-  .contenedor {
-    width: 90%;
-    max-width: 1000px;
-    gap: 0; }
-  .tituloProd, table {
+  .titOfertas, .contenido {
     font-size: 14px; }
-  table {
-    display: block;
-    overflow-x: auto;
-    max-width: 768px; } }
+  .contenido {
+    gap: 5px; }
+    .contenido div p {
+      padding-left: 5px;
+      font-size: 12px; } }
 
 @media screen and (max-width: 576px) {
   /*se hace si tiene 576px o menos*/
@@ -857,19 +906,11 @@ td {
     max-width: 1000px;
     margin: 0;
     gap: 0; }
-    .contenedor .tituloProd, .contenedor table {
-      font-size: 13px; }
-    .contenedor th, .contenedor td {
-      padding: 2px; }
-    .contenedor .footer {
-      border-radius: 0; } }
-
-@media screen and (max-width: 420px) {
-  /*se hace si tiene 341px o menos*/
-  .estado {
-    display: none; } }
+  .titOfertas, .contenido {
+    font-size: 12px; }
+  .contenido {
+    gap: 10px; } }
 
 @media screen and (max-width: 341px) {
-  /*se hace si tiene 341px o menos*/
-  .tituloProd, table {
+  .titOfertas, .contenido {
     font-size: 10px; } }

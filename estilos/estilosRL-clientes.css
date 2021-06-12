@@ -655,9 +655,10 @@ body {
   font-size: 1rem;
   margin: 0 auto;
   height: auto;
-  gap: 5px; }
-  .contenedor table {
+  grid-gap: 5px; }
+  .contenedor .tit2, .contenedor #login-form {
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 1.25rem;
     border-radius: 4px; }
 
 .header {
@@ -791,30 +792,86 @@ body {
   .header nav ul {
     height: 55vh; } }
 
-.tituloProd {
+.tit1 {
   text-align: center; }
 
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%; }
-
-th {
-  background-color: #808080;
-  border: 1px solid #000000;
+.tit2 {
+  border-radius: 4px;
   text-align: center;
-  padding: 8px; }
+  background-color: darksalmon; }
 
-tr:nth-child(even) {
-  background-color: #dddddd; }
+#login-form {
+  background-color: #a8bfc0;
+  padding: 15px 20px;
+  border-radius: 4px;
+  grid-column-gap: 2rem;
+  grid-row-gap: 0.6rem; }
 
-tr:nth-child(odd) {
-  background-color: #f1ea7e; }
+.izq, .der {
+  grid-gap: 3px;
+  grid-row-gap: 1.5rem;
+  align-content: flex-start; }
 
-td {
-  border: 1px solid #000000;
-  text-align: left;
-  padding: 8px; }
+.der {
+  grid-column-gap: 1.5rem; }
+
+#NomAp, #NomEmp, #Cuit, #Dire, #Loca, #PosProv, #Postal, #Email, #Tfono {
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: #eee;
+  outline: none; }
+
+#PosProv {
+  padding: 0.525rem 1.5rem; }
+
+#Prov {
+  font-family: "Roboto", verdana, sans-serif;
+  align-content: right;
+  border: none;
+  background: #eee;
+  outline: none; }
+
+input::placeholder {
+  font-family: "Roboto", verdana, sans-serif; }
+
+#PosReset {
+  margin: 20px 0px 10px 60px;
+  padding: 5px;
+  font: 18px bold tahoma, sans-serif;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 9px #999;
+  transition: all 2ms; }
+  #PosReset:hover {
+    background-color: lightskyblue; }
+  #PosReset:active {
+    background-color: lightskyblue;
+    box-shadow: 0 5px #666;
+    transform: translateY(7px); }
+
+#PosSubmit {
+  margin: 20px 60px 10px 0px;
+  padding: 5px 25px 5px 25px;
+  font: 18px bold tahoma, sans-serif;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 9px #999;
+  transition: all 2ms; }
+  #PosSubmit:hover {
+    background-color: salmon; }
+  #PosSubmit:active {
+    background-color: salmon;
+    box-shadow: 0 5px #666;
+    transform: translateY(7px); }
 
 .footer {
   background: linear-gradient(140deg, rgba(32, 32, 32, 0.705) 0%, #556c6d 50%, #202020 100%);
@@ -828,27 +885,30 @@ td {
   color: black; }
 
 @media screen and (max-width: 992px) {
-  /*se hace si tiene 992px o menos*/
   :root {
     width: -webkit-fill-available; }
-  .tituloProd, table {
-    font-size: 15px; }
-  table {
-    display: block;
-    overflow-x: auto; } }
+  .tit1, .tit2, #login-form {
+    font-size: 14px; }
+  .contenedor #login-form {
+    grid-row-gap: 0.6rem;
+    padding: 5px 150px; }
+  .der {
+    padding-top: 1rem; } }
 
 @media screen and (max-width: 768px) {
-  /*se hace si tiene 768px o menos*/
-  .contenedor {
-    width: 90%;
-    max-width: 1000px;
-    gap: 0; }
-  .tituloProd, table {
+  .tit1, .tit2, #login-form {
     font-size: 14px; }
-  table {
-    display: block;
-    overflow-x: auto;
-    max-width: 768px; } }
+  .contenedor {
+    grid-gap: 5px; }
+  .contenido div p {
+    padding-left: 5px;
+    font-size: 12px; }
+  .contenedor #login-form {
+    padding: 5px 60px; }
+  h2 {
+    font-size: 1.3rem; }
+  .tit1 {
+    font-size: 0.4rem; } }
 
 @media screen and (max-width: 576px) {
   /*se hace si tiene 576px o menos*/
@@ -856,20 +916,18 @@ td {
     width: 100%;
     max-width: 1000px;
     margin: 0;
-    gap: 0; }
-    .contenedor .tituloProd, .contenedor table {
-      font-size: 13px; }
-    .contenedor th, .contenedor td {
-      padding: 2px; }
-    .contenedor .footer {
-      border-radius: 0; } }
-
-@media screen and (max-width: 420px) {
-  /*se hace si tiene 341px o menos*/
-  .estado {
-    display: none; } }
+    grid-gap: 0;
+    border-radius: 0; }
+    .contenedor .tit1, .contenedor .tit2, .contenedor #login-form {
+      font-size: 12px;
+      padding: 5px; }
+  input, #PosProv {
+    width: 255px;
+    margin: 0px auto; }
+  .footer {
+    border-radius: 0; } }
 
 @media screen and (max-width: 341px) {
   /*se hace si tiene 341px o menos*/
-  .tituloProd, table {
+  .tit1, .tit2, #login-form {
     font-size: 10px; } }

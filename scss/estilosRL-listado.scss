@@ -40,7 +40,7 @@ table {// grid-column: 1 / -1; grid-row: 3 / 4;
 th {
 	background-color: #808080;
 	border: 1px solid #000000;
-	text-align: left;
+	text-align: center;
 	padding: 8px;
 }
 tr {
@@ -103,12 +103,20 @@ td {
 		.tituloProd, table {
 			font-size: 13px;
 		}
+		th, td {
+			padding: 2px;
+		}		
 		.footer {// grid-column: 1 / 4; grid-row: 6 / 7;
 			border-radius: 0;
 		}	
 	}	
 }
-
+@media screen and (max-width: 420px) {
+	/*se hace si tiene 341px o menos*/
+	.estado{// oculto la columna rubro cuando screen es menor o igual a 420
+		display: none;
+	}
+}
 @media screen and (max-width: 341px) {
 /*se hace si tiene 341px o menos*/
 	// :root{font-size: 10px;}	
