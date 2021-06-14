@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
     };
 
     // Functions
-    /**
+    /***
      * Animated scroll to up
      */
     function scrollUp(duration, easing) {
