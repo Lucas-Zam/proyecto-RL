@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lucas Zambelli">
+	<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet. Ofertas de Productos">
+	<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet, ofertas">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rep Lucas | Compras</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="./css/estilosRL-procesocompra.css"><!-- mi carpeta de estilos se pone última para que pise cualquier estilo general de bootstrap-->
+	<link rel="icon" type="image/png" href="./imagenes/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="./imagenes/favicon-32x32.png" sizes="32x32">
+</head>
+
+<body link="black" alink="blue" vlink="black"><!-- estos son para cambiar el color cuando son visitados-->
+	<div class="contenedor grid col-1 row-6">
+		
+		<header class="header colspan-1 rowspan-1 grid col-9 row-1">
+			<div class="logo-RL colspan-1 rowspan-1">
+				<a href="index.html">
+					<img src="./imagenes/logo-RL.png" alt="logo RL de la empresa">
+				</a>
+			</div>	
+			<div class="texto-RL colspan-3 rowspan-1 m768-colspan-8">
+				<p class="tituh2">REPUESTOS LUCAS</p>
+			    <p class="tituh5">Repuestos alternativos</p>
+			    <p class="tituh5">para el automotor marca Chevrolet</p>	
+			</div>
+		</header>
+
+		<div class="titCompras colspan-1 rowspan-1">
+			<h2>Colocar cantidades y Realizar Compra</h2>			
+		</div>
+
+		<table id="lista-carrito colspan-1 rowspan-1" class="table">
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Nombre</th>
+					<th>Precio</th>
+					<th>Cantidad</th>
+					<th>SubTotal</th>
+					<th>Eliminar</th>
+				</tr>
+			</thead>
+			<tbody id="datProd"></tbody>
+		</table>
+					
+		<div class="tot colspan-1 rowspan-1 grid col-6 row-1">
+			<div class="colspan-1 rowspan-1"></div>
+			<div class="colspan-2 rowspan-1">
+				<h4 class="totp">Sub Total Parcial:</h4>
+				<h4 class="totp">I.V.A.:</h4>
+				<h4 class="totp">Total:</h4>
+			</div>
+			<div class="colspan-1 rowspan-1">
+				<h4 class="totp" id="tot1">000:</h4>
+				<h4 class="totp" id="tot2">000</h4>
+				<h4 class="totp" id="tot3">000</h4>
+			</div>
+			<div class="colspan-2 rowspan-1"></div>
+		</div>
+
+		<div class="colspan-1 rowspan-1 grid col-3 row-1">
+			<button class="btn btn-block btn-primary" onclick="seguirComprando()">Seguir comprando</button>
+			<button class="btn btn-block btn-danger" onclick="eliminarCompra()">Eliminar Compra</button>
+			<button class="btn btn-block btn-success" onclick="realizarCompra()">Realizar Compra</button>
+		</div>
+		
+		<footer class="footer colspan-1 rowspan-1">
+			<h4><b>Repuestos Lucas</b></h4>
+			<h5>4666-1908/15  // Ciudad de Buenos Aires</h5>
+			<h5><ins><a href="mailto:repuestoslucas2020@yahoo.com.ar">repuestoslucas2020@yahoo.com.ar</a></ins></h5>
+			<h5 class="copyright texto-centrado"><b>Copyright LRZ &copy; 2021</b></h5>
+		</footer>
+
+		<div id="volver">
+			<input type="checkbox" id="check2" class="s1 s1hide" name="check2">
+			<label for="check2" class="s1 s1hide">
+				<img src="./imagenes/cd-top-arrow.svg" alt="ico flecha arriba">
+			</label>
+		</div>
+
+	</div>
+
+	<script src="./js/todos-volverarriba.js"></script>
+	<script src="./js/8-clases.js"></script>
+	<script src="./js/8-procesocompra.js"></script>
+</body>
+</html>

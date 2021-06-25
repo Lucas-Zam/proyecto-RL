@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="Lucas Zambelli">
+	<meta name="description" content="Repuestos Lucas - repuestos alternativos para el automotor marca Chevrolet. Ofertas de Productos">
+	<meta name="keywords" content="repuestos, lucas, autopartes, automotor, alternativos, chevrolet, ofertas">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rep Lucas | Compras</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="./css/estilosRL-compras.css"><!-- mi carpeta de estilos se pone última para que pise cualquier estilo general de bootstrap-->
+	<link rel="icon" type="image/png" href="./imagenes/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="./imagenes/favicon-32x32.png" sizes="32x32">
+</head>
+
+<body link="black" alink="blue" vlink="black"><!-- estos son para cambiar el color cuando son visitados-->
+	<div class="contenedor grid col-1 row-4">
+		
+		<header class="header colspan-1 rowspan-1 grid col-9 row-1">
+			<div class="logo-RL colspan-1 rowspan-1">
+				<a href="index.html">
+					<img src="./imagenes/logo-RL.png" alt="logo RL de la empresa">
+				</a>
+			</div>	
+			<div class="texto-RL colspan-3 rowspan-1 m992-colspan-8">
+				<p class="tituh2">REPUESTOS LUCAS</p>
+			    <p class="tituh5">Repuestos alternativos</p>
+			    <p class="tituh5">para el automotor marca Chevrolet</p>	
+			</div>
+ 			<nav class="nav colspan-5 rowspan-1 m992-colspan-9">
+                 <input type="checkbox" id="check">
+                 <label for="check" class="checkbtn">
+                    <img src="" class="sichecked" alt="ícono" id="img11">
+                	<img src="" class="nochecked" alt="ícono" id="img22">
+				</label>
+				<ul>
+					<li><a class="tituh4" href="index.html">Inicio</a></li>
+					<li><a class="tituh4" href="4-Ofertas.html">Ofertas</a></li>
+					<li><a class="tituh4" href="5-Clientes.html">Clientes</a></li>
+					<li><a class="tituh4" href="6-Listado.html">Listado</a></li>
+					<li><a class="tituh4" href="#">Compras</a></li>
+				</ul>				 
+			</nav>
+		</header>
+
+		<div class="colspan-1 rowspan-1">
+			<a href="#">			
+				<img src="./imagenes/carro.png" id="posi" class="imgcarrito" width="3px" 
+					onclick="verCarrito()"> </img>
+			</a>
+
+			<div id="carrito" class="carro noveo">
+				<table id="lista-carrito" class="table">
+					<thead>
+						<tr>
+							<th>Código</th>
+							<th>Nombre</th>
+							<th>Precio</th>
+							<th class="noveo">Cantidad</th>
+						</tr>
+					</thead>
+					<tbody id="datProd"></tbody>
+				</table>
+				<button class="btn btn-block btn-primary" onclick="vaciarCarrito()">Vaciar Carrito</button>
+				<button class="btn btn-block btn-success" onclick="procesarCompra()">Abrir Carrito<c</button>
+			</div>
+		</div>
+
+		<main class="titCompras colspan-1 rowspan-1">
+			<h2>Compras</h2>
+			<p>(click en carrito de compras para ver los productos ingresados)</p>
+			<p>(click en botón Abrir Carrito para colocar cantidades de compra)</p>
+
+		</main>	
+
+		<main class="contenido colspan-1 rowspan-1 grid col-3 m576-col-2 m341-col-1">
+				
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/02028.jpg" alt="Oferta 1" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C02028','GRIFO DE CALEFACCION CHEVROLET CORSA 4 VIAS',1556,1)">Comprar</button>
+				<p>Cód. 02028</p>
+				<p>GRIFO DE CALEFACCION CHEVROLET CORSA 4 VIAS</p>
+				<h3 class="card-title">$<span class="">1556</span></h3>
+			</div>
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/02029.jpg" alt="Oferta 2" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C02029','GRIFO DE CALEFACCION 3VIAS CHEV CORSA VECTRA',1469,1)">Comprar</button>
+				<p>Cód. 02029</p>
+				<p>GRIFO DE CALEFACCION 3VIAS CHEV CORSA VECTRA</p>
+				<h3 class="card-title">$<span class="">1469</span></h3>
+			</div>
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/02031.jpg" alt="Oferta 3" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C02031','GRIFO CALEFACCION CHEV CORSA 2 2002',2766,1)">Comprar</button>
+				<p>Cód. 02031</p>
+				<p>GRIFO CALEFACCION CHEV CORSA 2 2002</p>
+				<h3 class="card-title">$<span class="">2766</span></h3>
+			</div>
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/02032.jpg" alt="Oferta 4" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C02032','GRIFO DE CALEFACCION CHEVROLET MERIVA 2002',2508,1)">Comprar</button>
+				<p>Cód. 02032</p>
+				<p>GRIFO DE CALEFACCION CHEVROLET MERIVA 2002</p>
+				<h3 class="card-title">$<span class="">2508</span></h3>
+			</div>
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/02418.jpg" alt="Oferta 5" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C02418','KIT TAPA DISTRIBUCION CHEV CORSA NAFTA 1.4 1.6 OSSCA 3 PARTE',2651,1)">Comprar</button>
+				<p>Cód. 02418</p>
+				<p>KIT TAPA DISTRIBUCION CHEV CORSA NAFTA 1.4 1.6 OSSCA 3 PARTE</p>
+				<h3 class="card-title">$<span class="">2651</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/02440.jpg" alt="Oferta 6" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C02440','TAPA CULATA TAPA CILINDRO CHEVROLET CORSA TODOS',318,1)">Comprar</button>
+				<p>Cód. 02440</p>
+				<p>TAPA CULATA TAPA CILINDRO CHEVROLET CORSA TODOS</p>
+				<h3 class="card-title">$<span class="">318</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/02442.jpg" alt="Oferta 7" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C02442','KIT TAPA DISTRIBUCION CORSAII /MERIVA 1.8 8V.',3255,1)">Comprar</button>
+				<p>Cód. 02442</p>
+				<p>KIT TAPA DISTRIBUCION CORSAII /MERIVA 1.8 8V.</p>
+				<h3 class="card-title">$<span class="">3255</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/03040.jpg" alt="Oferta 8" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C03040','POLEA B/AGUA CHEV.COCHE PICK UP 62 78 BAJA',1867,1)">Comprar</button>
+				<p>Cód. 03040</p>
+				<p>POLEA B/AGUA CHEV.COCHE PICK UP 62 78 BAJA</p>
+				<h3 class="card-title">$<span class="">1867</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/03041.jpg" alt="Oferta 9" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C03041','POLEA B/AGUA CHEVROLET CORSA MERIVA COMBO 1.7 DIESEL',2701,1)">Comprar</button>
+				<p>Cód. 03041</p>
+				<p>POLEA B/AGUA CHEVROLET CORSA MERIVA COMBO 1.7 DIESEL</p>
+				<h3 class="card-title">$<span class="">2701</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/03498.jpg" alt="Oferta 10" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C03498','DISTANCIADOR PALETA VENT CHEVROLET TORINO FORD BAJO 22MM',407,1)">Comprar</button>
+				<p>Cód. 03498</p>
+				<p>DISTANCIADOR PALETA VENT CHEVROLET TORINO FORD BAJO 22MM</p>
+				<h3 class="card-title">$<span class="">407</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/03709.jpg" alt="Oferta 11" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C03709','POLEA DE CIG CHEVROLET C 20 BRASILERA MOD92',3740,1)">Comprar</button>
+				<p>Cód. 03709</p>
+				<p>POLEA DE CIG CHEVROLET C 20 BRASILERA MOD92</p>
+				<h3 class="card-title">$<span class="">3740</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/03759.jpg" alt="Oferta 12" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C03759','POLEA DE CIG CHEVROLET OPEL K-180',5217,1)">Comprar</button>
+				<p>Cód. 03759</p>
+				<p>POLEA DE CIG CHEVROLET OPEL K-180</p>
+				<h3 class="card-title">$<span class="">5217</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/03760.jpg" alt="Oferta 13" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C03760','POLEA DE CIG CHEVROLET 400 CHEVY SIMPLE',2285,1)">Comprar</button>
+				<p>Cód. 03760</p>
+				<p>POLEA DE CIG CHEVROLET 400 CHEVY SIMPLE</p>
+				<h3 class="card-title">$<span class="">2285</span></h3>
+			</div>	
+			
+			<div class="artsombra colspan-1 rowspan-1">
+				<img src="./imagenes/03770.jpg" alt="Oferta 14" />
+				<button class="btn btn-block btn-primary" onclick="addProd('C03770','POLEA DE CIG CHEVY DOBLE',3411,1)">Comprar</button>
+				<p>Cód. 03770</p>
+				<p>POLEA DE CIG CHEVY DOBLE</p>
+				<h3 class="card-title">$<span class="">3411</span></h3>
+			</div>
+
+		</main>
+		
+		<footer class="footer colspan-1 rowspan-1">
+			<h4><b>Repuestos Lucas</b></h4>
+			<h5>4666-1908/15  // Ciudad de Buenos Aires</h5>
+			<h5><ins><a href="mailto:repuestoslucas2020@yahoo.com.ar">repuestoslucas2020@yahoo.com.ar</a></ins></h5>
+			<h5 class="copyright texto-centrado"><b>Copyright LRZ &copy; 2021</b></h5>
+		</footer>
+
+		<div id="volver">
+			<input type="checkbox" id="check2" class="s1 s1hide" name="check2">
+			<label for="check2" class="s1 s1hide">
+				<img src="./imagenes/cd-top-arrow.svg" alt="ico flecha arriba">
+			</label>
+		</div>
+
+		</div>
+	</div>
+
+	<script src="./js/todos-nav-ico-intercambio.js"></script>
+	<script src="./js/todos-volverarriba.js"></script>
+	<script src="./js/7-clases.js"></script>
+	<script src="./js/7-compras.js"></script>
+</body>
+</html>

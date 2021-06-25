@@ -734,7 +734,12 @@ body {
     padding: 0.3125rem 0.625rem;
     grid-column-gap: 4px; }
     .header nav {
-      margin-right: 0; } }
+      margin: 5px auto; }
+      .header nav ul {
+        float: none; }
+        .header nav ul li {
+          display: inline-block;
+          margin: auto 5px; } }
 
 @media screen and (max-width: 768px) {
   /*se hace si tiene 768px o menos*/

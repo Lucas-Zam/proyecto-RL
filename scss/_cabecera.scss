@@ -87,8 +87,18 @@
 		font-size: 14px;
 		padding: 0.3125rem 0.625rem;
 		grid-column-gap: 4px;
-		nav{
-			margin-right: 0;
+		// nav{
+		// 	margin-right: 0;
+		// }
+		nav {// grid-column: 1 / -1;
+			margin: 5px auto;
+			ul {
+				float: none;
+				li {
+					display: inline-block;
+					margin: auto 5px;
+				}
+			}
 		}
 	}
 }
