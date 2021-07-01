@@ -1,5 +1,6 @@
 let seVeTabla = false;// true se esta viendo, false está oculta
-
+var posicion;
+const coordenadas = document.getElementById('posi');
 
 //Si localStorage tiene datos, entonces creo vectorCompra y creo carrito
 const almacenados = JSON.parse(localStorage.getItem("vectorCompra"));
@@ -12,6 +13,8 @@ if (almacenados != null) {
     seVeTabla = false;
     verCarrito();
 }    
+totProductos();
+
 
 
 //-----------------------------------------------------------------------------
@@ -21,12 +24,14 @@ function addProd(a,b,c,d) {
         // pregunto si el objeto está vacío, si true entonces ingreso el producto
         vectorCompra.push(new Producto(a,b,c,d));
         guardarLocalStorage();
+        totProductos();
     }else{
         // busco si el producto a agregar estaba ya ingresado
         const encontrado = vectorCompra.find(encontrado => encontrado.codigo === a);
         if (!encontrado) {// si no está, lo ingreso
             vectorCompra.push(new Producto(a,b,c,d));
             guardarLocalStorage();
+            totProductos();
         }
     }
     // carrito actualizado con este último ingreso
@@ -60,6 +65,9 @@ function crearCarrito() {
 function eliminarCarrito() {
     let borrar1;
     let borrar2;
+    const datProd = document.getElementById('datProd');
+    datProd.classList.add('noveo');
+      // elemento.className += "noveo";
     do {// elimino todos los td de la tabla tbody
         borrar1 = document.querySelectorAll('#datTDProd')[0];
         if (borrar1) {
@@ -72,6 +80,7 @@ function eliminarCarrito() {
             borrar2.parentNode.removeChild(borrar2);
         }
     } while (borrar2);
+    datProd.classList.remove('noveo');
 }
 
 
@@ -87,6 +96,7 @@ function verCarrito () {
 	    document.getElementById('carrito').classList.add('veo');
         seVeTabla = true;
     }
+    totProductos();
 }        
 
 
@@ -96,6 +106,7 @@ function verCarrito () {
 function vaciarCarrito() {
     vectorCompra.splice(0,vectorCompra.length);
     eliminarCarrito();
+    totProductos();
     localStorage.clear();
 }
 
@@ -104,7 +115,7 @@ function vaciarCarrito() {
 //función que salta a 8-procesocompra.html
 function procesarCompra() {
     if (vectorCompra.length != 0) {
-        document.location.href="8-procesocompra.html";
+        window.location.href="8-procesocompra.html";
     }
 }
 
@@ -121,6 +132,27 @@ function guardarLocalStorage() {
         localStorage.setItem("vectorCompra", enJSON);
     }
 }
+
+
+//---------------------------------------------------------------------
+//función que pone un cartel al lado del carrito del total de productos
+function totProductos() {
+    let mensaje = "";
+    let tot = vectorCompra.length;
+    if (tot == 0) {
+        if (seVeTabla) {
+            mensaje = "carrito vacío (<= click para ocultarlo)";
+        }else{
+            mensaje = "carrito vacío (<= click para verlo)";
+        }
+    }else if (tot == 1) {
+        mensaje = tot + " producto en carrito";
+    }else{
+        mensaje = tot + " productos en carrito";
+    }
+    document.getElementById('loteProd').innerHTML = mensaje;
+}
+
 
 
 

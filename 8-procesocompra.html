@@ -32,7 +32,7 @@
 			</div>
 		</header>
 
-		<div class="titCompras colspan-1 rowspan-1">
+		<div class="tituloPrincipal colspan-1 rowspan-1">
 			<h2>Colocar cantidades y Realizar Compra</h2>			
 		</div>
 
@@ -43,19 +43,19 @@
 					<th>Nombre</th>
 					<th>Precio</th>
 					<th>Cantidad</th>
-					<th>SubTotal</th>
+					<th>SubTot</th>
 					<th>Eliminar</th>
 				</tr>
 			</thead>
 			<tbody id="datProd"></tbody>
 		</table>
 					
-		<div class="tot colspan-1 rowspan-1 grid col-6 row-1">
+		<!-- <div class="tot colspan-1 rowspan-1 grid col-6 row-1">
 			<div class="colspan-1 rowspan-1"></div>
 			<div class="colspan-2 rowspan-1">
-				<h4 class="totp">Sub Total Parcial:</h4>
-				<h4 class="totp">I.V.A.:</h4>
-				<h4 class="totp">Total:</h4>
+				<h4 class="totp1">Sub Total Parcial:</h4>
+				<h4 class="totp1">I.V.A.:</h4>
+				<h4 class="totp1">Total:</h4>
 			</div>
 			<div class="colspan-1 rowspan-1">
 				<h4 class="totp" id="tot1">000:</h4>
@@ -63,7 +63,22 @@
 				<h4 class="totp" id="tot3">000</h4>
 			</div>
 			<div class="colspan-2 rowspan-1"></div>
+		</div> -->
+
+		<div class="tot colspan-1 rowspan-1 grid col-2 row-1">
+			<div class="colspan-1 rowspan-1">
+				<h4 class="totp1">Sub Total Parcial:</h4>
+				<h4 class="totp1">I.V.A.:</h4>
+				<h4 class="totp1">Total:</h4>
+			</div>
+			<div class="colspan-1 rowspan-1">
+				<h4 class="totp2" id="tot1">000:</h4>
+				<h4 class="totp2" id="tot2">000</h4>
+				<h4 class="totp2" id="tot3">000</h4>
+			</div>
 		</div>
+
+
 
 		<div class="colspan-1 rowspan-1 grid col-3 row-1">
 			<button class="btn btn-block btn-primary" onclick="seguirComprando()">Seguir comprando</button>

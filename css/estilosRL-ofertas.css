@@ -54,6 +54,10 @@ img {
   height: auto;
   /* la altura se coloca para que no deforme la imagen*/ }
 
+.tituloPrincipal {
+  text-align: center;
+  margin: 20px auto 10px; }
+
 .texto-centrado {
   text-align: center; }
 
@@ -62,6 +66,12 @@ img {
 
 .texto-derecha {
   text-align: right; }
+
+tr:nth-child(even) {
+  background-color: #dddddd; }
+
+tr:nth-child(odd) {
+  background-color: #ffffff; }
 
 .grid {
   display: grid;
@@ -792,9 +802,6 @@ body {
     font-size: 10px; }
   .header nav ul {
     height: 55vh; } }
-
-.titOfertas {
-  text-align: center; }
 
 .contenido {
   background: lightblue;

@@ -13,6 +13,9 @@ $fondo-footer: linear-gradient(140deg, rgba(32, 32, 32, 0.705) 0%, rgb(85, 108, 
 $sombra-caja: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 $fuente-primaria: 'Roboto', 'Montserrat-Light', verdana, sans-serif;
 $fuente-size: 16px;
+$fondo-th: #aef3b4;
+$fondo-tr-par: #f3efef;
+$fondo-th-impar: #ffffff;
 
 
 h1 {font-family: roboto, sans-serif;}
@@ -34,6 +37,22 @@ img {
 	min-width: 50%;/* tiene un mínimo, antes que se pixele la imagen*/
 	height: auto;/* la altura se coloca para que no deforme la imagen*/
 }
+
+.tituloPrincipal {
+	text-align: center;
+	margin: 20px auto 10px;
+}
+
 .texto-centrado {text-align: center;}
 .texto-izquierda {text-align: left;}
 .texto-derecha {text-align: right;}
+
+th {
+	background-color: $fondo-th;
+}
+tr:nth-child(even) {
+	background-color: $fondo-tr-par;
+}  
+tr:nth-child(odd) {
+	background-color: $fondo-th-impar;
+}	

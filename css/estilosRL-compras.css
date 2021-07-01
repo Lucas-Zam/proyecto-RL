@@ -54,6 +54,10 @@ img {
   height: auto;
   /* la altura se coloca para que no deforme la imagen*/ }
 
+.tituloPrincipal {
+  text-align: center;
+  margin: 20px auto 10px; }
+
 .texto-centrado {
   text-align: center; }
 
@@ -62,6 +66,15 @@ img {
 
 .texto-derecha {
   text-align: right; }
+
+th {
+  background-color: #aef3b4; }
+
+tr:nth-child(even) {
+  background-color: #f3efef; }
+
+tr:nth-child(odd) {
+  background-color: #ffffff; }
 
 .grid {
   display: grid;
@@ -793,25 +806,57 @@ body {
   .header nav ul {
     height: 55vh; } }
 
+.bloqueCarrito {
+  background-color: #f7f334;
+  margin-left: 0px;
+  margin-top: 90px;
+  min-width: 40px;
+  position: fixed;
+  z-index: 3002; }
+
 .imgcarrito {
   margin-left: -45px;
   min-width: 40px;
   position: fixed;
+  z-index: 3001; }
+
+.boxTextCarrito {
+  color: #fff;
+  border-radius: 4px;
+  border: 1px solid black;
+  margin-top: 5px;
+  background-color: #007bff;
+  border-color: #007bff;
+  position: fixed;
   z-index: 3000; }
 
+.boxTextCarrito:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  cursor: pointer; }
+
+.textCarrito {
+  min-width: 40px;
+  text-align: center;
+  margin: 10px 15px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
+
 .carro {
+  margin-top: 50px;
   position: fixed;
   font-size: 12px;
   background-color: rgba(255, 255, 255, 0.815);
-  border: 1px solid black; }
+  border: 1px solid black;
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 #vaciar-carrito, #procesar-pedido {
   width: 70%;
   margin-bottom: 0;
   margin-top: 0; }
 
-.titCompras {
-  text-align: center; }
+.tituloSecundario {
+  margin-top: -40px; }
 
 .contenido {
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -944,20 +989,12 @@ body {
 
 .table {
   border-collapse: collapse !important;
-  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 2px solid #9ad89f; }
+  border: 2px solid #aef3b4; }
 
 th {
-  background-color: #9ad89f;
   text-align: center;
   padding: 3px;
   border: 1px solid #000000; }
-
-tr:nth-child(even) {
-  background-color: #dddddd; }
-
-tr:nth-child(odd) {
-  background-color: #fff9ac; }
 
 td {
   border: 1px solid #000000;
@@ -980,7 +1017,7 @@ td:nth-child(4) {
   margin: 15px;
   padding: 2px 16px;
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white; }
 
 button {

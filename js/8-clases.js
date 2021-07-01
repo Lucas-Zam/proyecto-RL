@@ -9,7 +9,6 @@ class Producto {
 
 vectorCompra = [];
 
-
 // class Persona{
 //     constructor(nombre, edad, calle) {
 //         this.nombre = nombre;

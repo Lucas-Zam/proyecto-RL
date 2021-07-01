@@ -54,6 +54,10 @@ img {
   height: auto;
   /* la altura se coloca para que no deforme la imagen*/ }
 
+.tituloPrincipal {
+  text-align: center;
+  margin: 20px auto 10px; }
+
 .texto-centrado {
   text-align: center; }
 
@@ -62,6 +66,15 @@ img {
 
 .texto-derecha {
   text-align: right; }
+
+th {
+  background-color: #aef3b4; }
+
+tr:nth-child(even) {
+  background-color: #f3efef; }
+
+tr:nth-child(odd) {
+  background-color: #ffffff; }
 
 .grid {
   display: grid;
@@ -795,25 +808,15 @@ body {
   .header nav ul {
     height: 55vh; } }
 
-.tituloProd {
-  text-align: center; }
-
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%; }
 
 th {
-  background-color: #808080;
   border: 1px solid #000000;
   text-align: center;
   padding: 8px; }
-
-tr:nth-child(even) {
-  background-color: #dddddd; }
-
-tr:nth-child(odd) {
-  background-color: #f1ea7e; }
 
 td {
   border: 1px solid #000000;

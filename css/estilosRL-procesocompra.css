@@ -54,6 +54,10 @@ img {
   height: auto;
   /* la altura se coloca para que no deforme la imagen*/ }
 
+.tituloPrincipal {
+  text-align: center;
+  margin: 20px auto 10px; }
+
 .texto-centrado {
   text-align: center; }
 
@@ -62,6 +66,15 @@ img {
 
 .texto-derecha {
   text-align: right; }
+
+th {
+  background-color: #aef3b4; }
+
+tr:nth-child(even) {
+  background-color: #f3efef; }
+
+tr:nth-child(odd) {
+  background-color: #ffffff; }
 
 .grid {
   display: grid;
@@ -810,9 +823,6 @@ body {
   margin-bottom: 0;
   margin-top: 0; }
 
-.titCompras {
-  text-align: center; }
-
 .contenido {
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 4px;
@@ -948,21 +958,15 @@ body {
   border: 2px solid #9ad89f; }
 
 th {
-  background-color: #9ad89f;
+  font-weight: 400;
   text-align: center;
-  padding: 3px;
+  padding: 8px;
   border: 1px solid #000000; }
-
-tr:nth-child(even) {
-  background-color: #dddddd; }
-
-tr:nth-child(odd) {
-  background-color: #fff9ac; }
 
 td {
   border: 1px solid #000000;
   text-align: left;
-  padding: 3px; }
+  padding: 8px; }
 
 td:nth-child(1) {
   text-align: center; }
@@ -974,7 +978,8 @@ td:nth-child(3) {
   text-align: right; }
 
 td:nth-child(4) {
-  text-align: center; }
+  text-align: center;
+  background-color: #dff5e1; }
 
 td:nth-child(5) {
   text-align: right; }
@@ -982,14 +987,21 @@ td:nth-child(5) {
 td:nth-child(6) {
   text-align: center;
   width: 30px;
-  padding: 0 2%; }
+  padding: 0 2%;
+  background-color: #dff5e1; }
 
 .tot {
   margin: 20px 0; }
 
-.totp {
+.totp1 {
+  font-weight: 400;
   text-align: right;
   padding: 5px; }
+
+.totp2 {
+  text-align: right;
+  padding: 5px;
+  margin-right: 70%; }
 
 .cantidad {
   width: 3rem; }
@@ -1002,7 +1014,7 @@ td:nth-child(6) {
   margin: 15px;
   padding: 2px 16px;
   position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white; }
 
 button {
@@ -1010,6 +1022,9 @@ button {
   text-align: center;
   border-radius: 8px;
   padding: 10px 20px; }
+
+.form-control {
+  border: 2px groove #01830c; }
 
 .footer {
   background: linear-gradient(140deg, rgba(32, 32, 32, 0.705) 0%, #556c6d 50%, #202020 100%);
