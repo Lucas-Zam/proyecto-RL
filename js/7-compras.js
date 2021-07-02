@@ -1,6 +1,5 @@
 let seVeTabla = false;// true se esta viendo, false está oculta
 var posicion;
-const coordenadas = document.getElementById('posi');
 
 //Si localStorage tiene datos, entonces creo vectorCompra y creo carrito
 const almacenados = JSON.parse(localStorage.getItem("vectorCompra"));

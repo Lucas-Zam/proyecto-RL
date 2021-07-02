@@ -17,7 +17,6 @@
 // ------------------------------------------------------------------------------------------
 let Total1 = 0;
 let canti = [];
-debugger;
 getLocalStorage();
 if (vectorCompra.length == 0) {
     eliminarCompra();
@@ -202,13 +201,13 @@ function llenarTabla() {
 //-------------------------------------------------------------
 //función que regresa a 7-compras.html para continuar eligiendo productos
 function seguirComprando() {
-    window.location.href="7-compras.html";
+    window.location.href="7-Compras.html";
 }
 //-------------------------------------------------------------
 //función que regresa 7-compras.html borrando localStorage para recomenzar
 function eliminarCompra() {
     localStorage.clear();
-    window.location.href="7-compras.html";
+    window.location.href="7-Compras.html";
 }
 //-------------------------------------------------------------
 //función de realizar la compra (EN CONSTRUCCION)

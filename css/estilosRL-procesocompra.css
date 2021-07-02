@@ -715,7 +715,7 @@ body {
   height: 5%;
   top: 1.5rem;
   right: 0;
-  z-index: 3000; }
+  z-index: 5000; }
 
 #img11, #img22 {
   max-width: 50%; }
@@ -785,7 +785,6 @@ body {
   .header nav ul {
     position: fixed;
     width: 40%;
-    height: 52%;
     background-color: rgba(0, 0, 0, 0.342);
     border-bottom-left-radius: 3.125rem;
     border-top-left-radius: 3.125rem;
@@ -793,7 +792,7 @@ body {
     right: -100%;
     text-align: center;
     transition: all 0.5s;
-    z-index: 2000; }
+    z-index: 5000; }
     .header nav ul li {
       display: block;
       margin: 1.875rem 0;
@@ -802,9 +801,7 @@ body {
 @media screen and (max-width: 341px) {
   /*se hace si tiene 341px o menos*/
   .header {
-    font-size: 10px; }
-  .header nav ul {
-    height: 55vh; } }
+    font-size: 10px; } }
 
 .imgcarrito {
   margin-left: -45px;

@@ -25,9 +25,21 @@ body {
 @import "cabecera";
 
 .bloqueCarrito {
-	background-color: rgb(247, 243, 52);
-	margin-left: 0px;
-	margin-top: 90px;
+	margin-left: 37px;
+	margin-top: 85px;
+	min-width: 40px;
+	// max-width: 10%;
+	// height: auto;
+	position: fixed;
+	z-index: 3001;
+}
+.btn-carrito {
+	box-shadow: $sombra-caja;
+}
+
+.imgcarrito {
+	margin-left: -37px;
+	margin-top: -65px;
 	min-width: 40px;
 	// max-width: 10%;
 	// height: auto;
@@ -35,43 +47,9 @@ body {
 	z-index: 3002;
 }
 
-.imgcarrito {
-	margin-left: -45px;
-	min-width: 40px;
-	// max-width: 10%;
-	// height: auto;
-	position: fixed;
-	z-index: 3001;
-}
-
-.boxTextCarrito {
-	color: #fff;
-	border-radius: 4px;
-	border: 1px solid black;
-	margin-top: 5px;
-	background-color: #007bff;
-	border-color: #007bff;
-	position: fixed;
-	z-index: 3000;
-}
-.boxTextCarrito:hover {
-color: #fff;
-background-color: #0069d9;
-border-color: #0062cc;
-cursor: pointer;
-}
-
-.textCarrito{
-	min-width: 40px;
-	text-align: center;
-	margin: 10px 15px;
-	// max-width: 10%;
-	// height: auto;
-	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-
 .carro {
-	margin-top: 50px;
+	margin-top: -3px;
+	margin-left: -38px;
 	position: fixed;
 	font-size: 12px;
 	background-color: rgba(255, 255, 255, 0.815);
@@ -84,7 +62,8 @@ cursor: pointer;
 	margin-top: 0;
 }
 .tituloSecundario {
-	margin-top: -40px;
+	width: 50%;
+	margin-left: 50%;
 }
 .contenido {
 	// background: lightblue;
@@ -102,7 +81,6 @@ cursor: pointer;
 		}
 	}
 }
-
 .artsombra:hover {
 	box-shadow: $sombra-caja;
 }
@@ -260,6 +238,8 @@ td:nth-child(4) {text-align: right;}
 // 	background-color: #b6f782; 
 // }
 
+
+
 .box-producto {
     margin: 15px;
     padding: 2px 16px;
@@ -294,13 +274,14 @@ button {
 
 @import "piedepagina";
 
-
+//-------------------------------------------------------------
 @media screen and (max-width: 1200px) {
 /*se hace si tiene 1200px o menos*/
 	h6 {
 		font-size: 0.83rem;
 	}
 }
+//-------------------------------------------------------------
 @media screen and (max-width: 992px) {
 	/*se hace si tiene 992px o menos*/
 	:root {// font-size: 13px;
@@ -309,31 +290,55 @@ button {
 	h6 {
 		font-size: 0.83rem;
 	}
-	.imgcarrito {
-		margin-left: -35px;
+	.bloqueCarrito {
+		margin-top: 120px;
 	}
-	.titCompras, .contenido {
+	.tituloPrincipal, .contenido {
 		font-size: 13px;
 	}
+	.tituloSecundario {
+		width: 50%;
+		margin-left: 50%;
+	}
 }
+//-------------------------------------------------------------
 @media screen and (max-width: 768px) {
 	/*se hace si tiene 768px o menos*/
 	// :root{font-size: 14px;}	
-	.titCompras, .contenido {
+	.tituloPrincipal, .contenido {
 		font-size: 14px;
 	}
 	.contenido{
 		gap: 20px;
 		padding: 20px;
 		div p{
-			// padding-left: 5px;
 			font-size: 12px;
 		}
 	}
+	.bloqueCarrito {
+		margin-top: 130px;
+		margin-left: 30px;
+	}
 	.imgcarrito {
-		margin-left: -25px;
+		margin-left: -31px;
+	}
+	.carro {
+		margin-top: -3px;
+		margin-left: -32px;
+	}
+	.tituloPrincipal {
+		text-align: right;
+		margin-right: 130px;
+	}
+	thead, tbody {
+		display: block;
+	}
+	tbody {
+		height: 135px;
+		overflow-y: auto;
 	}
 }
+//-------------------------------------------------------------
 @media screen and (max-width: 576px) {
 	/*se hace si tiene 576px o menos*/
 	// :root {font-size: 12px;}
@@ -343,25 +348,41 @@ button {
 		margin: 0;
 		gap: 0;
 	}
-	.imgcarrito {
-		margin-left: 0;
-		min-width: 35px;
+	.bloqueCarrito {
+		margin-top: 92px;
+		margin-left: 35px;
 	}
-	.titCompras, .contenido {
+	.imgcarrito {
+		margin-left: -35px;
+	}
+	.carro {
+		margin-left: -35px;
+	}
+	.tituloPrincipal, .contenido {
 		font-size: 12px;
 	}
-	.titCompras {
-		margin-top: 20px;
+	.tituloPrincipal {
+		margin: 70px auto 10px;
+		text-align: center;
 	}
 	.contenido{
 	// display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto;
 	gap: 10px; 
 	padding: 10px;
 	}
+	.tituloSecundario {
+		margin-right: 2%;
+		margin-left: 45%;
+	}
 }
+//-------------------------------------------------------------
 @media screen and (max-width: 341px) {
 	// :root{font-size: 10px;}	
-	.titCompras, .contenido {
+	.tituloSecundario, .contenido {
 		font-size: 10px;
+	}
+	.tituloSecundario {
+		margin: 0 2%;
+		width: 92%;
 	}
 }
