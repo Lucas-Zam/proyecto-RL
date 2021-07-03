@@ -241,7 +241,7 @@ td:nth-child(6) {
 .totp2 {
 	text-align: right;
 	padding: 5px;
-	margin-right: 70%;
+	margin-right: 50%;
 }
 .cantidad {
 	width: 3rem;
@@ -333,6 +333,17 @@ button {
 	// display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto;
 	gap: 10px; 
 	padding: 10px;
+	}
+	th, td {
+		padding-left: 0;
+		padding-right: 0;
+		font-size: 14px;
+	}
+	.totp2 {
+		margin-right: 30%;
+	}
+	.grid {
+		gap: 0;
 	}
 }
 @media screen and (max-width: 341px) {
