@@ -211,11 +211,14 @@ td:nth-child(4) {
 	text-align: center;
 	background-color: #dff5e1;
 }
+td:nth-child(4):hover {
+	background-color: #f1cfcf;
+}
 td:nth-child(5) {text-align: right;}
 td:nth-child(6) {
 	text-align: center;
 	width: 30px;
-	padding: 0 2%;
+	padding: 0 1.5%;
 	background-color: #dff5e1;
 }
 // td:nth-child(2n+1) {// columna impar  
@@ -263,10 +266,15 @@ button {
     border-radius: 8px;
     padding: 10px 20px;
 }
-.form-control {
+.inp-bor {
 	border: 2px groove rgb(1, 131, 12);
+	text-align: center;
 }
-
+.inp-bor:hover {
+	border: 2px groove rgb(204, 4, 4);
+	background-color: #ffffe7;
+	text-align: center;
+}
 
 @import "piedepagina";
 
@@ -309,6 +317,9 @@ button {
 	.imgcarrito {
 		margin-left: -25px;
 	}
+	td:nth-child(6) {
+		padding: 0 1.7%;
+	}
 }
 @media screen and (max-width: 576px) {
 	/*se hace si tiene 576px o menos*/
@@ -338,6 +349,9 @@ button {
 		padding-left: 0;
 		padding-right: 0;
 		font-size: 14px;
+	}
+	td:nth-child(6) {
+		padding: 0 1%;
 	}
 	.totp2 {
 		margin-right: 30%;

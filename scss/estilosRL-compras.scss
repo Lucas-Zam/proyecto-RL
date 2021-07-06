@@ -66,7 +66,7 @@ body {
 	margin-left: 50%;
 }
 .contenido {
-	// background: lightblue;
+	background: $fondo-varios;
 	box-shadow: $sombra-caja;
 	border-radius: 4px;
 	padding: 30px;
@@ -334,7 +334,7 @@ button {
 		display: block;
 	}
 	tbody {
-		height: 135px;
+		height: 95px;
 		overflow-y: auto;
 	}
 }

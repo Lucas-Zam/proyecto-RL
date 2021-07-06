@@ -3,14 +3,20 @@ var posicion;
 
 //Si localStorage tiene datos, entonces creo vectorCompra y creo carrito
 const almacenados = JSON.parse(localStorage.getItem("vectorCompra"));
+debugger;
 if (almacenados != null) {
     // //Iteramos almacenados con for...of para transformar todos sus objetos a tipo producto.
     for (const i of almacenados) {
-        vectorCompra.push(new Producto(i.codigo,i.nombre,i.precio,i.cantidad));
+        if (i.cantidad != 0) {
+            vectorCompra.push(new Producto(i.codigo,i.nombre,i.precio,i.cantidad));
+        }
     }
-    crearCarrito();
-    seVeTabla = false;
-    verCarrito();
+    if (vectorCompra.length != 0) {
+        guardarLocalStorage();
+        crearCarrito();
+        seVeTabla = false;
+        verCarrito();
+    }
 }    
 totProductos();
 

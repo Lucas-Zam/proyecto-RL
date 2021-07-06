@@ -26,7 +26,7 @@ body {
 
 
 .contenido {
-	background: lightblue;
+	background: $fondo-varios;
 	box-shadow: $sombra-caja;
 	border-radius: 4px;
 	padding: 10px;
@@ -38,14 +38,14 @@ body {
 		&:hover{
 			background-color: lightblue;
 			box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.8), 0 6px 20px 0 rgba(0,0,0,0.2);
-			transform: scale(1.2);
-			cursor: pointer;
+			transform: scale(1.05);
+			// cursor: pointer;
 		}
 		&:active{
 			background-color: lightblue;
 			box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.8), 0 6px 20px 0 rgba(0,0,0,0.2);
-			transform: scale(2);
-			cursor: -webkit-grabbing;
+			transform: scale(1.05);
+			// cursor: -webkit-grabbing;
 		}
 		p{
 			padding-left: 5px;
@@ -172,7 +172,6 @@ article {
 		font-size: 12px;
 	}
 	.contenido{
-	// display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto;
 	gap: 10px; 
 	}
 }

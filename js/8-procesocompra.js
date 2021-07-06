@@ -1,5 +1,5 @@
 // eliminarRow(e) -- eliminar la fila seleccionada de la tabla de productos
-// ingresoCantidad(e) -- ingresa las cantidades de cada producto al vectorCompra
+// evalCant(e) -- evalua la cantidad ingresada y la ingresa al vectorCompra, a la tabla y al localStorage
 
 // seguirComprando() -- (BOTON) regresa a 7.compras.html para continuar eligiendo productos
 // eliminarCompra() -- (BOTON) regresa a 7-compras.html borrando localStorage para recomenzar
@@ -10,6 +10,8 @@
 
 // getLocalStorage() -- desde localStorage se obtiene el vectorCompra
 // saveInLocalStorage() -- guarda el vectorCompra en localStorage
+
+// mostrarTotales() -- muestra los totales finales de la planilla
 
 
 // ------------------------------------------------------------------------------------------
@@ -22,9 +24,8 @@ if (vectorCompra.length == 0) {
     eliminarCompra();
 }
 llenarTabla();
-const inputs = document.querySelectorAll('#ingCanti input');
+const inputCant = document.querySelectorAll('#ingCanti input');
 const icoTabla = document.querySelectorAll('#icono img');
-
 document.getElementById('tot1').innerHTML='$ '+Total1.toFixed(2);
 document.getElementById('tot2').innerHTML='$ '+IVA.toFixed(2);
 document.getElementById('tot3').innerHTML='$ '+Total2.toFixed(2);
@@ -47,36 +48,57 @@ const eliminarRow = (e) => {
     }
 }
 
-
-//-------------------------------------------------------------
-//función que ingresa las cantidades de cada producto al vectorCompra
-//para ubicar el índice se utilizó poner name=(nro) en el input
-//generado en la función llenarTabla()
-const ingresoCantidad = (e) => {
-    e.preventDefault();
-    let valor;
-    let valido = !(isNaN(e.target.valueAsNumber));// si el número es un nro. es true
-    if ((valido) && (e.target.value > 0)) {
-        valor = e.target.value;
+//--------------------------------------------------------------------------------------------
+//función que evalua la cantidad ingresada y la ingresa al array, a la tabla y al localStorage
+const evalCant = (e) => {
+    let fila = e.target.name;
+    let valido = !(isNaN(e.target.value));// true significa que SI es nro, false significa que NO es nro.
+    let valor = Number(e.target.value);
+    let subTotalFila = 0;
+    debugger;
+    if (valido) {
+        if (valor > 200) {//si la cantidad es mayor a 200, se utilizará 200 como máximo
+            e.target.value = 200;
+            valor = Number(e.target.value);
+        }
+        canti[fila] = valor;
     }else{
-        valor = 1;
-        e.target.value = 1;
-    }
-    canti[e.target.name] = valor;
-
-    if (canti[e.target.name] != vectorCompra[e.target.name].cantidad) {
-        vectorCompra[e.target.name].cantidad = valor;
+        e.target.value = "";
+        valor = "";
+        canti[fila] = 0;
+    }        
+    if (canti[fila] != vectorCompra[fila].cantidad) {
+        vectorCompra[fila].cantidad = valor;
+        subTotalFila = vectorCompra[fila].precio * canti[fila];
         localStorage.clear();
         saveInLocalStorage();
-        window.location.reload();
+        // mostrar valores modificados
+        document.querySelectorAll('#subTDProd')[fila].innerHTML = "$ " + subTotalFila;
+        mostrarTotales();
+        // window.location.reload();
+    }        
+}
+
+
+//----------------------------------------------------------------------------------------------------
+//función que evalua las cantidades del array vectorCompra y si hay alguna con 0 entonces lo pone en 1
+//(NO ESTA EN USO)
+const evalCant333 = (e) => {
+    e.preventDefault();
+    for (let iterar = 0; iterar < vectorCompra.length; iterar++) {
+        if (vectorCompra[iterar].cantidad < 1) {
+        vectorCompra[iterar].cantidad = 1;
+        }
     }
+    localStorage.clear();
+    saveInLocalStorage();
+    window.location.reload();
 }
 
 
 //-------------------------------------------------------------
 //función que obtiene de localStorage el vectorCompra
 function getLocalStorage() {
-    debugger;
 //function getLocalStorage(key) {
 //function getLocalStorage("vectorCompra") {
     //Obtenemos el listado de productos almacenado
@@ -163,7 +185,6 @@ function eliminarTabla() {
 //-------------------------------------------------------------
 //función que crea y llena la tabla
 function llenarTabla() {
-    debugger;
     Total1 = 0;
     canti = [];
     for (let i=0; i<vectorCompra.length; i++) {
@@ -172,6 +193,7 @@ function llenarTabla() {
     const tbody = document.querySelector('tbody');// indico una tbody
     for (let fila in vectorCompra) {
         const row = document.createElement('tr');
+        // <input type="number" name=${fila} class="inp-bor cantidad" min="1" max="200" value=${canti[fila]}>
 
         Total1 += vectorCompra[fila].precio * vectorCompra[fila].cantidad;
         row.innerHTML = `
@@ -179,9 +201,10 @@ function llenarTabla() {
             <td id="datTDProd">${vectorCompra[fila].nombre}</td>
             <td id="datTDProd"><label>$ ${vectorCompra[fila].precio}</label></td>
             <td id="ingCanti">
-                <input type="number" name=${fila} class="form-control cantidad" min="1" max="200" value=${canti[fila]}>
+                <input type="text" name=${fila} class="inp-bor cantidad" 
+                value=${canti[fila]}>
             </td>
-            <td id="datTDProd"><label>$ ${vectorCompra[fila].precio * canti[fila]}</label></td>
+            <td id="subTDProd"><label>$ ${vectorCompra[fila].precio * canti[fila]}</label></td>
             <td id="icono">
                 <a href="#" class="borrar-producto fas fa-times-circle" data-id="${fila}">
                     <img src="./imagenes/ico5.png" class="iconox" name=${fila} alt="icono">
@@ -194,7 +217,21 @@ function llenarTabla() {
 
     IVA = Total1 * 0.2;
     Total2 = Total1 + IVA;
-    debugger;
+}
+
+
+//-------------------------------------------------------------
+//muestra subTotal Parcial, IVA y Total
+const mostrarTotales = () => {
+    let tot1 = 0;
+    for (let iterar = 0; iterar < vectorCompra.length; iterar++) {
+        tot1 += vectorCompra[iterar].precio * vectorCompra[iterar].cantidad;  
+    }
+    let tot2 = tot1 * 0.2;
+    let tot3 = tot1 + tot2;
+    document.getElementById('tot1').innerHTML='$ '+tot1.toFixed(2);
+    document.getElementById('tot2').innerHTML='$ '+tot2.toFixed(2);
+    document.getElementById('tot3').innerHTML='$ '+tot3.toFixed(2);
 }
 
 
@@ -218,17 +255,15 @@ function realizarCompra() {
 
 // -----------------------------------------------------------------------------
 // EVENTOS
-
 // (1) Evento para los inputs de cantidad de productos a comprar
-inputs.forEach((unInput) => {// compruebo cada input del formulario, y de acuerdo a que sea se hace una función
-	unInput.addEventListener('mouseout', ingresoCantidad);// se hace la fc. cuando el mouse se va del campo
-    // input.addEventListener('focusout', ingresoCantidad);// se hace la fc. cuando salgo del campo
+inputCant.forEach((input) => {// compruebo cada input de la tabla, y de acuerdo a que sea se hace una función
+    input.addEventListener('keyup', evalCant);//cuando yo levanto la tecla presionada, se ejecutará evalCant
+    // input.addEventListener('blur', evalCant333);//cuando pierde el foco, se ejecutará evalCant333
+    // input.addEventListener('mousemove', evalCant333);//cuando pierde el foco, se ejecutará evalCant333
 });
-
 // (2) Evento para los íconos de eliminar filas de la tabla
 icoTabla.forEach((unIcono) => {
     unIcono.addEventListener('click', eliminarRow);// se hace la fc. cuando hago click sobre el ícono
-    // unIcono.addEventListener('click', eliminarRow);// se hace la fc. cuando hago click sobre el ícono
 });
 
 //-------------------------------------------------------------------------------
