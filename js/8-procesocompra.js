@@ -24,11 +24,14 @@ if (vectorCompra.length == 0) {
     eliminarCompra();
 }
 llenarTabla();
-const inputCant = document.querySelectorAll('#ingCanti input');
-const icoTabla = document.querySelectorAll('#icono img');
-document.getElementById('tot1').innerHTML='$ '+Total1.toFixed(2);
-document.getElementById('tot2').innerHTML='$ '+IVA.toFixed(2);
-document.getElementById('tot3').innerHTML='$ '+Total2.toFixed(2);
+// const inputCant = document.querySelectorAll('#ingCanti input');
+// const icoTabla = document.querySelectorAll('#icono img');
+// document.getElementById('tot1').innerHTML='$ '+Total1.toFixed(2);
+// document.getElementById('tot2').innerHTML='$ '+IVA.toFixed(2);
+// document.getElementById('tot3').innerHTML='$ '+Total2.toFixed(2);
+$('#tot1').text('$ '+`${Total1.toFixed(2)}`);
+$('#tot2').text('$ '+`${IVA.toFixed(2)}`);
+$('#tot3').text('$ '+`${Total2.toFixed(2)}`);
 
 
 //-------------------------------------------------------------
@@ -55,7 +58,6 @@ const evalCant = (e) => {
     let valido = !(isNaN(e.target.value));// true significa que SI es nro, false significa que NO es nro.
     let valor = Number(e.target.value);
     let subTotalFila = 0;
-    debugger;
     if (valido) {
         if (valor > 200) {//si la cantidad es mayor a 200, se utilizará 200 como máximo
             e.target.value = 200;
@@ -73,7 +75,8 @@ const evalCant = (e) => {
         localStorage.clear();
         saveInLocalStorage();
         // mostrar valores modificados
-        document.querySelectorAll('#subTDProd')[fila].innerHTML = "$ " + subTotalFila;
+        // document.querySelectorAll('#subTDProd')[fila].innerHTML = "$ " + subTotalFila;
+        $("td#subTDProd label").eq(fila).text("$ " + subTotalFila);
         mostrarTotales();
         // window.location.reload();
     }        
@@ -130,56 +133,56 @@ function saveInLocalStorage() {
 
 
 //-------------------------------------------------------------
-//función que elimina el tbody de la tabla
+//función que elimina el tbody de la tabla (NO ESTA EN USO)
 function eliminarTabla() {
-    let borrar1;
-    let borrar2;
-    let borrar3;
-    let borrar4;
-    let borrar5;
-    let tbody;
-    let padreTbody;
+    $('tbody').empty();//borra los elementos hijos, pero no el tbody
+
+    // let arrayTD;
+    // let arrayIngCanti;
+    // let arrayIcono;
+    // let arrayTR;
+    // let borrar5;
+    // let tbody;
+    // let padreTbody;
+    // let iterar = 0;
     // por si quiero hacer el proceso sin que se vea
     // const datProd = document.getElementById('datProd');
     // datProd.classList.add('noveo');
-    do {// elimino todos los td de la tabla tbody con id datTDProd
-        borrar1 = document.querySelectorAll('#datTDProd')[0];
-        if (borrar1) {
-            borrar1.parentNode.removeChild(borrar1);
-        }
-    } while (borrar1);
-    do {// elimino todos los td de la tabla tbody con id ingCanti
-        borrar2 = document.querySelectorAll('#ingCanti')[0];
-        if (borrar2) {
-            borrar2.parentNode.removeChild(borrar2);
-        }
-    } while (borrar2);
-    do {// elimino todos los td de la tabla tbody con id icono
-        borrar3 = document.querySelectorAll('#icono')[0];
-        if (borrar3) {
-            borrar3.parentNode.removeChild(borrar3);
-        }
-    } while (borrar3);
-    do {// elimino todos los tr de la tabla tbody con id datTRProd
-        borrar4 = document.querySelectorAll('#datTRProd')[0];
-        if (borrar4) {
-            borrar4.parentNode.removeChild(borrar4);
-        }
-    } while (borrar4);
-    // busco el tbody con id datProd
-    borrar5 = document.querySelectorAll('#datProd')[0];
-    // borro el tbody
-    borrar5.parentNode.removeChild(borrar5);
-    // creo un nuevo elemento tbody
-    tbody = document.createElement("tbody");
-    // al elemento tbody le pongo el id datProd
-    tbody.id = "datProd";
-    // busco el padre de tbody por el tag name thead
-    padreTbody = document.getElementsByTagName('thead')[0].parentNode;
-    // al padre le agrego un hijo tbody al final
-    padreTbody.appendChild(tbody);
-    // restituyo la visibilidad del tbody (si no lo hubiera borrado)
-    // datProd.classList.remove('noveo');
+
+    // elimino todos los td de la tabla tbody con id datTDProd
+    // arrayTD = document.querySelectorAll('#datTDProd');
+    // for (iterar = 0; iterar < arrayTD.length; iterar++) {
+    //     arrayTD[iterar].parentNode.removeChild(arrayTD[iterar]);
+    // }
+    // // elimino todos los td de la tabla tbody con id ingCanti
+    // arrayIngCanti = document.querySelectorAll('#ingCanti');
+    // for (iterar = 0; iterar < arrayIngCanti.length; iterar++) {
+    //     arrayIngCanti[iterar].parentNode.removeChild(arrayIngCanti[iterar]);
+    // }
+    // // elimino todos los td de la tabla tbody con id icono
+    // arrayIcono = document.querySelectorAll('#icono');
+    // for (iterar = 0; iterar < arrayIcono.length; iterar++) {
+    //     arrayIcono[iterar].parentNode.removeChild(arrayIcono[iterar]);
+    // }
+    // // elimino todos los tr de la tabla tbody con id datTRProd
+    // arrayTR = document.querySelectorAll('#datTRProd');
+    // for (iterar = 0; iterar < arrayTR.length; iterar++) {
+    //     arrayTR[iterar].parentNode.removeChild(arrayTR[iterar]);
+    // }
+    // // busco el tbody con id datProd
+    // borrar5 = document.querySelectorAll('#datProd')[0];
+    // // borro el tbody
+    // borrar5.parentNode.removeChild(borrar5);
+    // // creo un nuevo elemento tbody
+    // tbody = document.createElement("tbody");
+    // // al elemento tbody le pongo el id datProd
+    // tbody.id = "datProd";
+    // // busco el padre de tbody por el tag name thead
+    // padreTbody = document.getElementsByTagName('thead')[0].parentNode;
+    // // al padre le agrego un hijo tbody al final
+    // padreTbody.appendChild(tbody);
+    // // restituyo la visibilidad del tbody (si no lo hubiera borrado)
+    // // datProd.classList.remove('noveo');
 }
 
 //-------------------------------------------------------------
@@ -187,16 +190,10 @@ function eliminarTabla() {
 function llenarTabla() {
     Total1 = 0;
     canti = [];
-    for (let i=0; i<vectorCompra.length; i++) {
-        canti[i] = vectorCompra[i].cantidad;
-    }
-    const tbody = document.querySelector('tbody');// indico una tbody
-    for (let fila in vectorCompra) {
-        const row = document.createElement('tr');
-        // <input type="number" name=${fila} class="inp-bor cantidad" min="1" max="200" value=${canti[fila]}>
-
+    for (fila in vectorCompra) {
+        canti[fila] = vectorCompra[fila].cantidad;
         Total1 += vectorCompra[fila].precio * vectorCompra[fila].cantidad;
-        row.innerHTML = `
+        $('tbody').append(`<tr id="datTRProd">
             <td id="datTDProd">${vectorCompra[fila].codigo}</td>
             <td id="datTDProd">${vectorCompra[fila].nombre}</td>
             <td id="datTDProd"><label>$ ${vectorCompra[fila].precio}</label></td>
@@ -210,28 +207,61 @@ function llenarTabla() {
                     <img src="./imagenes/ico5.png" class="iconox" name=${fila} alt="icono">
                 </a>
             </td>
-        `;
-        row.id = "datTRProd";
-        tbody.appendChild(row);// tr hijo de tbody   
+        </tr>`);
     }    
-
     IVA = Total1 * 0.2;
     Total2 = Total1 + IVA;
 }
 
+//-------------------------------------------------------------
+//función que crea y llena la tabla
+// function llenarTabla() {
+//     Total1 = 0;
+//     canti = [];
+//     for (let i=0; i<vectorCompra.length; i++) {
+//         canti[i] = vectorCompra[i].cantidad;
+//     }    
+//     const tbody = document.querySelector('tbody');// indico una tbody
+//     for (let fila in vectorCompra) {
+//         const row = document.createElement('tr');
+//         Total1 += vectorCompra[fila].precio * vectorCompra[fila].cantidad;
+//         row.innerHTML = `
+//             <td id="datTDProd">${vectorCompra[fila].codigo}</td>
+//             <td id="datTDProd">${vectorCompra[fila].nombre}</td>
+//             <td id="datTDProd"><label>$ ${vectorCompra[fila].precio}</label></td>
+//             <td id="ingCanti">
+//                 <input type="text" name=${fila} class="inp-bor cantidad" 
+//                 value=${canti[fila]}>
+//             </td>
+//             <td id="subTDProd"><label>$ ${vectorCompra[fila].precio * canti[fila]}</label></td>
+//             <td id="icono">
+//                 <a href="#" class="borrar-producto fas fa-times-circle" data-id="${fila}">
+//                     <img src="./imagenes/ico5.png" class="iconox" name=${fila} alt="icono">
+//                 </a>
+//             </td>
+//         `;
+//         row.id = "datTRProd";
+//         tbody.appendChild(row);// tr hijo de tbody   
+//     }    
+//     IVA = Total1 * 0.2;
+//     Total2 = Total1 + IVA;
+// }
 
 //-------------------------------------------------------------
 //muestra subTotal Parcial, IVA y Total
 const mostrarTotales = () => {
     let tot1 = 0;
-    for (let iterar = 0; iterar < vectorCompra.length; iterar++) {
-        tot1 += vectorCompra[iterar].precio * vectorCompra[iterar].cantidad;  
+    for (fila in vectorCompra) {
+        tot1 += vectorCompra[fila].precio * vectorCompra[fila].cantidad;  
     }
     let tot2 = tot1 * 0.2;
     let tot3 = tot1 + tot2;
-    document.getElementById('tot1').innerHTML='$ '+tot1.toFixed(2);
-    document.getElementById('tot2').innerHTML='$ '+tot2.toFixed(2);
-    document.getElementById('tot3').innerHTML='$ '+tot3.toFixed(2);
+    // document.getElementById('tot1').innerHTML='$ '+tot1.toFixed(2);
+    // document.getElementById('tot2').innerHTML='$ '+tot2.toFixed(2);
+    // document.getElementById('tot3').innerHTML='$ '+tot3.toFixed(2);
+    $('#tot1').text('$ '+`${tot1.toFixed(2)}`);
+    $('#tot2').text('$ '+`${tot2.toFixed(2)}`);
+    $('#tot3').text('$ '+`${tot3.toFixed(2)}`);
 }
 
 
@@ -255,18 +285,29 @@ function realizarCompra() {
 
 // -----------------------------------------------------------------------------
 // EVENTOS
+// Al comienzo de página:
+// const inputCant = document.querySelectorAll('#ingCanti input');
+// const icoTabla = document.querySelectorAll('#icono img');
+// -----------------------------------------------------------------------------
 // (1) Evento para los inputs de cantidad de productos a comprar
-inputCant.forEach((input) => {// compruebo cada input de la tabla, y de acuerdo a que sea se hace una función
-    input.addEventListener('keyup', evalCant);//cuando yo levanto la tecla presionada, se ejecutará evalCant
+// inputCant.forEach((input) => {// compruebo cada input de la tabla, y de acuerdo a que sea se hace una función
+    // input.addEventListener('keyup', evalCant);//cuando yo levanto la tecla presionada, se ejecutará evalCant
     // input.addEventListener('blur', evalCant333);//cuando pierde el foco, se ejecutará evalCant333
     // input.addEventListener('mousemove', evalCant333);//cuando pierde el foco, se ejecutará evalCant333
+// });
+$('#ingCanti input').each(function() {
+    $(this).on('keyup', evalCant);
 });
 // (2) Evento para los íconos de eliminar filas de la tabla
-icoTabla.forEach((unIcono) => {
-    unIcono.addEventListener('click', eliminarRow);// se hace la fc. cuando hago click sobre el ícono
+// icoTabla.forEach((unIcono) => {
+    // unIcono.addEventListener('click', eliminarRow);// se hace la fc. cuando hago click sobre el ícono
+// });
+$('#icono img').each(function() {
+    $(this).on('click', eliminarRow);
 });
-
 //-------------------------------------------------------------------------------
+
+
 
 
 

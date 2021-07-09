@@ -1,9 +1,7 @@
 let seVeTabla = false;// true se esta viendo, false está oculta
-var posicion;
 
 //Si localStorage tiene datos, entonces creo vectorCompra y creo carrito
 const almacenados = JSON.parse(localStorage.getItem("vectorCompra"));
-debugger;
 if (almacenados != null) {
     // //Iteramos almacenados con for...of para transformar todos sus objetos a tipo producto.
     for (const i of almacenados) {
@@ -49,43 +47,54 @@ function addProd(a,b,c,d) {
 //función que crea la tabla carrito al hacer click en ícono carrito
 function crearCarrito() {
     if (vectorCompra.length != 0) {
-        const tbody = document.querySelector('tbody');// indico una tbody
-        for (let fila in vectorCompra) {
-            const row = document.createElement('tr');
-            row.innerHTML = `
+        for (let fila in vectorCompra) {        
+            $('tbody#datProd').append(`<tr id="datTRProd">
                 <td id="datTDProd">${vectorCompra[fila].codigo}</td>
                 <td id="datTDProd">${vectorCompra[fila].nombre}</td>
                 <td id="datTDProd">${vectorCompra[fila].precio}</td>
                 <td id="datTDProd" class="noveo">${vectorCompra[fila].cantidad}</td>
-            `;
-            row.id = "datTRProd";
-            tbody.appendChild(row);// tr hijo de tbody   
+            </tr>`);
         }    
     }
+    // if (vectorCompra.length != 0) {
+    //     const tbody = document.querySelector('tbody');// indico una tbody
+    //     for (let fila in vectorCompra) {
+    //         const row = document.createElement('tr');
+    //         row.innerHTML = `
+    //             <td id="datTDProd">${vectorCompra[fila].codigo}</td>
+    //             <td id="datTDProd">${vectorCompra[fila].nombre}</td>
+    //             <td id="datTDProd">${vectorCompra[fila].precio}</td>
+    //             <td id="datTDProd" class="noveo">${vectorCompra[fila].cantidad}</td>
+    //         `;
+    //         row.id = "datTRProd";
+    //         tbody.appendChild(row);// tr hijo de tbody   
+    //     }    
+    // }
 }
 
 
 //--------------------------------------------------------------------
 //función que elimina la tabla carrito al hacer click en ícono carrito
 function eliminarCarrito() {
-    let borrar1;
-    let borrar2;
-    const datProd = document.getElementById('datProd');
-    datProd.classList.add('noveo');
-      // elemento.className += "noveo";
-    do {// elimino todos los td de la tabla tbody
-        borrar1 = document.querySelectorAll('#datTDProd')[0];
-        if (borrar1) {
-            borrar1.parentNode.removeChild(borrar1);
-        }
-    } while (borrar1);
-    do {// elimino todos los tr de la tabla tbody
-        borrar2 = document.querySelectorAll('#datTRProd')[0];
-        if (borrar2) {
-            borrar2.parentNode.removeChild(borrar2);
-        }
-    } while (borrar2);
-    datProd.classList.remove('noveo');
+    $('#datProd').addClass('noveo');
+    $('tbody#datProd').empty();//borra los elementos hijos, pero no el tbody
+    $('#datProd').removeClass('noveo');
+    // let arrayTD;
+    // let arrayTR;
+    // let iterar = 0;
+    // const datProd = document.getElementById('datProd');
+    // datProd.classList.add('noveo');
+    // // elimino todos los td de la tabla tbody
+    // arrayTD = document.querySelectorAll('#datTDProd');
+    // for (iterar = 0; iterar < arrayTD.length; iterar++) {
+    //     arrayTD[iterar].parentNode.removeChild(arrayTD[iterar]);
+    // }
+    // // elimino todos los tr de la tabla tbody
+    // arrayTR = document.querySelectorAll('#datTRProd');
+    // for (iterar = 0; iterar < arrayTR.length; iterar++) {
+    //     arrayTR[iterar].parentNode.removeChild(arrayTR[iterar]);
+    // }
+    // datProd.classList.remove('noveo');
 }
 
 
@@ -93,12 +102,12 @@ function eliminarCarrito() {
 //función que muestra o no muestra la tabla carrito al hacer click en ícono carrito
 function verCarrito () {
     if (seVeTabla) {// si se ve, oculto la tabla carrito y los botones
-        document.getElementById('carrito').classList.remove('veo');
-        document.getElementById('carrito').classList.add('noveo');
+        $('#carrito').removeClass('veo');
+        $('#carrito').addClass('noveo');
         seVeTabla = false;
     }else{// si no se ve, muestro la tabla carrito y los botones
-        document.getElementById('carrito').classList.remove('noveo');
-	    document.getElementById('carrito').classList.add('veo');
+        $('#carrito').removeClass('noveo');
+        $('#carrito').addClass('veo');
         seVeTabla = true;
     }
     totProductos();
@@ -155,7 +164,8 @@ function totProductos() {
     }else{
         mensaje = tot + " productos en carrito";
     }
-    document.getElementById('loteProd').innerHTML = mensaje;
+    $('button#loteProd').text(`${mensaje}`);
+    // document.getElementById('loteProd').innerHTML = mensaje;
 }
 
 
