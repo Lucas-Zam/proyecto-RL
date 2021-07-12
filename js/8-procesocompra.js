@@ -19,6 +19,7 @@
 // ------------------------------------------------------------------------------------------
 let Total1 = 0;
 let canti = [];
+
 getLocalStorage();
 if (vectorCompra.length == 0) {
     eliminarCompra();

@@ -1,28 +1,35 @@
 let seVeTabla = false;// true se esta viendo, false está oculta
 
-//Si localStorage tiene datos, entonces creo vectorCompra y creo carrito
-const almacenados = JSON.parse(localStorage.getItem("vectorCompra"));
-if (almacenados != null) {
-    // //Iteramos almacenados con for...of para transformar todos sus objetos a tipo producto.
-    for (const i of almacenados) {
-        if (i.cantidad != 0) {
-            vectorCompra.push(new Producto(i.codigo,i.nombre,i.precio,i.cantidad));
+
+$(document).ready(function() {
+
+    //Si localStorage tiene datos, entonces creo vectorCompra y creo carrito
+    const almacenados = JSON.parse(localStorage.getItem("vectorCompra"));
+    if (almacenados != null) {
+        // //Iteramos almacenados con for...of para transformar todos sus objetos a tipo producto.
+        for (const item of almacenados) {
+            if (item.cantidad != 0) {
+                vectorCompra.push(new Producto(item.codigo,item.nombre,item.precio,item.cantidad));
+            }
         }
-    }
-    if (vectorCompra.length != 0) {
-        guardarLocalStorage();
-        crearCarrito();
-        seVeTabla = false;
-        verCarrito();
-    }
-}    
-totProductos();
+        if (vectorCompra.length != 0) {
+            guardarLocalStorage();
+            crearCarrito();
+            seVeTabla = false;
+            verCarrito();
+        }
+    }    
+    totProductos();
+    
+});
+
 
 
 
 //-----------------------------------------------------------------------------
 //función que ingresa el producto elegido al objeto vectorCompra y localStorage
 function addProd(a,b,c,d) {
+    debugger;
     if (vectorCompra.length == 0) {
         // pregunto si el objeto está vacío, si true entonces ingreso el producto
         vectorCompra.push(new Producto(a,b,c,d));
@@ -52,9 +59,10 @@ function crearCarrito() {
                 <td id="datTDProd">${vectorCompra[fila].codigo}</td>
                 <td id="datTDProd">${vectorCompra[fila].nombre}</td>
                 <td id="datTDProd">${vectorCompra[fila].precio}</td>
-                <td id="datTDProd" class="noveo">${vectorCompra[fila].cantidad}</td>
+                <td id="datTDProd">${vectorCompra[fila].cantidad}</td>
             </tr>`);
-        }    
+        }
+        $('td#datTDProd:nth-child(4n)').hide();//oculta cantidad en la tabla
     }
     // if (vectorCompra.length != 0) {
     //     const tbody = document.querySelector('tbody');// indico una tbody
@@ -76,9 +84,12 @@ function crearCarrito() {
 //--------------------------------------------------------------------
 //función que elimina la tabla carrito al hacer click en ícono carrito
 function eliminarCarrito() {
-    $('#datProd').addClass('noveo');
+    // $('#datProd').addClass('noveo');
+    $('#datProd').hide();
     $('tbody#datProd').empty();//borra los elementos hijos, pero no el tbody
-    $('#datProd').removeClass('noveo');
+    $('#datProd').show();
+    // $('#datProd').removeClass('noveo');
+
     // let arrayTD;
     // let arrayTR;
     // let iterar = 0;
@@ -102,12 +113,14 @@ function eliminarCarrito() {
 //función que muestra o no muestra la tabla carrito al hacer click en ícono carrito
 function verCarrito () {
     if (seVeTabla) {// si se ve, oculto la tabla carrito y los botones
-        $('#carrito').removeClass('veo');
-        $('#carrito').addClass('noveo');
+        // $('#carrito').removeClass('veo');// $('#carrito').addClass('noveo');
+        // $('#carrito').toggle();
+        $('#carrito').hide();
         seVeTabla = false;
     }else{// si no se ve, muestro la tabla carrito y los botones
-        $('#carrito').removeClass('noveo');
-        $('#carrito').addClass('veo');
+        // $('#carrito').removeClass('noveo');// $('#carrito').addClass('veo');
+        // $('#carrito').toggle();
+        $('#carrito').show();
         seVeTabla = true;
     }
     totProductos();
