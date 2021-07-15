@@ -47,6 +47,7 @@
 		</header>
 
 		<div class="bloqueCarrito colspan-1 rowspan-1">
+			<!-- <button id="loteProd" class="btn btn-block btn-primary btn-carrito">Carrito</button> -->
 			<button id="loteProd" class="btn btn-block btn-primary btn-carrito" onclick="verCarrito()">Carrito</button>
 			<img src="./imagenes/carro.png" class="imgcarrito" width="3px"></img>
 			<div id="carrito" class="carro noveo">
@@ -55,19 +56,21 @@
 						<tr>
 							<th>Código</th>
 							<th>Nombre</th>
-							<th>P.Unit</th>
+							<th>P.Unit.</th>
 							<th class="noveo">Cantidad</th>
 						</tr>
 					</thead>
 					<tbody id="datProd"></tbody>
 				</table>
+				<!-- <button id="vaciarCarrito" class="btn btn-block btn-primary">Vaciar Carrito</button> -->
 				<button class="btn btn-block btn-primary" onclick="vaciarCarrito()">Vaciar Carrito</button>
+				<!-- <button id="abrirCarrito" class="btn btn-block btn-success">Abrir Carrito<c</button> -->
 				<button class="btn btn-block btn-success" onclick="procesarCompra()">Abrir Carrito<c</button>
 			</div>
 		</div>
 
 		<main class="tituloPrincipal colspan-1 rowspan-1">
-			<h2>Compras</h2>
+			<p class="tituh2">Compras</p>
 		</main>	
 		<div class="tituloSecundario colspan-1 rowspan-1">
 			<div class="tituh5 texto-derecha">click en el botón del carrito de compras para ver los productos ingresados
@@ -94,10 +97,10 @@
 		</div>
 
 	</div>
-	<script src="js/jquery-3.6.0.js"></script>
+	<script src="./js/jquery-3.6.0.min.js"></script>
 	<script src="./js/todos-nav-ico-intercambio.js"></script>
 	<script src="./js/todos-volverarriba.js"></script>
-	<script src="./js/7-clases.js"></script>
-	<script src="./js/7-compras.js"></script>
+	<script src="./js/7-clases1.js"></script>
+	<script src="./js/7-compras1.js"></script>
 </body>
 </html>

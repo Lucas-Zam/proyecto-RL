@@ -8,7 +8,8 @@ $fondo-naveg-hover: $fondo-header;
 // $fondo-naveg-hover: rgb(0, 105, 105);
 $color-naveg-hover: rgb(133, 152, 156);
 // $color-naveg-hover: rgb(155, 155, 155);
-$fondo-novedad-barra-sup:rgba(0, 0, 0, 0.253);
+$fondo-novedad-barra-sup: rgb(193, 221, 190);
+$fondo-novedad-activa: rgb(228, 68, 68);
 $fondo-novedad: rgb(255, 255, 255);
 $fondo-ofertas: #e67e22;
 $fondo-formulario: rgb(18, 99, 126); 
@@ -46,7 +47,7 @@ img {
 
 .tituloPrincipal {
 	text-align: center;
-	margin: 20px auto 10px;
+	// margin: 20px auto 10px;
 }
 
 .texto-centrado {text-align: center;}

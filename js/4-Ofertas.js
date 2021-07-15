@@ -23,7 +23,7 @@ traerDatosServer();
 //-------------------------------------------------------------
 //función que trae la información del archivo productos.json
 function traerDatosServer() {
-    const URLJSON = "./imagenes/productos.json";
+    const URLJSON = "productos.json";
     $.getJSON(URLJSON, function (respuesta, estado) {
         if (estado === "success") {
             let datos = respuesta;

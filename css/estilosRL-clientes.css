@@ -58,8 +58,7 @@ img {
   /* la altura se coloca para que no deforme la imagen*/ }
 
 .tituloPrincipal {
-  text-align: center;
-  margin: 20px auto 10px; }
+  text-align: center; }
 
 .texto-centrado {
   text-align: center; }

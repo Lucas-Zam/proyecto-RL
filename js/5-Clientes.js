@@ -102,7 +102,6 @@ const validarprov = (e) => {
     // button: el botón del mouse presionado (0=izq, 1=medio, 2=der)
     // keyCode: el caracter del teclado presionado (en caso que corresponda)
     // shiftKey: true o false, en caso de estar presionada esta tecla
-	debugger;
 	let lista1 = document.getElementById("listaprov");
     let indice = lista1.selectedIndex;
     let opcion = lista1.options[indice];
@@ -129,14 +128,12 @@ const validarprov = (e) => {
 
 
 const hacertrim = (e) => {
-	debugger;
 	let hagotrim = document.getElementById(e.target.name).value.trim();
 	document.getElementById(e.target.name).value = hagotrim;
 }
 
 
 const validarFormu = (e) => {
-	debugger;
 	switch (e.target.name) {
 		case "NomAp":
 			validarCampo(expresiones.NomAp, e.target, 'NomAp');
@@ -173,7 +170,6 @@ const validarCampo = (expresion, input, campo) => {
 	// Evalúa cada campo y coloca en objeto campos true si ok, o false si está mal
 	// Evalúa cada campo también con expresiones regulares
 	// Muestra ícono de verificación en el campo
-	debugger;
 	let ok = 1; //1 es ok, 0 esta mal
 	let transi = document.getElementById(campo).value.trim();
 	let long = transi.length;

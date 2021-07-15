@@ -33,7 +33,7 @@
 		</header>
 
 		<div class="tituloPrincipal colspan-1 rowspan-1">
-			<h2>Colocar cantidades y Realizar Compra</h2>			
+			<p class="tituh2">Colocar cantidades y Realizar Compra</p>			
 		</div>
 
 		<table id="lista-carrito colspan-1 rowspan-1" class="table">
@@ -63,12 +63,13 @@
 			</div>
 		</div>
 
-
-
 		<div class="colspan-1 rowspan-1 grid col-3 row-1">
-			<button class="btn btn-block btn-primary" onclick="seguirComprando()">Seguir comprando</button>
+			<button id="seguirComprando" class="btn btn-block btn-primary">Seguir comprando</button>
+			<button id="eliminarCompra" class="btn btn-block btn-danger">Eliminar Compra</button>
+			<button id="realizarCompra" class="btn btn-block btn-success">Realizar Compra</button>
+			<!-- <button class="btn btn-block btn-primary" onclick="seguirComprando()">Seguir comprando</button>
 			<button class="btn btn-block btn-danger" onclick="eliminarCompra()">Eliminar Compra</button>
-			<button class="btn btn-block btn-success" onclick="realizarCompra()">Realizar Compra</button>
+			<button class="btn btn-block btn-success" onclick="realizarCompra()">Realizar Compra</button> -->
 		</div>
 		
 		<footer class="footer colspan-1 rowspan-1">
@@ -86,7 +87,7 @@
 		</div>
 
 	</div>
-	<script src="js/jquery-3.6.0.js"></script>
+	<script src="./js/jquery-3.6.0.min.js"></script>
 	<script src="./js/todos-volverarriba.js"></script>
 	<script src="./js/8-clases.js"></script>
 	<script src="./js/8-procesocompra.js"></script>

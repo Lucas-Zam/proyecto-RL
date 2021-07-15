@@ -1,6 +1,5 @@
 let seVeTabla = false;// true se esta viendo, false está oculta
 
-
 $(document).ready(function() {
 
     //Si localStorage tiene datos, entonces creo vectorCompra y creo carrito
@@ -22,8 +21,6 @@ $(document).ready(function() {
     totProductos();
     
 });
-
-
 
 
 //-----------------------------------------------------------------------------
@@ -112,15 +109,16 @@ function eliminarCarrito() {
 //-------------------------------------------------------------
 //función que muestra o no muestra la tabla carrito al hacer click en ícono carrito
 function verCarrito () {
+    debugger;
     if (seVeTabla) {// si se ve, oculto la tabla carrito y los botones
         // $('#carrito').removeClass('veo');// $('#carrito').addClass('noveo');
-        // $('#carrito').toggle();
-        $('#carrito').hide();
+        // $('#carrito').toggle();o // $('#carrito').hide();
+        $('#carrito').slideUp(50);
         seVeTabla = false;
     }else{// si no se ve, muestro la tabla carrito y los botones
         // $('#carrito').removeClass('noveo');// $('#carrito').addClass('veo');
-        // $('#carrito').toggle();
-        $('#carrito').show();
+        // $('#carrito').toggle();o // $('#carrito').show();
+        $('#carrito').slideDown(50);
         seVeTabla = true;
     }
     totProductos();
@@ -182,9 +180,17 @@ function totProductos() {
 }
 
 
+// $('button#loteProd').on('click', () => {
+//     verCarrito();
+// });
 
+// $('button#vaciarCarrito').on('click', () => {
+//     vaciarCarrito();
+// });
 
-
+// $('button#abrirCarrito').on('click', () => {
+//     procesarCompra();
+// });
 
 
 

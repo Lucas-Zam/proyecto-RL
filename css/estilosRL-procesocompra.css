@@ -55,8 +55,7 @@ img {
   /* la altura se coloca para que no deforme la imagen*/ }
 
 .tituloPrincipal {
-  text-align: center;
-  margin: 20px auto 10px; }
+  text-align: center; }
 
 .texto-centrado {
   text-align: center; }
@@ -668,7 +667,7 @@ body {
   font-size: 1rem;
   margin: 0 auto;
   height: auto;
-  grid-gap: 5px; }
+  grid-gap: 30px; }
 
 .header {
   font-size: 16px;

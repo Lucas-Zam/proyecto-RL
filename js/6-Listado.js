@@ -23,11 +23,8 @@ traerDatosServer();
 //-------------------------------------------------------------
 //función que trae la información del archivo productos.json
 function traerDatosServer() {
-    debugger;
-    const URLJSON = "./imagenes/productos.json";
+    const URLJSON = "productos.json";
     $.getJSON(URLJSON, function (respuesta, estado) {
-        console.log(estado);
-        debugger;
         if (estado === "success") {
             let datos = respuesta;
             datosAlDOM(datos);
@@ -41,6 +38,7 @@ function datosAlDOM(datos) {
     for (let item of datos) { 
         $('tbody').append(
             `<tr>
+                <td><img src=./imagenes/${item.imagen} width="270" alt="## imagen no disponible ##"/></td>
                 <td>${item.codigo}</td>
                 <td>${item.descripcion}</td>
                 <td>${item.precio}</td>
@@ -50,3 +48,5 @@ function datosAlDOM(datos) {
             </tr>`);
     }    
 };
+
+{/* <td>${item.imagen}</td> */} 

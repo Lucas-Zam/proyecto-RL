@@ -9,7 +9,9 @@ class Producto {
 
 vectorCompra = [];
 
-traerDatosServer()
+
+traerDatosServer();
+
 
 //---------------------------------------------------------------------------------------------
 //función que trae la información del archivo productos.json
@@ -36,7 +38,7 @@ traerDatosServer()
 //-------------------------------------------------------------
 //función que trae la información del archivo productos.json
 function traerDatosServer() {
-    const URLJSON = "./imagenes/productos.json";
+    const URLJSON = "productos.json";
     $.getJSON(URLJSON, function (respuesta, estado) {
         if (estado === "success") {
             let datos = respuesta;
@@ -44,6 +46,7 @@ function traerDatosServer() {
         }
     }
 )};
+
 
 //---------------------------------------------------------------------------------------------
 // función que coloca en el DOM los datos recibidos del archivo producto.json
@@ -59,7 +62,6 @@ function datosAlDOM(datos) {
             </div>`);
     }    
 };
-
 
 
 

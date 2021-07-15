@@ -299,12 +299,28 @@ function realizarCompra() {
 $('#ingCanti input').each(function() {
     $(this).on('keyup', evalCant);
 });
+
 // (2) Evento para los íconos de eliminar filas de la tabla
 // icoTabla.forEach((unIcono) => {
     // unIcono.addEventListener('click', eliminarRow);// se hace la fc. cuando hago click sobre el ícono
 // });
 $('#icono img').each(function() {
     $(this).on('click', eliminarRow);
+});
+
+// (3) Evento botón de seguir comprando
+$('button#seguirComprando').on('click', () => {
+    seguirComprando();
+});
+
+// (4) Evento botón de eliminar compra
+$('button#eliminarCompra').on('click', () => {
+    eliminarCompra()
+});
+
+// (5) Evento botón de realizar compra (EN CONSTRUCCION)
+$('button#realizarCompra').on('click', () => {
+    realizarCompra();
 });
 //-------------------------------------------------------------------------------
 

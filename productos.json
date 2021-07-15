@@ -21,7 +21,7 @@
         "marca": "",
         "cod_original": "90457649 / 905669",
         "oferta": "no",
-        "carrousel": "no"
+        "carrousel": "si"
     },
     {
         "imagen": "02031.jpg",
@@ -45,7 +45,7 @@
         "marca": "",
         "cod_original": "93306264",
         "oferta": "si",
-        "carrousel": "no"
+        "carrousel": "si"
     },
     {
         "imagen": "02418.jpg",
@@ -69,7 +69,7 @@
         "marca": "",
         "cod_original": "",
         "oferta": "no",
-        "carrousel": "no"
+        "carrousel": "si"
     },
     {
         "imagen": "02442.jpg",
@@ -93,7 +93,7 @@
         "marca": "",
         "cod_original": "3788472",
         "oferta": "no",
-        "carrousel": "no"
+        "carrousel": "si"
     },
     {
         "imagen": "03041.jpg",
@@ -117,7 +117,7 @@
         "marca": "",
         "cod_original": "",
         "oferta": "si",
-        "carrousel": "no"
+        "carrousel": "si"
     },
     {
         "imagen": "03709.jpg",
@@ -141,7 +141,7 @@
         "marca": "",
         "cod_original": "",
         "oferta": "no",
-        "carrousel": "no"
+        "carrousel": "si"
     },
     {
         "imagen": "03760.jpg",
@@ -165,6 +165,6 @@
         "marca": "",
         "cod_original": "",
         "oferta": "no",
-        "carrousel": "no"
+        "carrousel": "si"
     }
 ]

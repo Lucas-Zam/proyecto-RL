@@ -1,30 +1,27 @@
 Nombre de proyecto: proyecto-RL
 Descripción: proyecto demostración de casa de repuestos Lucas, que comercializa
 repuestos alternativos para el automotor marca Chevrolet.
-Link: https://proyecto-rl.000webhostapp.com/
 
-Este proyecto cuenta con un index (home), desde donde se enlazan 3 páginas.
-La página de ofertas, que muestra las fotos de todas las ofertas actuales con 
-sus respectivas descripciones.
-La página del formulario de ingreso como cliente de la empresa, donde se llena
-este formulario con los inputs solicitados.
-La página con el listado de productos que se comercializan y las empresas
-fabricantes de los mismos.
+Este proyecto cuenta con un index (home) como página principal, con la publicidad
+de la empresa y datos principales, además de contar con enlaces a 4 html
+(ofertas, clientes, compras y listado).
 
-En el index se muestra un breve video con el recorrido por el sector de ventas,
-y se explica la misión y visión de la empresa.
+En Ofertas se muestran los productos que están en ocasión con sus respectivas
+descripciones.
+En Clientes se muestra un formulario con la información que deberá ingresarse
+para ser cliente de la empresa, todo tiene su validación.
+En Compras, aparece un carrito, donde se puede ir eligiendo los productos
+que se ingresarán al carrito, para luego pasar a otro html donde se colocan
+las cantidades a comprar, mostrando el valor de la factura de compra. Pudiendo
+regresar para modificaciones.
+En Listado, se muestra el listado completo de productos con la info de sus
+fabricantes.
+En todos los casos, se utiliza un archivo de productos.json para ingresar
+los mismos, como así también el localStorage, para pasar información del carrito 
+de compras, al proceso de ingreso de cantidades e importe de la factura.
 
-Este es mi primer proyecto realizado como aprendizaje del curso de Desarrollo 
-Web, que estoy realizando en coderhouse.
-En este curso estoy aprendiendo el manejo de html, css, sass, scss.
-
+Todo está implementado íntegramente utilizando html, css, javascript y jQuery.
 Seguramente este proyecto se estará modificando, a medida que aparezcan nuevas
 ideas de complementación y de aprendizaje.
 
-Agradezco a mi profesor Darío Capdevila y mi tutora Milena Maite por la
-enseñanza y por las explicaciones resueltas.
-
-
-
-
-
+Link: https://proyecto-rl.000webhostapp.com/
