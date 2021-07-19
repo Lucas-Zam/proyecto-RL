@@ -1,5 +1,6 @@
-class Producto {
-    constructor(codigo, nombre, precio, cantidad) {
+class moldeProducto {
+    constructor(imagen, codigo, nombre, precio, cantidad) {
+        this.imagen = imagen;
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;
@@ -55,12 +56,12 @@ function datosAlDOM(datos) {
         $('div#colector').append(
             `<div class="artsombra colspan-1 rowspan-1">
                 <img src=./imagenes/${item.imagen} alt="## imagen no disponible ##"/>
-                <button class="btn btn-block btn-primary" onclick="addProd('${item.codigo}','${item.descripcion}',${item.precio},1)">Comprar</button>
+                <button class="btn btn-block btn-primary" onclick="addProd('${item.imagen}','${item.codigo}','${item.descripcion}',${item.precio},1)">Comprar</button>
                 <p>Cód. ${item.codigo}</p>
                 <p>${item.descripcion}</p>
                 <h3 class="card-title">$ <span>${item.precio}</span></h3>
             </div>`);
-    }    
+    }
 };
 
 

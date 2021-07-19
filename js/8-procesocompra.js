@@ -1,17 +1,18 @@
-// eliminarRow(e) -- eliminar la fila seleccionada de la tabla de productos
-// evalCant(e) -- evalua la cantidad ingresada y la ingresa al vectorCompra, a la tabla y al localStorage
+// handleDeleteRow(e)       -- eliminar la fila seleccionada de la tabla de productos
+// handleEvaluarCantidad(e) -- evalua la cantidad ingresada y la ingresa al vectorCompra, a la tabla y al localStorage
 
-// seguirComprando() -- (BOTON) regresa a 7.compras.html para continuar eligiendo productos
-// eliminarCompra() -- (BOTON) regresa a 7-compras.html borrando localStorage para recomenzar
-// realizarCompra() -- (BOTON) EN CONSTRUCCION
+// handleSeguirComprando()  -- (BOTON) regresa a 7.compras.html para continuar eligiendo productos
+// handleEliminarCompra()   -- (BOTON) regresa a 7-compras.html borrando localStorage para recomenzar
+// handleRealizarCompra()   -- (BOTON) EN CONSTRUCCION
 
-// llenarTabla() -- crea la tabla en el DOM con el vectorCompra
-// eliminarTabla() -- elimina tbody, tr y td del DOM
+// fillTable()              -- crea la tabla en el DOM con el vectorCompra
+// deleteTable()            -- elimina la tabla del DOM, elimina los tr y los td
 
-// getLocalStorage() -- desde localStorage se obtiene el vectorCompra
-// saveInLocalStorage() -- guarda el vectorCompra en localStorage
+// getLocalStorage()        -- desde localStorage se obtiene el vectorCompra
+// saveInLocalStorage()     -- guarda el vectorCompra en localStorage
 
-// mostrarTotales() -- muestra los totales finales de la planilla
+// showTotals()             -- muestra los totales finales de la planilla
+// handleRemoveZeros()      -- saca los ceros a izquierda en los campos de cantidad
 
 
 // ------------------------------------------------------------------------------------------
@@ -19,42 +20,39 @@
 // ------------------------------------------------------------------------------------------
 let Total1 = 0;
 let canti = [];
-
 getLocalStorage();
 if (vectorCompra.length == 0) {
-    eliminarCompra();
+    handleEliminarCompra();
 }
-llenarTabla();
-// const inputCant = document.querySelectorAll('#ingCanti input');
-// const icoTabla = document.querySelectorAll('#icono img');
-// document.getElementById('tot1').innerHTML='$ '+Total1.toFixed(2);
-// document.getElementById('tot2').innerHTML='$ '+IVA.toFixed(2);
-// document.getElementById('tot3').innerHTML='$ '+Total2.toFixed(2);
+fillTable();
 $('#tot1').text('$ '+`${Total1.toFixed(2)}`);
 $('#tot2').text('$ '+`${IVA.toFixed(2)}`);
 $('#tot3').text('$ '+`${Total2.toFixed(2)}`);
+// pongo el foco en el primer input y saco ceros a izquierda si tuviera
+let primerInput = Number($('#0').val());//obtengo el valor numérico del primer input de la tabla
+$('#0').focus().val("").val(primerInput);//pongo el cursor a la derecha de ese input
 
 
 //-------------------------------------------------------------
 //función que elimina la fila elegida de la tabla 
-const eliminarRow = (e) => {
+function handleDeleteRow(e) {
     e.preventDefault();
     if (vectorCompra.length == 1) {
-        eliminarCompra();
+        handleEliminarCompra();
     }else{
         let indice = e.target.name;
         vectorCompra.splice(indice,1);
         localStorage.clear();
         saveInLocalStorage();
         window.location.reload();
-        // eliminarTabla();
-        // llenarTabla();
+        // deleteTable();
+        // fillTable();
     }
 }
 
 //--------------------------------------------------------------------------------------------
 //función que evalua la cantidad ingresada y la ingresa al array, a la tabla y al localStorage
-const evalCant = (e) => {
+function handleEvaluarCantidad(e) {
     let fila = e.target.name;
     let valido = !(isNaN(e.target.value));// true significa que SI es nro, false significa que NO es nro.
     let valor = Number(e.target.value);
@@ -78,16 +76,36 @@ const evalCant = (e) => {
         // mostrar valores modificados
         // document.querySelectorAll('#subTDProd')[fila].innerHTML = "$ " + subTotalFila;
         $("td#subTDProd label").eq(fila).text("$ " + subTotalFila);
-        mostrarTotales();
+        showTotals();
         // window.location.reload();
+    }
+    let teclaPress = e.originalEvent.keyCode;// última tecla presionada
+    if ( teclaPress == 13) {//si presiono enter o tab, voy al próximo input
+        $('#'+fila).focus().val("").val(valor);//en el input actual saco los ceros de la izquierda
+        let proxInput = Number(e.target.name) + 1;//próximo input
+        if (proxInput > vectorCompra.length-1) {//si me paso, voy al comienzo
+            proxInput = 0;
+        }
+        let proxInputValor = Number($('#'+proxInput).val());//obtengo el valor del próximo input
+        $('#'+proxInput).focus().val("").val(proxInputValor);//pongo el cursor a la derecha de el próximo input
     }        
+}
+
+
+//--------------------------------------------------------------------------------
+//función que saca los ceros a izquierda en los campos de cantidad
+function handleRemoveZeros() {
+    for (row in vectorCompra) {
+        let inputValor = Number($('#'+row).val());//obtengo el valor del input
+        $('#'+row).val("").val(inputValor);//limpio el valor y le pongo el nro inputValor
+    }
 }
 
 
 //----------------------------------------------------------------------------------------------------
 //función que evalua las cantidades del array vectorCompra y si hay alguna con 0 entonces lo pone en 1
 //(NO ESTA EN USO)
-const evalCant333 = (e) => {
+function handleEvaluarCantidad333(e) {
     e.preventDefault();
     for (let iterar = 0; iterar < vectorCompra.length; iterar++) {
         if (vectorCompra[iterar].cantidad < 1) {
@@ -103,6 +121,7 @@ const evalCant333 = (e) => {
 //-------------------------------------------------------------
 //función que obtiene de localStorage el vectorCompra
 function getLocalStorage() {
+// function getLocalStorage() {
 //function getLocalStorage(key) {
 //function getLocalStorage("vectorCompra") {
     //Obtenemos el listado de productos almacenado
@@ -110,11 +129,11 @@ function getLocalStorage() {
     if (almacenados != null) {
         //Iteramos almacenados con for...of para transformar todos sus objetos a tipo producto.
         // for (const ifila of almacenados) {
-        //     vectorCompra.push(new Producto(ifila.codigo,ifila.nombre,ifila.precio,ifila.cantidad));
+        //     vectorCompra.push(new moldeProducto(ifila.codigo,ifila.nombre,ifila.precio,ifila.cantidad));
         // }
         //o sino que es lo mismo
         almacenados.forEach(ifila => {
-            vectorCompra.push(new Producto(ifila.codigo,ifila.nombre,ifila.precio,ifila.cantidad));
+            vectorCompra.push(new moldeProducto(ifila.imagen,ifila.codigo,ifila.nombre,ifila.precio,ifila.cantidad));
         });
     }        
 }
@@ -135,7 +154,7 @@ function saveInLocalStorage() {
 
 //-------------------------------------------------------------
 //función que elimina el tbody de la tabla (NO ESTA EN USO)
-function eliminarTabla() {
+function deleteTable() {
     $('tbody').empty();//borra los elementos hijos, pero no el tbody
 
     // let arrayTD;
@@ -188,18 +207,19 @@ function eliminarTabla() {
 
 //-------------------------------------------------------------
 //función que crea y llena la tabla
-function llenarTabla() {
+function fillTable() {
     Total1 = 0;
     canti = [];
     for (fila in vectorCompra) {
         canti[fila] = vectorCompra[fila].cantidad;
         Total1 += vectorCompra[fila].precio * vectorCompra[fila].cantidad;
         $('tbody').append(`<tr id="datTRProd">
+            <td id="datTDProd"><img src=./imagenes/${vectorCompra[fila].imagen} width="100" alt="## imagen no disponible ##"/></td>
             <td id="datTDProd">${vectorCompra[fila].codigo}</td>
             <td id="datTDProd">${vectorCompra[fila].nombre}</td>
             <td id="datTDProd"><label>$ ${vectorCompra[fila].precio}</label></td>
             <td id="ingCanti">
-                <input type="text" name=${fila} class="inp-bor cantidad" 
+                <input type="text" id=${fila} name=${fila} class="inp-bor cantidad" 
                 value=${canti[fila]}>
             </td>
             <td id="subTDProd"><label>$ ${vectorCompra[fila].precio * canti[fila]}</label></td>
@@ -216,7 +236,7 @@ function llenarTabla() {
 
 //-------------------------------------------------------------
 //función que crea y llena la tabla
-// function llenarTabla() {
+// function fillTable() {
 //     Total1 = 0;
 //     canti = [];
 //     for (let i=0; i<vectorCompra.length; i++) {
@@ -227,6 +247,7 @@ function llenarTabla() {
 //         const row = document.createElement('tr');
 //         Total1 += vectorCompra[fila].precio * vectorCompra[fila].cantidad;
 //         row.innerHTML = `
+//             <td id="datTDProd">${vectorCompra[fila].imagen}</td>
 //             <td id="datTDProd">${vectorCompra[fila].codigo}</td>
 //             <td id="datTDProd">${vectorCompra[fila].nombre}</td>
 //             <td id="datTDProd"><label>$ ${vectorCompra[fila].precio}</label></td>
@@ -250,7 +271,7 @@ function llenarTabla() {
 
 //-------------------------------------------------------------
 //muestra subTotal Parcial, IVA y Total
-const mostrarTotales = () => {
+function showTotals() {
     let tot1 = 0;
     for (fila in vectorCompra) {
         tot1 += vectorCompra[fila].precio * vectorCompra[fila].cantidad;  
@@ -268,18 +289,18 @@ const mostrarTotales = () => {
 
 //-------------------------------------------------------------
 //función que regresa a 7-compras.html para continuar eligiendo productos
-function seguirComprando() {
+function handleSeguirComprando() {
     window.location.href="7-Compras.html";
 }
 //-------------------------------------------------------------
 //función que regresa 7-compras.html borrando localStorage para recomenzar
-function eliminarCompra() {
+function handleEliminarCompra() {
     localStorage.clear();
     window.location.href="7-Compras.html";
 }
 //-------------------------------------------------------------
 //función de realizar la compra (EN CONSTRUCCION)
-function realizarCompra() {
+function handleRealizarCompra() {
     debugger;
 }
 
@@ -292,42 +313,43 @@ function realizarCompra() {
 // -----------------------------------------------------------------------------
 // (1) Evento para los inputs de cantidad de productos a comprar
 // inputCant.forEach((input) => {// compruebo cada input de la tabla, y de acuerdo a que sea se hace una función
-    // input.addEventListener('keyup', evalCant);//cuando yo levanto la tecla presionada, se ejecutará evalCant
-    // input.addEventListener('blur', evalCant333);//cuando pierde el foco, se ejecutará evalCant333
-    // input.addEventListener('mousemove', evalCant333);//cuando pierde el foco, se ejecutará evalCant333
+    // input.addEventListener('keyup', handleEvaluarCantidad);//cuando yo levanto la tecla presionada, se ejecutará handleEvaluarCantidad
+    // input.addEventListener('blur', handleEvaluarCantidad333);//cuando pierde el foco, se ejecutará handleEvaluarCantidad333
+    // input.addEventListener('mousemove', handleEvaluarCantidad333);//cuando pierde el foco, se ejecutará handleEvaluarCantidad333
 // });
 $('#ingCanti input').each(function() {
-    $(this).on('keyup', evalCant);
+    $(this).on('keyup', handleEvaluarCantidad);
 });
 
 // (2) Evento para los íconos de eliminar filas de la tabla
 // icoTabla.forEach((unIcono) => {
-    // unIcono.addEventListener('click', eliminarRow);// se hace la fc. cuando hago click sobre el ícono
+    // unIcono.addEventListener('click', handleDeleteRow);// se hace la fc. cuando hago click sobre el ícono
 // });
 $('#icono img').each(function() {
-    $(this).on('click', eliminarRow);
+    $(this).on('click', handleDeleteRow);
 });
 
 // (3) Evento botón de seguir comprando
 $('button#seguirComprando').on('click', () => {
-    seguirComprando();
+    handleSeguirComprando();
 });
 
 // (4) Evento botón de eliminar compra
 $('button#eliminarCompra').on('click', () => {
-    eliminarCompra()
+    handleEliminarCompra()
 });
 
 // (5) Evento botón de realizar compra (EN CONSTRUCCION)
 $('button#realizarCompra').on('click', () => {
-    realizarCompra();
+    handleRealizarCompra();
 });
+
+// (6) Evento del mouse sobre el contenedor que saca los ceros a izquierda de los inputs de cantidad
+$('.contenedor').on('mousemove', () => {
+    handleRemoveZeros();
+});
+
 //-------------------------------------------------------------------------------
-
-
-
-
-
 
 
 

@@ -222,9 +222,10 @@ td {
 	padding: 3px; 
 }
 td:nth-child(1) {text-align: center;}
-td:nth-child(2) {text-align: left;}
-td:nth-child(3) {text-align: right;}
+td:nth-child(2) {text-align: center;}
+td:nth-child(3) {text-align: left;}
 td:nth-child(4) {text-align: right;}
+td:nth-child(5) {text-align: right;}
 // td:nth-child(2n+1) {// columna impar  
 // 	text-align: left;
 // }
@@ -293,7 +294,7 @@ button {
 	.bloqueCarrito {
 		margin-top: 120px;
 	}
-	.tituloPrincipal, .contenido {
+	.contenido {
 		font-size: 13px;
 	}
 	.tituloSecundario {
@@ -305,10 +306,8 @@ button {
 @media screen and (max-width: 768px) {
 	/*se hace si tiene 768px o menos*/
 	// :root{font-size: 14px;}	
-	.tituloPrincipal, .contenido {
-		font-size: 14px;
-	}
 	.contenido{
+		font-size: 14px;
 		gap: 20px;
 		padding: 20px;
 		div p{
@@ -325,10 +324,6 @@ button {
 	.carro {
 		margin-top: -3px;
 		margin-left: -32px;
-	}
-	.tituloPrincipal {
-		text-align: right;
-		margin-right: 130px;
 	}
 	thead, tbody {
 		display: block;
@@ -358,12 +353,11 @@ button {
 	.carro {
 		margin-left: -35px;
 	}
-	.tituloPrincipal, .contenido {
+	.contenido {
 		font-size: 12px;
 	}
 	.tituloPrincipal {
 		margin: 70px auto 10px;
-		text-align: center;
 	}
 	.contenido{
 	// display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto;

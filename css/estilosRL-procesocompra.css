@@ -75,6 +75,31 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background-color: white; }
 
+@media screen and (max-width: 1200px) {
+  /*se hace si tiene 1200px o menos*/
+  .titulo {
+    font-size: 16px; } }
+
+@media screen and (max-width: 992px) {
+  /*se hace si tiene 992px o menos*/
+  .titulo {
+    font-size: 14px; } }
+
+@media screen and (max-width: 768px) {
+  /*se hace si tiene 768px o menos*/
+  .titulo {
+    font-size: 14px; } }
+
+@media screen and (max-width: 576px) {
+  /*se hace si tiene 576px o menos*/
+  .titulo {
+    font-size: 12px; } }
+
+@media screen and (max-width: 341px) {
+  /*se hace si tiene 341px o menos*/
+  .titulo {
+    font-size: 10px; } }
+
 .grid {
   display: grid;
   gap: 30px; }
@@ -964,26 +989,26 @@ td {
   text-align: left;
   padding: 8px; }
 
-td:nth-child(1) {
+td:nth-child(2) {
   text-align: center; }
 
-td:nth-child(2) {
+td:nth-child(3) {
   text-align: left; }
 
-td:nth-child(3) {
+td:nth-child(4) {
   text-align: right; }
 
-td:nth-child(4) {
+td:nth-child(5) {
   text-align: center;
   background-color: #dff5e1; }
 
-td:nth-child(4):hover {
+td:nth-child(5):hover {
   background-color: #f1cfcf; }
 
-td:nth-child(5) {
+td:nth-child(6) {
   text-align: right; }
 
-td:nth-child(6) {
+td:nth-child(7) {
   text-align: center;
   width: 30px;
   padding: 0 1.5%;
@@ -1023,12 +1048,17 @@ button {
   padding: 10px 20px; }
 
 .inp-bor {
-  border: 2px groove #01830c;
+  border: 2px groove #77d87f;
   text-align: center; }
 
 .inp-bor:hover {
-  border: 2px groove #cc0404;
+  border: 2px groove #77d87f;
   background-color: #ffffe7;
+  text-align: center; }
+
+.inp-bor:active {
+  border: 2px groove #c90707;
+  background-color: #d1d138;
   text-align: center; }
 
 .footer {
@@ -1055,12 +1085,12 @@ button {
     font-size: 0.83rem; }
   .imgcarrito {
     margin-left: -35px; }
-  .titCompras, .contenido {
+  .contenido {
     font-size: 13px; } }
 
 @media screen and (max-width: 768px) {
   /*se hace si tiene 768px o menos*/
-  .titCompras, .contenido {
+  .contenido {
     font-size: 14px; }
   .contenido {
     gap: 20px;
@@ -1082,9 +1112,9 @@ button {
   .imgcarrito {
     margin-left: 0;
     min-width: 35px; }
-  .titCompras, .contenido {
+  .contenido {
     font-size: 12px; }
-  .titCompras {
+  .titulo {
     margin-top: 20px; }
   .contenido {
     gap: 10px;
@@ -1101,5 +1131,5 @@ button {
     gap: 0; } }
 
 @media screen and (max-width: 341px) {
-  .titCompras, .contenido {
+  .contenido {
     font-size: 10px; } }

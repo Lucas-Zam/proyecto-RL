@@ -63,3 +63,34 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
 	background-color: $fondo-th-impar;
 }	
+
+@media screen and (max-width: 1200px) {
+	/*se hace si tiene 1200px o menos*/
+	.titulo {
+		font-size: $fuente-size;
+	}
+}
+@media screen and (max-width: 992px) {
+	/*se hace si tiene 992px o menos*/
+	.titulo {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 768px) {
+	/*se hace si tiene 768px o menos*/
+	.titulo {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 576px) {
+	/*se hace si tiene 576px o menos*/
+	.titulo {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 341px) {
+	/*se hace si tiene 341px o menos*/
+	.titulo {
+		font-size: 10px;
+	}
+}

@@ -141,17 +141,15 @@ article {
 	h6 {
 		font-size: 0.83rem;
 	}
-	.titOfertas, .contenido {
+	.contenido {
 		font-size: 13px;
 	}
 }
 @media screen and (max-width: 768px) {
 /*se hace si tiene 768px o menos*/
 	// :root{font-size: 14px;}	
-	.titOfertas, .contenido {
-		font-size: 14px;
-	}
 	.contenido{
+		font-size: 14px;
 		gap: 5px;
 		div p{
 			padding-left: 5px;
@@ -168,16 +166,14 @@ article {
 		margin: 0;
 		gap: 0;
 	}
-	.titOfertas, .contenido {
-		font-size: 12px;
-	}
 	.contenido{
-	gap: 10px; 
+		font-size: 12px;
+		gap: 10px; 
 	}
 }
 @media screen and (max-width: 341px) {
 	// :root{font-size: 10px;}	
-	.titOfertas, .contenido {
+	.contenido {
 		font-size: 10px;
 	}
 }

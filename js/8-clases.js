@@ -1,5 +1,6 @@
-class Producto {
-    constructor(codigo, nombre, precio, cantidad) {
+class moldeProducto {
+    constructor(imagen, codigo, nombre, precio, cantidad) {
+        this.imagen = imagen;
         this.codigo = codigo;
         this.nombre = nombre;
         this.precio = precio;

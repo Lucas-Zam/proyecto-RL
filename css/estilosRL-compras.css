@@ -75,6 +75,31 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background-color: white; }
 
+@media screen and (max-width: 1200px) {
+  /*se hace si tiene 1200px o menos*/
+  .titulo {
+    font-size: 16px; } }
+
+@media screen and (max-width: 992px) {
+  /*se hace si tiene 992px o menos*/
+  .titulo {
+    font-size: 14px; } }
+
+@media screen and (max-width: 768px) {
+  /*se hace si tiene 768px o menos*/
+  .titulo {
+    font-size: 14px; } }
+
+@media screen and (max-width: 576px) {
+  /*se hace si tiene 576px o menos*/
+  .titulo {
+    font-size: 12px; } }
+
+@media screen and (max-width: 341px) {
+  /*se hace si tiene 341px o menos*/
+  .titulo {
+    font-size: 10px; } }
+
 .grid {
   display: grid;
   gap: 30px; }
@@ -985,12 +1010,15 @@ td:nth-child(1) {
   text-align: center; }
 
 td:nth-child(2) {
-  text-align: left; }
+  text-align: center; }
 
 td:nth-child(3) {
-  text-align: right; }
+  text-align: left; }
 
 td:nth-child(4) {
+  text-align: right; }
+
+td:nth-child(5) {
   text-align: right; }
 
 .box-producto {
@@ -1030,7 +1058,7 @@ button {
     font-size: 0.83rem; }
   .bloqueCarrito {
     margin-top: 120px; }
-  .tituloPrincipal, .contenido {
+  .contenido {
     font-size: 13px; }
   .tituloSecundario {
     width: 50%;
@@ -1038,9 +1066,8 @@ button {
 
 @media screen and (max-width: 768px) {
   /*se hace si tiene 768px o menos*/
-  .tituloPrincipal, .contenido {
-    font-size: 14px; }
   .contenido {
+    font-size: 14px;
     gap: 20px;
     padding: 20px; }
     .contenido div p {
@@ -1053,9 +1080,6 @@ button {
   .carro {
     margin-top: -3px;
     margin-left: -32px; }
-  .tituloPrincipal {
-    text-align: right;
-    margin-right: 130px; }
   thead, tbody {
     display: block; }
   tbody {
@@ -1076,11 +1100,10 @@ button {
     margin-left: -35px; }
   .carro {
     margin-left: -35px; }
-  .tituloPrincipal, .contenido {
+  .contenido {
     font-size: 12px; }
   .tituloPrincipal {
-    margin: 70px auto 10px;
-    text-align: center; }
+    margin: 70px auto 10px; }
   .contenido {
     gap: 10px;
     padding: 10px; }

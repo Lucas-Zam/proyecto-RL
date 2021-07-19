@@ -59,10 +59,8 @@ td:nth-child(7) {text-align: center;}
 	:root {// font-size: 15px;
 		width: -webkit-fill-available;
 	}
-	.tituloProd, table {
-		font-size: 15px;
-	}
 	table {
+		font-size: 15px;
 		display: block;
 		overflow-x: auto;		
 	}
@@ -76,10 +74,8 @@ td:nth-child(7) {text-align: center;}
 		// margin: 0;
 		gap: 0;
 	}
-	.tituloProd, table {
-		font-size: 14px;
-	}
 	table {
+		font-size: 14px;
 		display: block;
 		overflow-x: auto;		
 		// width: 768px;
@@ -95,7 +91,7 @@ td:nth-child(7) {text-align: center;}
 		max-width: 1000px;
 		margin: 0;
 		gap: 0;
-		.tituloProd, table {
+		table {
 			font-size: 13px;
 		}
 		th, td {
@@ -112,7 +108,7 @@ td:nth-child(7) {text-align: center;}
 @media screen and (max-width: 341px) {
 /*se hace si tiene 341px o menos*/
 	// :root{font-size: 10px;}	
-	.tituloProd, table {
+	table {
 		font-size: 10px;
 	}
 }

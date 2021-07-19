@@ -75,6 +75,31 @@ tr:nth-child(even) {
 tr:nth-child(odd) {
   background-color: white; }
 
+@media screen and (max-width: 1200px) {
+  /*se hace si tiene 1200px o menos*/
+  .titulo {
+    font-size: 16px; } }
+
+@media screen and (max-width: 992px) {
+  /*se hace si tiene 992px o menos*/
+  .titulo {
+    font-size: 14px; } }
+
+@media screen and (max-width: 768px) {
+  /*se hace si tiene 768px o menos*/
+  .titulo {
+    font-size: 14px; } }
+
+@media screen and (max-width: 576px) {
+  /*se hace si tiene 576px o menos*/
+  .titulo {
+    font-size: 12px; } }
+
+@media screen and (max-width: 341px) {
+  /*se hace si tiene 341px o menos*/
+  .titulo {
+    font-size: 10px; } }
+
 .grid {
   display: grid;
   gap: 30px; }
@@ -855,9 +880,8 @@ td:nth-child(7) {
   /*se hace si tiene 992px o menos*/
   :root {
     width: -webkit-fill-available; }
-  .tituloProd, table {
-    font-size: 15px; }
   table {
+    font-size: 15px;
     display: block;
     overflow-x: auto; } }
 
@@ -867,9 +891,8 @@ td:nth-child(7) {
     width: 98%;
     max-width: 1000px;
     gap: 0; }
-  .tituloProd, table {
-    font-size: 14px; }
   table {
+    font-size: 14px;
     display: block;
     overflow-x: auto;
     max-width: 768px; } }
@@ -881,7 +904,7 @@ td:nth-child(7) {
     max-width: 1000px;
     margin: 0;
     gap: 0; }
-    .contenedor .tituloProd, .contenedor table {
+    .contenedor table {
       font-size: 13px; }
     .contenedor th, .contenedor td {
       padding: 2px; }
@@ -892,5 +915,5 @@ td:nth-child(7) {
 
 @media screen and (max-width: 341px) {
   /*se hace si tiene 341px o menos*/
-  .tituloProd, table {
+  table {
     font-size: 10px; } }

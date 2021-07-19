@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-class armadoCarrousel {
+class moldeCarrousel {
     constructor(id, imagen, codigo, descripcion, precio, auto, marca, cod_original) {
         this.id = id;
         this.imagen = imagen;
@@ -17,7 +17,7 @@ vectorCarrousel = [];
 var paso = -1;
 var textoHabilitado = true;
 cargarJSON();
-
+// traerDatosServer();
 
 //--------------------------------------------------------------------------------------------------------------------
 //función que modifica la barra superior, la imagen ,el texto y los indicadores del carrousel según el valor de "paso"
@@ -34,9 +34,8 @@ function procesoCarrousel() {
         img1.src = "imagenes/"+vectorCarrousel[paso].imagen;
         //cuando muestro la primer imagen, entonces el título "Novedades" está habilitado
         if (textoHabilitado) {
-            $('#carrousel').addClass('tituh2');
-            $('#carrousel').css('font-weight', 700);
-            $('#carrousel').text('Novedades');
+            $('#carrousel').empty();
+            $('#carrousel').append('<h2><b>Novedades</b></h2');
             textoHabilitado = false;
         }
         
@@ -77,11 +76,25 @@ function llenarVectorCarrousel(datos) {
     for (let it of datos) {     
         if (`${it.carrousel}` == "si") {//solo se cargarán los que tienen "si" en campo carrousel
             j += 1;
-            vectorCarrousel.push(new armadoCarrousel(j,it.imagen,it.codigo,it.descripcion,it.precio,it.auto,it.marca,it.cod_original));
+            vectorCarrousel.push(new moldeCarrousel(j,it.imagen,it.codigo,it.descripcion,it.precio,it.auto,it.marca,it.cod_original));
         }
     }
 };
 
+
+//-----------------------------------------------------------------------------------------------------
+//función que trae la información del archivo productos.json (esta fc. no se usa, se usa cargarJSON)
+function traerDatosServer() {
+    const URLJSON = "productos.json";
+    $.getJSON(URLJSON, function (respuesta, estado) {
+        if (estado === "success") {
+            let data = respuesta;
+            llenarVectorCarrousel(data);
+            crearDOMindicadores();
+            setInterval(procesoCarrousel, 3500);
+        }
+    }
+)};
 
 //-----------------------------------------------------------------------------------------------------
 //función que trae la información del archivo productos.json
@@ -95,22 +108,18 @@ function cargarJSON() {
         contentType: false,
         processData: false,
         beforeSend : function(){
-            $('#carrousel').removeClass('tituh2');
-            $('#carrousel').css('font-weight', 400);
-            $('#carrousel').text('Cargando...');
+            $('#carrousel').text('Cargando...');           
         }
     })
-    .done(function(data) {//cuando ya está ready
-        // console.log(data);
+    .done( function(data) {//cuando ya está ready
         llenarVectorCarrousel(data);
         crearDOMindicadores();
-        // $('#carrousel').text('Novedades');
-        // console.log(vectorCarrousel);
         setInterval(procesoCarrousel, 3500);
     })
-    .fail(function(data) {//si el archivo no se encuentra
+    .fail( function(data) {//si el archivo no se encuentra
         if (data.status == 404) {
-            $('#carrousel').text('Novedades');
+            $('#carrousel').text('no se encuentra el archivo de productos...');
+            $('div#carrousel').removeClass('texto-centrado');
         }
     });
 };
