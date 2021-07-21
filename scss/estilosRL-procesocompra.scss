@@ -245,7 +245,7 @@ td:nth-child(7) {
 	margin-right: 50%;
 }
 .cantidad {
-	width: 3rem;
+	width: 2rem;
 }
 .iconox {
 	width: 30%;
@@ -293,7 +293,8 @@ button {
 @media screen and (max-width: 992px) {
 	/*se hace si tiene 992px o menos*/
 	:root {// font-size: 13px;
-		width: -webkit-fill-available;
+		width: -webkit-stretch;
+		// width: -webkit-fill-available;
 	}
 	h6 {
 		font-size: 0.83rem;
@@ -322,9 +323,9 @@ button {
 	.imgcarrito {
 		margin-left: -25px;
 	}
-	td:nth-child(6) {
-		padding: 0 1.7%;
-	}
+	// td:nth-child(6) {
+	// 	padding: 0 1.7%;
+	// }
 }
 @media screen and (max-width: 576px) {
 	/*se hace si tiene 576px o menos*/
@@ -355,8 +356,8 @@ button {
 		padding-right: 0;
 		font-size: 14px;
 	}
-	td:nth-child(6) {
-		padding: 0 1%;
+	td:nth-child(5) {
+		padding: 0;
 	}
 	.totp2 {
 		margin-right: 30%;

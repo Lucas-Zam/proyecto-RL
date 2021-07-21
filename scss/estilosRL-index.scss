@@ -216,7 +216,8 @@ body {
 @media screen and (max-width: 992px) {
 /*se hace si tiene 992px o menos*/
 	:root {// font-size: 14px;
-		width: -webkit-fill-available;
+		width: -webkit-stretch;
+		// width: -webkit-fill-available;
 	}
 	.contenedor{
 		gap: 20px;

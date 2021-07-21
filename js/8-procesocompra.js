@@ -75,7 +75,7 @@ function handleEvaluarCantidad(e) {
         saveInLocalStorage();
         // mostrar valores modificados
         // document.querySelectorAll('#subTDProd')[fila].innerHTML = "$ " + subTotalFila;
-        $("td#subTDProd label").eq(fila).text("$ " + subTotalFila);
+        $("td#subTDProd label").eq(fila).text(subTotalFila);
         showTotals();
         // window.location.reload();
     }
@@ -217,15 +217,15 @@ function fillTable() {
             <td id="datTDProd"><img src=./imagenes/${vectorCompra[fila].imagen} width="100" alt="## imagen no disponible ##"/></td>
             <td id="datTDProd">${vectorCompra[fila].codigo}</td>
             <td id="datTDProd">${vectorCompra[fila].nombre}</td>
-            <td id="datTDProd"><label>$ ${vectorCompra[fila].precio}</label></td>
+            <td id="datTDProd"><label>${vectorCompra[fila].precio}</label></td>
             <td id="ingCanti">
                 <input type="text" id=${fila} name=${fila} class="inp-bor cantidad" 
                 value=${canti[fila]}>
             </td>
-            <td id="subTDProd"><label>$ ${vectorCompra[fila].precio * canti[fila]}</label></td>
+            <td id="subTDProd"><label>${vectorCompra[fila].precio * canti[fila]}</label></td>
             <td id="icono">
-                <a href="#" class="borrar-producto fas fa-times-circle" data-id="${fila}">
-                    <img src="./imagenes/ico5.png" class="iconox" name=${fila} alt="icono">
+                <a href="#" class="borrar-producto" data-id="${fila}">
+                    <img src="./imagenes/ico5.png" class="iconox" name=${fila} alt="## ícono no disponible ##">
                 </a>
             </td>
         </tr>`);

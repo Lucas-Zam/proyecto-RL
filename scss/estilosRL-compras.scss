@@ -286,7 +286,8 @@ button {
 @media screen and (max-width: 992px) {
 	/*se hace si tiene 992px o menos*/
 	:root {// font-size: 13px;
-		width: -webkit-fill-available;
+		width: -webkit-stretch;
+		// width: -webkit-fill-available;
 	}
 	h6 {
 		font-size: 0.83rem;

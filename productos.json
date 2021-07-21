@@ -14,7 +14,7 @@
     {
         "imagen": "02029.jpg",
         "codigo": "02029",
-        "descripcion": "GRIFO DE CALEFACCION 3VIAS CORSA VECTRA",
+        "descripcion": "GRIFO DE CALEFACCION CORSA VECTRA 3 VIAS",
         "precio": "1469",
         "rubro": "GRICALAF",
         "auto": "CORSA VECTRA",
@@ -166,5 +166,101 @@
         "cod_original": "",
         "oferta": "no",
         "carrousel": "si"
+    },
+    {
+        "imagen": "09792.jpg",
+        "codigo": "09792",
+        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU 2.3 NAFTA",
+        "precio": "1103",
+        "rubro": "",
+        "auto": "ISUZU",
+        "marca": "",
+        "cod_original": "94172420",
+        "oferta": "no",
+        "carrousel": "si"
+    },
+    {
+        "imagen": "09793.jpg",
+        "codigo": "09793",
+        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU 2.5 2.8 NAFTA",
+        "precio": "1507",
+        "rubro": "",
+        "auto": "ISUZU",
+        "marca": "",
+        "cod_original": "97139712",
+        "oferta": "si",
+        "carrousel": "no"
+    },
+    {
+        "imagen": "09794.jpg",
+        "codigo": "09794",
+        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU DIESEL 4JA",
+        "precio": "1638",
+        "rubro": "",
+        "auto": "ISUZU",
+        "marca": "",
+        "cod_original": "",
+        "oferta": "no",
+        "carrousel": "si"
+    },
+    {
+        "imagen": "09809.jpg",
+        "codigo": "09809",
+        "descripcion": "CONEXION DIST DE AGUA CORSA DIESEL 1.7CC",
+        "precio": "2189",
+        "rubro": "",
+        "auto": "CORSA",
+        "marca": "",
+        "cod_original": "97185514",
+        "oferta": "si",
+        "carrousel": "no"
+    },
+    {
+        "imagen": "03773.jpg",
+        "codigo": "03773",
+        "descripcion": "POLEA DE CIG CHEV SILVERADO",
+        "precio": "5744",
+        "rubro": "POLCIGU",
+        "auto": "SILVERADO",
+        "marca": "",
+        "cod_original": "2641885",
+        "oferta": "no",
+        "carrousel": "no"
+    },
+    {
+        "imagen": "03775.jpg",
+        "codigo": "03775",
+        "descripcion": "POLEA DE CIG CHEV VECTRA 2000 8V 141MM",
+        "precio": "5089",
+        "rubro": "POLCIGU",
+        "auto": "VECTRA",
+        "marca": "",
+        "cod_original": "990459102CF69",
+        "oferta": "si",
+        "carrousel": "no"
+    },
+    {
+        "imagen": "03776.jpg",
+        "codigo": "03776",
+        "descripcion": "POLEA DE CIG CHEV LUV ISUZU 2.5 208",
+        "precio": "11244",
+        "rubro": "POLCIGU",
+        "auto": "ISUZU",
+        "marca": "",
+        "cod_original": "94419457",
+        "oferta": "no",
+        "carrousel": "si"
+    },
+    {
+        "imagen": "03777.jpg",
+        "codigo": "03777",
+        "descripcion": "POLEA DE CIG CHEV CORSA 1.7 DIESEL MOTOR ISUZU",
+        "precio": "7197",
+        "rubro": "POLCIGU",
+        "auto": "CORSA",
+        "marca": "",
+        "cod_original": "97251975",
+        "oferta": "si",
+        "carrousel": "no"
     }
 ]

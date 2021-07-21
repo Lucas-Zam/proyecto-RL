@@ -191,7 +191,8 @@ body{
 @media screen and (max-width: 992px) {
 	:root{
 		font-size: 14px;
-		width: -webkit-fill-available;
+		width: -webkit-stretch;
+		// width: -webkit-fill-available;
 	}	
 }
 
