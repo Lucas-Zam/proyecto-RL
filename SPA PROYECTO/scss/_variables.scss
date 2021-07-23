@@ -1,0 +1,96 @@
+﻿$fondo-principal: rgb(235, 235, 235);
+// $fondo-principal: rgb(168, 191, 192);
+$fondo-header:rgb(54, 52, 63);
+// $fondo-header:rgb(104, 110, 110);
+$fondo-naveg: $fondo-header;
+// $fondo-naveg: rgb(0, 105, 105);
+$fondo-naveg-hover: $fondo-header;
+// $fondo-naveg-hover: rgb(0, 105, 105);
+$color-naveg-hover: rgb(133, 152, 156);
+// $color-naveg-hover: rgb(155, 155, 155);
+$fondo-novedad-barra-sup: rgb(193, 221, 190);
+$fondo-novedad-activa: rgb(228, 68, 68);
+$fondo-novedad: rgb(255, 255, 255);
+$fondo-ofertas: #e67e22;
+$fondo-formulario: rgb(18, 99, 126); 
+$fondo-formcliente:rgb(73, 192, 231);
+$fondo-varios:rgb(143, 171, 180);
+// $fondo-footer: linear-gradient(140deg, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 45%, rgba(95,158, 160,1) 88%, rgba(95,158, 160,1) 100%);
+$fondo-footer: linear-gradient(140deg, rgba(32, 32, 32, 0.705) 0%, rgb(85, 108, 109) 50%, rgba(32,32,32,1) 100%);
+$sombra-caja: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+$fuente-primaria: 'Roboto', 'Montserrat-Light', verdana, sans-serif;
+$fuente-size: 16px;
+$fondo-th: rgb(174, 243, 180);
+$fondo-tr-par: rgb(243, 239, 239);
+$fondo-th-impar: rgb(255, 255, 255);
+$fondo111-formulario: rgb(173, 216, 230); 
+
+h1 {font-family: roboto, sans-serif;}
+h2 {font-family: roboto, sans-serif;}
+h3 {font-family: nunito, verdana, sans-serif;}
+h4 {font-family: roboto, sans-serif;}
+h5 {font-family: roboto, sans-serif;}
+h6 {font-family: roboto, sans-serif;}
+.tituh1 {font-size: 2rem; font-weight: 700;}
+.tituh2 {font-size: 1.5rem; font-weight: 500;}
+.tituh3 {font-size: 1.17rem;}
+.tituh4 {font-size: 1rem;}
+.tituh5 {font-size: 0.83rem;}
+.tituh6 {font-size: 0.67rem;}
+img {
+	display: block;/* con esto las imágenes son tratadas como un bloque*/
+	margin: auto;/* este bloque se puede centrar bien*/
+	max-width: 100%;/* tiene un máximo, antes que se pixele la imagen*/
+	min-width: 50%;/* tiene un mínimo, antes que se pixele la imagen*/
+	height: auto;/* la altura se coloca para que no deforme la imagen*/
+}
+
+.tituloPrincipal {
+	text-align: center;
+	// margin: 20px auto 10px;
+}
+
+.texto-centrado {text-align: center;}
+.texto-izquierda {text-align: left;}
+.texto-derecha {text-align: right;}
+
+th {
+	background-color: $fondo-th;
+}
+tr:nth-child(even) {
+	background-color: $fondo-tr-par;
+}  
+tr:nth-child(odd) {
+	background-color: $fondo-th-impar;
+}	
+
+@media screen and (max-width: 1200px) {
+	/*se hace si tiene 1200px o menos*/
+	.titulo {
+		font-size: $fuente-size;
+	}
+}
+@media screen and (max-width: 992px) {
+	/*se hace si tiene 992px o menos*/
+	.titulo {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 768px) {
+	/*se hace si tiene 768px o menos*/
+	.titulo {
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 576px) {
+	/*se hace si tiene 576px o menos*/
+	.titulo {
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 341px) {
+	/*se hace si tiene 341px o menos*/
+	.titulo {
+		font-size: 10px;
+	}
+}

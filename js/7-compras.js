@@ -26,23 +26,24 @@ $(document).ready(function() {
 //-----------------------------------------------------------------------------
 //función que ingresa el producto elegido al objeto vectorCompra y localStorage
 function addProd(a,b,c,d,e) {
-    if (vectorCompra.length == 0) {
-        // pregunto si el objeto está vacío, si true entonces ingreso el producto
-        vectorCompra.push(new moldeProducto(a,b,c,d,e));
-        guardarLocalStorage();
-        totProductos();
+    let control = 0;// 0 es control inactivo, 1 es control activo
+    if (vectorCompra.length == 0) {// pregunto si el objeto está vacío, si true entonces activo control de ingreso
+        control = 1;
     }else{
         // busco si el producto a agregar estaba ya ingresado
         const encontrado = vectorCompra.find(encontrado => encontrado.codigo === b);
-        if (!encontrado) {// si no está, lo ingreso
-            vectorCompra.push(new moldeProducto(a,b,c,d,e));
-            guardarLocalStorage();
-            totProductos();
+        if (!encontrado) {// si no está, activo control de ingreso
+            control = 1;
         }
     }
-    // carrito actualizado con este último ingreso
-    eliminarCarrito();
-    crearCarrito();
+    if (control == 1) {// si control ingreso está en 1, entonces ingreso el producto
+        vectorCompra.push(new moldeProducto(a,b,c,d,e));
+        guardarLocalStorage();
+        totProductos();
+        // carrito actualizado con este último ingreso
+        eliminarCarrito();
+        crearCarrito();
+    }
 }
 
 
@@ -59,8 +60,8 @@ function crearCarrito() {
                 <td id="datTDProd">${vectorCompra[fila].cantidad}</td>
             </tr>`);
         }
-        $('td#datTDProd:nth-child(5n-4)').hide();//oculta imagen en la tabla
-        $('td#datTDProd:nth-child(5n)').hide();//oculta cantidad en la tabla
+        $('td#datTDProd:nth-child(5n-4)').hide();//oculto campo imagen en la tabla
+        $('td#datTDProd:nth-child(5n)').hide();//oculto campo cantidad en la tabla
     }
     // if (vectorCompra.length != 0) {
     //     const tbody = document.querySelector('tbody');// indico una tbody
