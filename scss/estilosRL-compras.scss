@@ -375,15 +375,12 @@ button {
 	}
 	.contenido {
 		font-size: 12px;
+		gap: 10px; 
+		padding: 10px;
 	}
 	.tituloPrincipal {
 		margin-top: 10px;
 		margin-bottom: 10px;
-	}
-	.contenido{
-	// display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: auto;
-	gap: 10px; 
-	padding: 10px;
 	}
 	.tituloSecundario {
 		margin: 0 2%;
@@ -402,5 +399,60 @@ button {
 	}
 	.carro {
 		width: 250px;
+	}
+}
+//-------------------------------------------------------------
+@media screen and (orientation: landscape) {
+	.contenedor {
+		width: 100%;
+		max-width: 1000px;
+		gap: 0;
+	}
+	.logo-RL {
+		display: none;
+	}
+	.texto-RL {
+		opacity: 0.2;
+		margin-left: 200px;
+	}
+	.h22 {
+		padding: 13px;
+	}
+	.h55 {
+		display: none;
+	}
+	.bloqueCarrito {
+		margin-top: 0px;
+		margin-left: 35px;
+	}
+	.imgcarrito {
+		padding: 5px;
+		margin-top:-66px;
+		margin-left: -33px;
+		background-color: rgba(255, 255, 255, 0.178);
+	}
+	.carro {
+		margin-left: -35px;
+		font-size: 11px;
+		width: 270px;
+	}
+	.contenido {
+		font-size: 12px;
+		gap: 10px; 
+		padding: 10px;
+	}
+	.tituloPrincipal {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.tituloSecundario {
+		margin: 0 2%;
+		width: 92%;
+	}
+	.header nav {
+		margin-right: 0;
+	}
+	.header nav ul li {
+		margin: 0;
 	}
 }

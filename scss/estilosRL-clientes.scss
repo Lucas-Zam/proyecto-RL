@@ -263,3 +263,10 @@ body{
 		padding: 0 0.625rem;
 	}
 }
+//-------------------------------------------------------------
+@media screen and (orientation: landscape) {
+	.contenedor {
+		width: 100%;
+		gap: 0;
+	}
+}

@@ -372,3 +372,9 @@ button {
 		font-size: 10px;
 	}
 }
+//-------------------------------------------------------------
+@media screen and (orientation: landscape) {
+	.contenedor {
+		width: 100%;
+	}
+}
