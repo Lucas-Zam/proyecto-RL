@@ -19,7 +19,7 @@
         "rubro": "GRICALAF",
         "auto": "CORSA VECTRA",
         "marca": "",
-        "cod_original": "90457649 / 905669",
+        "cod_original": "90457649 905669",
         "oferta": "no",
         "carrousel": "si"
     },
@@ -50,7 +50,7 @@
     {
         "imagen": "02418.jpg",
         "codigo": "02418",
-        "descripcion": "KIT TAPA DISTRIBUCION CORSA NAFTA 1.4 1.6 OSSCA 3 PARTE",
+        "descripcion": "KIT TAPA DE DISTRIBUCION CORSA NAFTA 1.4 1.6 OSSCA 3 PARTE",
         "precio": "2651",
         "rubro": "TAPDIST",
         "auto": "CORSA",
@@ -74,7 +74,7 @@
     {
         "imagen": "02442.jpg",
         "codigo": "02442",
-        "descripcion": "KIT TAPA DISTRIBUCION CORSA 2 / MERIVA 1.8 8V.",
+        "descripcion": "KIT TAPA DE DISTRIBUCION CORSA 2 / MERIVA 1.8 8V.",
         "precio": "3255",
         "rubro": "TAPDIST",
         "auto": "CORSA 2",
@@ -86,7 +86,7 @@
     {
         "imagen": "03040.jpg",
         "codigo": "03040",
-        "descripcion": "POLEA B/AGUA COCHE PICK UP 62 78 BAJA",
+        "descripcion": "POLEA BOMBA DE AGUA COCHE PICK UP 62 78 BAJA",
         "precio": "1866",
         "rubro": "POLBOM",
         "auto": "",
@@ -98,7 +98,7 @@
     {
         "imagen": "03041.jpg",
         "codigo": "03041",
-        "descripcion": "POLEA B/AGUA CORSA MERIVA COMBO 1.7 DIESEL",
+        "descripcion": "POLEA BOMBA DE AGUA CORSA MERIVA COMBO 1.7 DIESEL",
         "precio": "2700",
         "rubro": "POLBOM",
         "auto": "CORSA",
@@ -122,7 +122,7 @@
     {
         "imagen": "03709.jpg",
         "codigo": "03709",
-        "descripcion": "POLEA DE CIG C 20 BRASILERA MOD92",
+        "descripcion": "POLEA DE CIGÜEÑAL C 20 BRASILERA MOD92",
         "precio": "3740",
         "rubro": "POLCIGU",
         "auto": "C 20",
@@ -134,7 +134,7 @@
     {
         "imagen": "03759.jpg",
         "codigo": "03759",
-        "descripcion": "POLEA DE CIG OPEL K-180",
+        "descripcion": "POLEA DE CIGÜEÑAL OPEL K-180",
         "precio": "5217",
         "rubro": "POLCIGU",
         "auto": "OPEL",
@@ -146,7 +146,7 @@
     {
         "imagen": "03760.jpg",
         "codigo": "03760",
-        "descripcion": "POLEA DE CIG CHEVROLET 400 CHEVY SIMPLE",
+        "descripcion": "POLEA DE CIGÜEÑAL CHEVROLET 400 CHEVY SIMPLE",
         "precio": "2285",
         "rubro": "POLCIGU",
         "auto": "CHEVY",
@@ -158,7 +158,7 @@
     {
         "imagen": "03770.jpg",
         "codigo": "03770",
-        "descripcion": "POLEA DE CIG CHEVY DOBLE",
+        "descripcion": "POLEA DE CIGÜEÑAL CHEVY DOBLE",
         "precio": "3411",
         "rubro": "POLCIGU",
         "auto": "CHEVY",
@@ -168,60 +168,12 @@
         "carrousel": "si"
     },
     {
-        "imagen": "09792.jpg",
-        "codigo": "09792",
-        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU 2.3 NAFTA",
-        "precio": "1103",
-        "rubro": "",
-        "auto": "ISUZU",
-        "marca": "",
-        "cod_original": "94172420",
-        "oferta": "no",
-        "carrousel": "si"
-    },
-    {
-        "imagen": "09793.jpg",
-        "codigo": "09793",
-        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU 2.5 2.8 NAFTA",
-        "precio": "1507",
-        "rubro": "",
-        "auto": "ISUZU",
-        "marca": "",
-        "cod_original": "97139712",
-        "oferta": "si",
-        "carrousel": "no"
-    },
-    {
-        "imagen": "09794.jpg",
-        "codigo": "09794",
-        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU DIESEL 4JA",
-        "precio": "1638",
-        "rubro": "",
-        "auto": "ISUZU",
-        "marca": "",
-        "cod_original": "",
-        "oferta": "no",
-        "carrousel": "si"
-    },
-    {
-        "imagen": "09809.jpg",
-        "codigo": "09809",
-        "descripcion": "CONEXION DIST DE AGUA CORSA DIESEL 1.7CC",
-        "precio": "2189",
-        "rubro": "",
-        "auto": "CORSA",
-        "marca": "",
-        "cod_original": "97185514",
-        "oferta": "si",
-        "carrousel": "no"
-    },
-    {
         "imagen": "03773.jpg",
         "codigo": "03773",
-        "descripcion": "POLEA DE CIG CHEV SILVERADO",
+        "descripcion": "POLEA DE CIGÜEÑAL CHEV SILVERADO",
         "precio": "5744",
         "rubro": "POLCIGU",
-        "auto": "SILVERADO",
+        "auto": "SILVER.",
         "marca": "",
         "cod_original": "2641885",
         "oferta": "no",
@@ -230,19 +182,19 @@
     {
         "imagen": "03775.jpg",
         "codigo": "03775",
-        "descripcion": "POLEA DE CIG CHEV VECTRA 2000 8V 141MM",
+        "descripcion": "POLEA DE CIGÜEÑAL CHEV VECTRA 2000 8V 141MM",
         "precio": "5089",
         "rubro": "POLCIGU",
         "auto": "VECTRA",
         "marca": "",
-        "cod_original": "990459102CF69",
+        "cod_original": "99045969",
         "oferta": "si",
         "carrousel": "no"
     },
     {
         "imagen": "03776.jpg",
         "codigo": "03776",
-        "descripcion": "POLEA DE CIG CHEV LUV ISUZU 2.5 208",
+        "descripcion": "POLEA DE CIGÜEÑAL CHEV LUV ISUZU 2.5 208",
         "precio": "11244",
         "rubro": "POLCIGU",
         "auto": "ISUZU",
@@ -254,7 +206,7 @@
     {
         "imagen": "03777.jpg",
         "codigo": "03777",
-        "descripcion": "POLEA DE CIG CHEV CORSA 1.7 DIESEL MOTOR ISUZU",
+        "descripcion": "POLEA DE CIGÜEÑAL CHEV CORSA 1.7 DIESEL MOTOR ISUZU",
         "precio": "7197",
         "rubro": "POLCIGU",
         "auto": "CORSA",
@@ -262,5 +214,103 @@
         "cod_original": "97251975",
         "oferta": "si",
         "carrousel": "no"
+    },
+    {
+        "imagen": "09792.jpg",
+        "codigo": "09792",
+        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU 2.3 NAFTA",
+        "precio": "1103",
+        "rubro": "BRIDATERM",
+        "auto": "ISUZU",
+        "marca": "",
+        "cod_original": "94172420",
+        "oferta": "no",
+        "carrousel": "si"
+    },
+    {
+        "imagen": "09793.jpg",
+        "codigo": "09793",
+        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU 2.5 2.8 NAFTA",
+        "precio": "1507",
+        "rubro": "BRIDATERM",
+        "auto": "ISUZU",
+        "marca": "",
+        "cod_original": "97139712",
+        "oferta": "si",
+        "carrousel": "no"
+    },
+    {
+        "imagen": "09794.jpg",
+        "codigo": "09794",
+        "descripcion": "BRIDA DE TERMOSTATO LUV ISUZU DIESEL 4JA",
+        "precio": "1638",
+        "rubro": "BRIDATERM",
+        "auto": "ISUZU",
+        "marca": "",
+        "cod_original": "",
+        "oferta": "no",
+        "carrousel": "si"
+    },
+    {
+        "imagen": "09809.jpg",
+        "codigo": "09809",
+        "descripcion": "CONEXION DIST DE AGUA CORSA DIESEL 1.7CC",
+        "precio": "2189",
+        "rubro": "CONEXIOND",
+        "auto": "CORSA",
+        "marca": "",
+        "cod_original": "97185514",
+        "oferta": "si",
+        "carrousel": "no"
+    },
+
+    {
+        "imagen": "09879.jpg",
+        "codigo": "09879",
+        "descripcion": "BASE DE TERMOSTATO COMPLETO CHEV SPARK",
+        "precio": "6141",
+        "rubro": "BASETERM",
+        "auto": "SPARK",
+        "marca": "",
+        "cod_original": "96988257",
+        "oferta": "no",
+        "carrousel": "no"
+    },
+    {
+        "imagen": "09880.jpg",
+        "codigo": "09880",
+        "descripcion": "BRIDA DE TERMOSTATO COMPLETO CHEV CRUZE TRACKER 1.8",
+        "precio": "4823",
+        "rubro": "BRIDATERM",
+        "auto": "CRUZE TRACKER",
+        "marca": "",
+        "cod_original": "96984104",
+        "oferta": "si",
+        "carrousel": "no"
+    },
+    {
+        "imagen": "09881.jpg",
+        "codigo": "09881",
+        "descripcion": "BRIDA DE TERMOSTATO COMPLETO CHEV S-10 BLAZER 2.4 LEFI-MPFI 4X2",
+        "precio": "2098",
+        "rubro": "BRIDATERM",
+        "auto": "S-10 BLAZER",
+        "marca": "",
+        "cod_original": "93225280 932587",
+        "oferta": "no",
+        "carrousel": "si"
+    },
+    {
+        "imagen": "09894.jpg",
+        "codigo": "09894",
+        "descripcion": "BASE DE TERMOSTATO COMPLETO CHEV AVEO 1.6",
+        "precio": "1607",
+        "rubro": "BASETERM",
+        "auto": "AVEO",
+        "marca": "",
+        "cod_original": "96407677",
+        "oferta": "si",
+        "carrousel": "no"
     }
+
 ]

@@ -189,19 +189,20 @@ body{
 
 /*se hace si tiene 992px o menos*/
 @media screen and (max-width: 992px) {
-	:root{
-		font-size: 14px;
-		width: -webkit-stretch;
-		// width: -webkit-fill-available;
-	}	
+	// :root{
+	// 	font-size: 14px;
+	// 	width: -webkit-stretch;
+	// 	// width: -webkit-fill-available;
+	// }	
 }
 
 /*se hace si tiene 768px o menos*/
 @media screen and (max-width: 768px) {
-	:root{
-		font-size: 14px;
-	}	
+	// :root{
+	// 	font-size: 14px;
+	// }	
 	#login-form {
+		font-size: 14px;
 		grid-template-columns: 1fr;
 		padding: 0.3125rem 5.625rem;
 	}
@@ -223,14 +224,15 @@ body{
 
 /*se hace si tiene 576px o menos*/
 @media screen and (max-width: 576px) {
-	:root{
-		font-size: 12px;
-	}	
+	// :root{
+	// 	font-size: 12px;
+	// }	
 	.contenedor{
 		width: 100%;
 		max-width:1000px;
 		margin: 0;
 		grid-gap: 0;
+		font-size: 12px;
 	}
 	.tit1, .tit2, #login-form, .footer {
 		border-radius: 0;
@@ -254,9 +256,9 @@ body{
 
 /*se hace si tiene 341px o menos*/
 @media screen and (max-width: 341px) {
-	:root{
-		font-size: 0.625rem;
-	}	
+	// :root{
+	// 	font-size: 0.625rem;
+	// }	
 	#login-form {
 		padding: 0 0.625rem;
 	}

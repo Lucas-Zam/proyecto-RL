@@ -5,7 +5,7 @@
 	background: $fondo-header;
 	box-shadow: 0px 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 	// display:grid; grid-template-columns: 0.8fr 2.5fr 5.5fr; grid-template-rows: auto;
-	gap: 0.625rem;	
+	gap: 0.3125rem;	
 	justify-content: center;
 	align-items: center;	
 
@@ -33,7 +33,7 @@
 					color:#fff;
 					text-align: center;
 					text-decoration: none;
-					padding: 0.625rem 0.9375rem;
+					padding: 0px 0.9375rem;
 					border-radius: 4px;
 					&:hover {
 						background: $fondo-naveg-hover;
@@ -86,13 +86,13 @@
 	}
 	.header{
 		font-size: 14px;
-		padding: 0.3125rem 0.625rem;
+		padding: 0.3125rem 0.625rem 0rem;
 		grid-column-gap: 4px;
 		// nav{
 		// 	margin-right: 0;
 		// }
 		nav {// grid-column: 1 / -1;
-			margin: 5px auto;
+			margin: 0px auto;
 			ul {
 				float: none;
 				li {
@@ -109,14 +109,13 @@
 	// :root{font-size: 14px;}	
 	.header{
 		font-size: 14px;
-		padding: 0.625rem;
 		.logo-RL img{
 			min-width: 4.75rem;// 50px
 			// min-width: 3.125rem;// 50px
 		}
 		// .texto-RL{}// grid-column: 2 / 4;
 		nav {// grid-column: 1 / -1;
-			margin: 5px auto;
+			margin: 0px auto;
 			ul {
 				float: none;
 				li {
@@ -166,6 +165,19 @@
 			display: block;
 			margin: 1.875rem 0;
 			line-height: 1.875rem;
+			.cajaIconos {
+				background-color: rgb(54, 51, 70);
+				margin: 0 auto;
+				width: 45%;
+				min-width: 90px;
+				border-radius: 4px;
+				a {
+					background-color: transparent;
+					text-align: center;
+					align-items: center;
+					// padding: 10px 15px;
+				}
+			}	
 		}
 	}
 }
