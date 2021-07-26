@@ -78,6 +78,7 @@
 	100%{transform: rotate(180deg);}
 }	
 
+
 @media screen and (max-width: 992px) {
 /*se hace si tiene 992px o menos*/
 	:root {// font-size: 14px;
@@ -191,4 +192,24 @@
 	// .header nav ul {
 		// height: 55vh;
 	// }
+}
+
+//-------------------------------------------------------------
+@media screen and (orientation: landscape) {
+	.header {
+		padding: 0;
+	}
+	.header .logo-RL {// grid-column: 1 / 2;
+		img{
+			width: 50%;
+			min-width: 2.5rem;
+		}
+	}
+	.header .texto-RL {// grid-column: 2 / 3;
+		font-size: 11px;
+	}
+	.checkbtn {
+		top: 0.5rem;
+		height: 10%;
+	}
 }
