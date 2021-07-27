@@ -345,6 +345,9 @@ button {
 		margin: 0;
 		gap: 0;
 	}
+	.header {
+		padding: 0;
+	}
 	.logo-RL {
 		display: none;
 	}
@@ -389,7 +392,10 @@ button {
 }
 //-------------------------------------------------------------
 @media screen and (max-width: 341px) {
-	// :root{font-size: 10px;}	
+	// :root{font-size: 10px;}
+	.texto-RL {
+		margin-left: 0;
+	}
 	.tituloSecundario, .contenido {
 		font-size: 10px;
 	}
@@ -400,6 +406,9 @@ button {
 	.carro {
 		width: 250px;
 	}
+	.h22 {
+		opacity: 0;
+	}
 }
 //-------------------------------------------------------------
 @media screen and (orientation: landscape) {
@@ -409,11 +418,12 @@ button {
 		gap: 0;
 	}
 	.logo-RL {
-		display: none;
+		opacity: 0;
+		// display: none;
 	}
 	.texto-RL {
 		opacity: 0.2;
-		margin-left: 200px;
+		// margin-left: 200px;
 	}
 	.h22 {
 		padding: 13px;
