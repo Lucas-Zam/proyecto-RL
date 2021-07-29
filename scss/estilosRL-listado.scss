@@ -54,6 +54,17 @@ td:nth-child(7) {text-align: center;}
 
 @import "piedepagina";
 
+
+.menu-fixed {
+	position: fixed;
+	z-index: 15000;
+	top: 0;
+	width: 100%;
+	max-width: 1000px;
+	box-shadow: $sombra-caja;
+	// display: table;
+}
+
 @media screen and (max-width: 992px) {
 	/*se hace si tiene 992px o menos*/
 	:root {// font-size: 15px;

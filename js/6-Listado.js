@@ -1,4 +1,19 @@
+// Esta funcion sirve para dejar algún div al tope cuando se hace scroll, utilizando la clase menu-fixed,
+// guardada en estilos.
+    // $(document).ready(function(){
+    //     var altura = $('.paraFixed').offset().top; // pixeles desde el tope hasta la clase q quiero poner arriba al hacer scroll
+    //     $(window).on('scroll',function(){ // function que actúa cuando el cliente hace scroll
+    //         if ( $(window).scrollTop() > altura ) { // si el scroll es mayor a altura
+    //             $('.paraFixed').addClass('menu-fixed'); // si el scroll es mayor a altura, entonces sumo la clase menu-fixed           
+    //         }else{
+    //             $('.paraFixed').removeClass('menu-fixed'); // si el scroll es menor a altura, entonces resto la clase menu-fixed           
+    //         }
+    //     });
+    //     traerDatosServer();
+    // });
+
 traerDatosServer();
+
 //---------------------------------------------------------------------------------------------
 //función que trae la información del archivo productos.json
 // status ( 200 ok, 403 forbidden, 404 not found)

@@ -52,7 +52,12 @@ body {
 		}
 	}
 }
+.tituloPrincipal {
+	// background-color: rgb(230, 126, 34);
+	background: linear-gradient(140deg, rgba(230, 126, 34, 1) 0%, rgb(252, 148, 58) 50%, rgba(230, 126, 34, 1) 100%);
 
+	border-radius: 4px;
+}
 
 .fila2 {
 	margin: 0px 30px;
