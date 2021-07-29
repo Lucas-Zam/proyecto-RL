@@ -165,7 +165,7 @@
         "marca": "",
         "cod_original": "",
         "oferta": "no",
-        "carrousel": "si"
+        "carrousel": "no"
     },
     {
         "imagen": "03773.jpg",
@@ -201,7 +201,7 @@
         "marca": "",
         "cod_original": "94419457",
         "oferta": "no",
-        "carrousel": "si"
+        "carrousel": "no"
     },
     {
         "imagen": "03777.jpg",
@@ -249,7 +249,7 @@
         "marca": "",
         "cod_original": "",
         "oferta": "no",
-        "carrousel": "si"
+        "carrousel": "no"
     },
     {
         "imagen": "09809.jpg",
@@ -310,7 +310,7 @@
         "marca": "",
         "cod_original": "96407677",
         "oferta": "si",
-        "carrousel": "no"
+        "carrousel": "si"
     }
 
 ]
