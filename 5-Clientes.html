@@ -73,7 +73,7 @@
 				<div class="formu__grupo" id="grupo__Cuit">
 					<label for="Cuit" class="formu__label tituh4">Cuit</label>
 					<div class="formu__grupo-input">
-						<input type="text" class="formu__input" name="Cuit" id="Cuit" placeholder="Cuit">
+						<input type="text" class="formu__input" name="Cuit" id="Cuit" placeholder="00-00000000-0">
 						<i class="formu__valida-estado fas fa-times-circle"></i>
 					</div>
 					<p class="formu__input-error">El Cuit debe ser de la forma 00-12345678-0 y solo puede contener números y 2 guiones, o no es un cuit válido. Se evalúa el dígito verificador.</p>	
@@ -197,7 +197,7 @@
 				
 				<!-- Botón de Enviar -->
 				<div class="formu__grupo formu__grupo-btn-enviar">
-					<button type="submit" class="formu__btn tituh4">Enviar</button>
+					<button type="submit" class="formu__btn tituh4" id="submit">Enviar</button>
 					<p class="formu__mensaje-exito" id="formu__mensaje-exito"> Formulario enviado exitosamente! </p>
 				</div>
 			</form>
@@ -219,6 +219,7 @@
 		</div>
 
 		<!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
+		<script src="./js/jquery-3.6.0.min.js"></script>
 		<script src="./js/todos-nav-ico-intercambio.js"></script>
 		<script src="./js/todos-volverarriba.js"></script>
 		<script src="./js/5-Clientes.js"></script>
